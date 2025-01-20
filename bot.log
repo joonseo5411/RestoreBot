@@ -1,0 +1,24 @@
+2025-01-16 12:37:34,515:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:37:34,516:INFO:discord.client: logging in using static token
+2025-01-16 12:37:35,945:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b112a843514e1541f4e3f81aa62d6bc9).
+2025-01-16 12:37:38,928:INFO:logger: Zita Restore 이 켜졌습니다.
+2025-01-16 12:48:22,433:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:48:44,176:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:48:56,281:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:49:09,661:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:49:09,662:INFO:discord.client: logging in using static token
+2025-01-16 12:49:10,966:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a5385c22d9f7ae1e1405b2157360cb9d).
+2025-01-16 12:49:13,677:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+2025-01-16 12:57:07,797:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:57:07,798:INFO:discord.client: logging in using static token
+2025-01-16 12:57:09,089:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 185ee5c374e4a766b9eca44f6322f987).
+2025-01-16 12:57:12,383:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+2025-01-16 12:57:27,808:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-16 12:57:27,809:INFO:discord.client: logging in using static token
+2025-01-16 12:57:29,611:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c6646d9a7c0a97f128e642756c50c614).
+2025-01-16 12:58:12,439:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01/16/2025 12:58:54 PM:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+01/16/2025 12:58:54 PM:INFO:discord.client: logging in using static token
+01/16/2025 12:58:56 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 242bbfa08bf30b41d9d36051a820625b).
+01/16/2025 12:59:00 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01/16/2025 01:19:38 PM:INFO:discord.gateway: Shard ID None session has been invalidated.

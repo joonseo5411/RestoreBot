@@ -10,6 +10,13 @@ from logger import logger
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="..", help_command=None, intents=intents)
 
+def error_function(error, i: discord.Interaction):
+    if isinstance(error, commands.MissingPermissions):
+        logger.warn(f"{i.user.name}({i.user.id}) 님의 권한 부족으로 명령어가 실행 하지 못했어요.")
+
+    if isinstance(error, commands.CommandError):
+        logger.warn(f'{i.user.name}({i.user.id}) 님이 명령어를 실행 하였지만, {error}의 에러가 방생 하였습니다.')
+
 @bot.event
 async def on_ready():
     trees = await bot.tree.sync()
@@ -66,11 +73,10 @@ async def set_role(i: discord.Interaction, role: discord.Role):
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):
-    if isinstance(error, commands.MissingPermissions):
-        logger.warn(f"{i.user.name}({i.user.id}) 님의 권한 부족으로 명령어가 실행 하지 못했어요.")
+    error_function(error, i)
 
-    if isinstance(error, commands.CommandError):
-        logger.warn(f'{i.user.name}({i.user.id}) 님이 명령어를 실행 하였지만, {error}의 에러가 방생 하였습니다.')
-
+@set_role.error
+async def setRoleError(error, i: discord.Interaction):
+    error_function(error, i)
 
 bot.run(setting.token)

@@ -1,0 +1,7 @@
+discord.py
+discord.py[voice]
+datetime
+requests
+quart
+pytz
+aiosqlite

@@ -84,8 +84,8 @@ class DB:
             guilds = []
             res = await db.execute("SELECT guild_id FROM restore_license")
             if not res:
-                return False
-            result = res.fetchall()
+                return []
+            result = await res.fetchall()
             for x in range(len(result)):
                 guildID = result[x][0]
                 if guildID != 0:

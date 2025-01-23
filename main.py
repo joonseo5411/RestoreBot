@@ -78,7 +78,7 @@ async def set_role(i: discord.Interaction, role: discord.Role):
     embed.set_footer(text=f"{bot.user.name}", icon_url=f"{bot.user.avatar}")
     return await i.response.send_message(embed=embed, ephemeral=True)
 
-@bot.tree.command(name='register', description='')
+@bot.tree.command(name='register', description='test')
 @commands.has_permissions(administrator=True)
 async def register(i: discord.Interaction):
     class registerModal(discord.ui.Modal, title='register'):

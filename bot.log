@@ -1,24 +1,59 @@
-2025-01-16 12:37:34,515:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:37:34,516:INFO:discord.client: logging in using static token
-2025-01-16 12:37:35,945:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b112a843514e1541f4e3f81aa62d6bc9).
-2025-01-16 12:37:38,928:INFO:logger: Zita Restore 이 켜졌습니다.
-2025-01-16 12:48:22,433:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:48:44,176:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:48:56,281:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:49:09,661:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:49:09,662:INFO:discord.client: logging in using static token
-2025-01-16 12:49:10,966:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a5385c22d9f7ae1e1405b2157360cb9d).
-2025-01-16 12:49:13,677:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
-2025-01-16 12:57:07,797:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:57:07,798:INFO:discord.client: logging in using static token
-2025-01-16 12:57:09,089:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 185ee5c374e4a766b9eca44f6322f987).
-2025-01-16 12:57:12,383:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
-2025-01-16 12:57:27,808:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-2025-01-16 12:57:27,809:INFO:discord.client: logging in using static token
-2025-01-16 12:57:29,611:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c6646d9a7c0a97f128e642756c50c614).
-2025-01-16 12:58:12,439:INFO:logger: Zita Restore 이 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
-01/16/2025 12:58:54 PM:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
-01/16/2025 12:58:54 PM:INFO:discord.client: logging in using static token
-01/16/2025 12:58:56 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 242bbfa08bf30b41d9d36051a820625b).
-01/16/2025 12:59:00 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
-01/16/2025 01:19:38 PM:INFO:discord.gateway: Shard ID None session has been invalidated.
+01-23-2025 09:15:15 PM:INFO:discord.client: logging in using static token
+01-23-2025 09:15:16 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 4ba310a1ef751b39e09438b3dc026d51).
+01-23-2025 09:15:18 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-23-2025 09:15:18 PM:INFO:logger: Successful getting verify guild id
+01-23-2025 09:15:19 PM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/Desktop/restore/RestoreBot/main.py", line 30, in on_ready
+    trees = await bot.tree.sync()
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1134, in sync
+    raise CommandSyncFailure(e, commands) from None
+discord.app_commands.errors.CommandSyncFailure: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In command 'register' defined in function 'register'
+  description: This field is required
+01-23-2025 09:16:21 PM:INFO:discord.client: logging in using static token
+01-23-2025 09:16:22 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: df95f5285c3db5e14dd9d6591ae7b35a).
+01-23-2025 09:16:25 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-23-2025 09:16:25 PM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/Desktop/restore/RestoreBot/main.py", line 29, in on_ready
+    guilds = await DB.getGuildRegister()
+  File "/root/Desktop/restore/RestoreBot/db.py", line 89, in getGuildRegister
+    for x in range(len(result)):
+TypeError: object of type 'coroutine' has no len()
+01-23-2025 09:50:14 PM:INFO:discord.client: logging in using static token
+01-23-2025 09:50:15 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d139519f60bb5d1ffb27a72e4042d08f).
+01-23-2025 09:50:17 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-23-2025 09:50:17 PM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/Desktop/restore/RestoreBot/main.py", line 29, in on_ready
+    guilds = await DB.getGuildRegister()
+  File "/root/Desktop/restore/RestoreBot/db.py", line 89, in getGuildRegister
+    for x in range(len(result)):
+TypeError: object of type 'coroutine' has no len()
+01-23-2025 09:50:40 PM:INFO:discord.client: logging in using static token
+01-23-2025 09:50:42 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 515210886fdd663d89bd0fd78c785f8d).
+01-23-2025 09:50:44 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-23-2025 09:50:44 PM:INFO:logger: Successful getting verify guild id
+01-23-2025 09:50:44 PM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/Desktop/restore/RestoreBot/main.py", line 31, in on_ready
+    trees = await bot.tree.sync()
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1134, in sync
+    raise CommandSyncFailure(e, commands) from None
+discord.app_commands.errors.CommandSyncFailure: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In command 'register' defined in function 'register'
+  description: This field is required
+01-23-2025 09:51:52 PM:INFO:discord.client: logging in using static token
+01-23-2025 09:51:53 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a430cf96c75e6c3ba7d22e6980731c7c).
+01-23-2025 09:51:56 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-23-2025 09:51:56 PM:INFO:logger: Successful getting verify guild id
+01-23-2025 09:51:56 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.

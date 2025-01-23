@@ -7,7 +7,7 @@ logging.basicConfig(
 	datefmt = '%m-%d-%Y %I:%M:%S %p',
     handlers=[
         logging.StreamHandler(),  # 콘솔 출력
-        logging.FileHandler(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'database.db'), encoding='utf-8')  # 파일 출력
+        logging.FileHandler(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'bot.log'), encoding='utf-8')  # 파일 출력
     ]
 )
 logger = logging.getLogger(__name__)

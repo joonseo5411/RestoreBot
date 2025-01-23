@@ -7,6 +7,10 @@ from db import DB
 
 from logger import logger
 
+import asyncio
+
+guilds = []
+
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="..", help_command=None, intents=intents)
 
@@ -19,10 +23,13 @@ def error_function(error, i: discord.Interaction):
 
 @bot.event
 async def on_ready():
-    trees = await bot.tree.sync()
-    logger.info(f"{bot.user.name} 이(가) 켜졌습니다. {len(trees)} 개의 명령어가 활성화 되었습니다.")
     await DB.create_table()
     logger.info(f"DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.")
+    global guilds
+    guilds = await DB.getGuildRegister()
+    logger.info("Successful getting verify guild id")
+    trees = await bot.tree.sync()
+    logger.info(f"{bot.user.name} 이(가) 켜졌습니다. {len(trees)} 개의 명령어가 활성화 되었습니다.")
 
 @bot.tree.command(name="인증", description="✅ㅣ인증 메시지를 보냅니다.")
 @commands.has_permissions(administrator = True)
@@ -44,10 +51,11 @@ async def verify(i: discord.Interaction):
     await i.channel.send(embed=embed, view=view)
     return await msg.edit(content="출력 완료")
 
-@bot.tree.command(name="역할설정", description="🔰ㅣ인증 완료 후, 받을 역할을 설정 해 주세요.")
+@bot.tree.command(name="역할설정", description="🔰ㅣ인증 완료 후, 받을 역할을 설정 해 주세요.",guilds=guilds)
 @discord.app_commands.describe(
     role="🔰ㅣ인증 후, 받으실 역할을 설정 해 주세요."
 )
+@commands.has_permissions(administrator=True)
 async def set_role(i: discord.Interaction, role: discord.Role):
     role_id = role.id
 
@@ -69,7 +77,40 @@ async def set_role(i: discord.Interaction, role: discord.Role):
 
     embed.set_footer(text=f"{bot.user.name}", icon_url=f"{bot.user.avatar}")
     return await i.response.send_message(embed=embed, ephemeral=True)
+
+@bot.tree.command(name='register', description='')
+@commands.has_permissions(administrator=True)
+async def register(i: discord.Interaction):
+    class registerModal(discord.ui.Modal, title='register'):
+        licenseVar = discord.ui.TextInput(
+            label='input license Key',
+            style=discord.TextStyle.short,
+            placeholder='1s3w5-1f3df-1cvbs-qwert',
+            max_length=23,
+            min_length=21
+        )
+
+        async def on_submit(self, interaction: discord.Interaction):
+            licenseKEY = self.licenseVar
+            registers = DB.registerGuild(i.guild_id, licenseKEY)
+            if not registers:
+                embed = discord.Embed(title='Not found license key',
+                    description='- please check license key again and use command later',
+                    color=discord.Color.red())
+                return await interaction.response.send_message(embed=embed, ephemeral=True)
+    return await i.response.send_modal(registerModal())
+
+@bot.command(name="createLicense")
+async def createLicense(ctx, days: int, amount:int = 1):
+    if not bot.is_owner:
+        return
     
+    licenses = []
+    for _ in range(amount):
+        licenses.append(DB.create_license(days))
+
+    result = await asyncio.gather(*licenses)
+    return await ctx.send("\n".join(f'{result} {days}days'))
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):

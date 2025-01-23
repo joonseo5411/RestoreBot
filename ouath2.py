@@ -7,6 +7,19 @@ import asyncio
 import setting
 import pytz
 
+async def serverCheck(guildID):
+    response = requests.get(
+        f'https://discord.com/api/v10/users/@me/guilds',
+        headers = {'Authorization': f'Bot {setting.token}'})
+    
+    if response.status_code == 200:
+        guilds = response.json()
+        for guild in guilds:
+            if guild['id'] == str(guildID):
+                return True
+        return False
+    return False
+
 def serverTime():
     KST= pytz.timezone(setting.timeZone)
     return datetime.now().astimezone(KST)
@@ -49,7 +62,18 @@ async def getIp():
 
     return ip
 
-async def get_agent():
+async def getIpInfo(ipAddress):
+    response = requests.get(f'http://ip-api.com/json/{ipAddress}')
+    if response.status_code == 200:
+        data = response.json()
+        isp = data.get('isp')
+        city = data.get('city')
+        country = data.get('country')
+        if isp and city and country:
+            return isp, city, country
+    return None
+
+async def getAgent():
     return request.user_agent.string
 
 async def isExpired(time):

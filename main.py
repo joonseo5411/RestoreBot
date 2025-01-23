@@ -47,6 +47,7 @@ async def verify(i: discord.Interaction):
     button = discord.ui.Button(style=discord.ButtonStyle.link,label="인증하기",disabled=False, emoji="🌐", url=verfiy)
     view = discord.ui.View()
     view.add_item(button)
+    print('test')
 
     await i.channel.send(embed=embed, view=view)
     return await msg.edit(content="출력 완료")

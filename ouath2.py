@@ -122,10 +122,10 @@ async def getUserProfile2(token):
     print(response.json())
     return False if response.status_code != 200 else response.json()
 
-async def getUserProfile(token):
+def getUserProfile(token):
     response = requests.get(
         "https://discord.com/v10/users/@me",
-        headers={"Authorization": token}
+        headers={"Authorization": "Bearer " + token}
     )
 
     print(response.json())

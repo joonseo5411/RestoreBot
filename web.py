@@ -33,7 +33,7 @@ async def callback():
     if not exchangeRes:
         return render_template('error.html', title='인증 실패', ERROR_MSG=""), 404
     
-    userInfo = await getUserProfile('Bearer ' + exchangeRes['access_token'])
+    userInfo = getUserProfile(exchangeRes['access_token'])
     if not userInfo:
         return render_template('error.html', title='인증 실패', ERROR_MSG=''), 500
     

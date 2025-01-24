@@ -1,15 +1,15 @@
 from quart import Quart
 from quart import request
 from quart import render_template
-import threading
 
 from ouath2 import *
+from logger import logger
 
 from db import DB
 
 import setting
 
-app = Quart('Restore')
+app = Quart('Restore Web')
 
 @app.route("/")
 async def main():
@@ -26,14 +26,17 @@ async def callback():
         serverCheck(state),
         getIp()
     ]
-
     exchangeRes, guild, ip = await asyncio.gather(*task)
-    print(exchangeRes)
+    infoTask = [
+        getIpInfo(ip),
+        getUserProfile(exchangeRes['access_token'])
+    ]
+    ipInfo, userInfo = await asyncio.gather()
+    logger.info(f"{ip} Users in data email: {userInfo['email']},User: {userInfo['global_name']}({userInfo['id']})")
 
     if not exchangeRes:
         return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
     
-    userInfo = getUserProfile(exchangeRes['access_token'])
     if not userInfo:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
     

@@ -17,10 +17,10 @@ bot = commands.Bot(command_prefix="..", help_command=None, intents=intents)
 
 def error_function(error, i: discord.Interaction):
     if isinstance(error, commands.MissingPermissions):
-        logger.warn(f"{i.user.name}({i.user.id}) 님의 권한 부족으로 명령어가 실행 하지 못했어요.")
+        logger.warning(f"{i.user.name}({i.user.id}) 님의 권한 부족으로 명령어가 실행 하지 못했어요.")
 
     if isinstance(error, commands.CommandError):
-        logger.warn(f'{i.user.name}({i.user.id}) 님이 명령어를 실행 하였지만, {error}의 에러가 방생 하였습니다.')
+        logger.warning(f'{i.user.name}({i.user.id}) 님이 명령어를 실행 하였지만, {error}의 에러가 방생 하였습니다.')
 
 @bot.event
 async def on_ready():

@@ -31,17 +31,14 @@ async def callback():
     print(exchangeRes)
 
     if not exchangeRes:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG=""), 404
+        return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
     
     userInfo = getUserProfile(exchangeRes['access_token'])
     if not userInfo:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 500
+        return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
     
     if not guild:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
-    
-    if userInfo == None:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
+        return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
     
     # await DB.add_user(userInfo['id'], exchangeRes['refresh_token'], state)
     return await render_template('success.html', title='verify successful', SUCCESSFUL_MSG=''), 200

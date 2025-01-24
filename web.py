@@ -27,15 +27,16 @@ async def callback():
         getIp()
     ]
     exchangeRes, guild, ip = await asyncio.gather(*task)
+
+    if not exchangeRes:
+        return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
+    
     infoTask = [
         getIpInfo(ip),
         getUserProfile(exchangeRes['access_token'])
     ]
     ipInfo, userInfo = await asyncio.gather(*infoTask)
-    logger.info(f"{ip} Users in data email: {userInfo['email']},User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
-
-    if not exchangeRes:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
+    logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
     
     if not userInfo:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500

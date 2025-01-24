@@ -31,20 +31,20 @@ async def callback():
     print(exchangeRes)
 
     if not exchangeRes:
-        return render_template('error.html', title='인증 실패', ERROR_MSG=""), 404
+        return await render_template('error.html', title='인증 실패', ERROR_MSG=""), 404
     
     userInfo = getUserProfile(exchangeRes['access_token'])
     if not userInfo:
-        return render_template('error.html', title='인증 실패', ERROR_MSG=''), 500
+        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 500
     
     if not guild:
-        return render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
+        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
     
     if userInfo == None:
-        return render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
+        return await render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
     
     # await DB.add_user(userInfo['id'], exchangeRes['refresh_token'], state)
-    return render_template('success.html', title='verify successful', SUCCESSFUL_MSG=''), 200
+    return await render_template('success.html', title='verify successful', SUCCESSFUL_MSG=''), 200
     
 
 

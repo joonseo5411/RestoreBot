@@ -6,6 +6,7 @@ import setting
 from db import DB
 
 from logger import logger
+from web import web
 
 import asyncio
 
@@ -28,8 +29,11 @@ async def on_ready():
     global guilds
     guilds = await DB.getGuildRegister()
     logger.info("Successful getting verify guild id")
+    await bot.wait_until_ready()
     trees = await bot.tree.sync()
     logger.info(f"{bot.user.name} 이(가) 켜졌습니다. {len(trees)} 개의 명령어가 활성화 되었습니다.")
+    web()
+    logger.info('Starting Web server')
 
 @bot.tree.command(name="인증", description="✅ㅣ인증 메시지를 보냅니다.")
 @commands.has_permissions(administrator = True)

@@ -57,3 +57,15 @@ In command 'register' defined in function 'register'
 01-23-2025 09:51:56 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
 01-23-2025 09:51:56 PM:INFO:logger: Successful getting verify guild id
 01-23-2025 09:51:56 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-24-2025 02:20:54 PM:INFO:discord.client: logging in using static token
+01-24-2025 02:20:56 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: ab3c60ee8f7fb921668e7ec0edfca24f).
+01-24-2025 02:20:58 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-24-2025 02:20:58 PM:INFO:logger: Successful getting verify guild id
+01-24-2025 02:20:58 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-24-2025 02:20:58 PM:INFO:logger: Starting Web server
+01-24-2025 02:23:22 PM:INFO:discord.client: logging in using static token
+01-24-2025 02:23:23 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1f5f821407e866923c80f01502578c38).
+01-24-2025 02:23:26 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-24-2025 02:23:26 PM:INFO:logger: Successful getting verify guild id
+01-24-2025 02:23:26 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-24-2025 02:23:26 PM:INFO:logger: Starting Web server

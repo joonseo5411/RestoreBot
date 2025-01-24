@@ -1,6 +1,7 @@
 from quart import Quart
 from quart import request
 from quart import render_template
+import threading
 
 from ouath2 import *
 
@@ -31,7 +32,7 @@ async def callback():
     if not exchangeRes:
         return render_template('error.html', title='인증 실패', ERROR_MSG=""), 404
     
-    userInfo = await getUserProfile(f'Bearer {exchangeRes['access_token']}')
+    userInfo = await getUserProfile('Bearer ' + exchangeRes['access_token'])
     if not userInfo:
         return render_template('error.html', title='인증 실패', ERROR_MSG=''), 500
     
@@ -46,4 +47,8 @@ async def callback():
 
 
 def run():
-    app.run(host="0.0.0.0", port=4404, debug=False)
+    app.run(host="0.0.0.0", port=4404)
+
+def web():
+    web = threading.Thread(target=run, args=())
+    web.start()

@@ -28,6 +28,7 @@ async def callback():
     ]
 
     exchangeRes, guild, ip = await asyncio.gather(*task)
+    print(exchangeRes)
 
     if not exchangeRes:
         return render_template('error.html', title='인증 실패', ERROR_MSG=""), 404

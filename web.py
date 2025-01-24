@@ -31,7 +31,7 @@ async def callback():
         getIpInfo(ip),
         getUserProfile(exchangeRes['access_token'])
     ]
-    ipInfo, userInfo = await asyncio.gather()
+    ipInfo, userInfo = await asyncio.gather(*infoTask)
     logger.info(f"{ip} Users in data email: {userInfo['email']},User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
 
     if not exchangeRes:

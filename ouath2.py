@@ -128,7 +128,4 @@ def getUserProfile(token):
         headers={"Authorization": "Bearer " + token}
     )
 
-    print(response)
-
-    print(response.json())
     return False if response.status_code != 200 else response.json()

@@ -43,7 +43,8 @@ async def callback():
     if userInfo == None:
         return render_template('error.html', title='인증 실패', ERROR_MSG=''), 400
     
-    await DB.add_user(userInfo['id'], exchangeRes['refresh_token'], state)
+    # await DB.add_user(userInfo['id'], exchangeRes['refresh_token'], state)
+    return render_template('success.html', title='verify successful', SUCCESSFUL_MSG=''), 200
     
 
 

@@ -46,10 +46,4 @@ async def callback():
     
 
 
-def run():
-    app.run(host="0.0.0.0", port=4404)
-    
-def web():
-    web = threading.Thread(target=run, args=())
-    web.start()
-    web.join()
+app.run(host="0.0.0.0", port=4404)

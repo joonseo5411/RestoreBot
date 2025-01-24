@@ -32,7 +32,7 @@ async def callback():
         getUserProfile(exchangeRes['access_token'])
     ]
     ipInfo, userInfo = await asyncio.gather()
-    logger.info(f"{ip} Users in data email: {userInfo['email']},User: {userInfo['global_name']}({userInfo['id']})")
+    logger.info(f"{ip} Users in data email: {userInfo['email']},User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
 
     if not exchangeRes:
         return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404

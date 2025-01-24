@@ -124,7 +124,7 @@ async def getUserProfile2(token):
 
 def getUserProfile(token):
     response = requests.get(
-        "https://discord.com/v10/users/@me",
+        "https://discord.com/api/v10/users/@me",
         headers={"Authorization": "Bearer " + token}
     )
 

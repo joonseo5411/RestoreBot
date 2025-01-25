@@ -10,7 +10,7 @@ app = Quart('Restore Web')
 
 @app.route("/")
 async def main():
-    return await render_template('error.html', title='404', ERROR_MSG=''), 404
+    return await render_template('error.html', title='404', ERROR_MSG='잘못 들어 온 것 같아요. 다시 확인 후, 접속 해 주세요.'), 404
 
 @app.route("/callback")
 async def callback():

@@ -69,9 +69,9 @@ class DB:
                 await db.execute("INSERT INTO restore_license VALUES (?, ?, ?, ?)",
                                 (False, 0, license_key, int(time.time() + (days*86400))))
                 await db.commit()
-                return True, license_key
+                return license_key
             except Exception as e:
-                return e, None
+                return e
             
     @classmethod
     async def registerGuild(cls, guildID: int, licenseID: str):

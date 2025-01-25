@@ -108,7 +108,7 @@ async def createLicense(ctx, days: int, amount:int = 1):
     
     licenses = []
     for _ in range(amount):
-        licenses.append(DB.create_license(days)[1])
+        licenses.append(DB.create_license(days))
 
     result = await asyncio.gather(*licenses)
     return await ctx.send("\n".join(result))

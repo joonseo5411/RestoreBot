@@ -4,7 +4,7 @@ from quart import render_template
 
 from function import *
 
-from setting import setting
+from function import setting
 
 app = Quart('Restore Web')
 

@@ -2,7 +2,7 @@ from discord.ext import commands
 from datetime import datetime
 import discord
 
-from setting import setting
+from function import setting
 from function import DB
 
 from function import logger

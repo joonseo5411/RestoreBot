@@ -4,7 +4,7 @@ from datetime import datetime
 from datetime import timedelta
 import requests
 import asyncio
-from setting import setting
+from .setting import setting
 import pytz
 
 async def serverCheck(guildID):

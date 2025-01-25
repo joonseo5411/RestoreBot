@@ -79,12 +79,12 @@ async def set_role(i: discord.Interaction, role: discord.Role):
     embed.set_footer(text=f"{bot.user.name}", icon_url=f"{bot.user.avatar}")
     return await i.response.send_message(embed=embed, ephemeral=True)
 
-@bot.tree.command(name='register', description='test')
+@bot.tree.command(name='등록', description='📥ㅣ서버를 등록 합니다.')
 @commands.has_permissions(administrator=True)
 async def register(i: discord.Interaction):
-    class registerModal(discord.ui.Modal, title='register'):
+    class registerModal(discord.ui.Modal, title='📥ㅣ등록하기'):
         licenseVar = discord.ui.TextInput(
-            label='input license Key',
+            label='라이센스 키를 입력 해 주세요.',
             style=discord.TextStyle.short,
             placeholder='1s3w5-1f3df-1cvbs-qwert',
             max_length=23,
@@ -101,7 +101,7 @@ async def register(i: discord.Interaction):
                 return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 
-@bot.command(name="createLicense")
+@bot.command(name="생성")
 async def createLicense(ctx, days: int, amount:int = 1):
     if not bot.is_owner:
         return

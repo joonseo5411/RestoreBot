@@ -108,10 +108,10 @@ async def createLicense(ctx, days: int, amount:int = 1):
     
     licenses = []
     for _ in range(amount):
-        licenses.append(DB.create_license(days))
+        licenses.append(DB.create_license(days)[1])
 
     result = await asyncio.gather(*licenses)
-    return await ctx.send("\n".join(f'{result} {days}days'))
+    return await ctx.send("\n".join(result))
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):

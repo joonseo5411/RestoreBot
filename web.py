@@ -44,7 +44,16 @@ async def callback():
     if not guild:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
     
-    # await DB.add_user(userInfo['id'], exchangeRes['refresh_token'], state)
+    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+    async def sendWebhook():
+        if not webhook:
+            return
+        await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest')
+    task = [
+        giveRoleToMember(state, int(userInfo['id']), role_id),
+        sendWebhook()
+    ]
+    await asyncio.gather(*task)
     return await render_template('success.html', title='인증 완료', SUCCESSFUL_MSG='이제 이 탭 또는 창을 닫으셔도 좋습니다.'), 200
     
 

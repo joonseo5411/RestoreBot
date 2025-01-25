@@ -7,6 +7,18 @@ import asyncio
 from .setting import setting
 import pytz
 
+async def giveRoleToMember(guildID, memberID, roleID):
+    headers ={
+        'Authorization': f'Bot {setting().token}',
+        'Content-Type': 'application/json'
+    }
+    response = requests.put(
+        f'{setting().api_endpoint}/guilds/{guildID}/members/{memberID}/roles/{roleID}',
+        headers=headers)
+    if response.status_code == 204:
+        return True
+    return False
+
 async def serverCheck(guildID):
     response = requests.get(
         f'https://discord.com/api/v10/users/@me/guilds',

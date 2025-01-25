@@ -33,6 +33,7 @@ async def on_ready():
     
 @bot.tree.command(name="인증", description="✅ㅣ인증 메시지를 보냅니다.")
 @commands.has_permissions(administrator = True)
+@discord.app_commands.guild_only()
 async def verify(i: discord.Interaction):
     logger.info(f'{i.user.name}({i.user.id}) 님이 {i.guild.name}({i.guild.id})에서 인증 명령어를 실행 하셨습니다.')
     await i.response.send_message("출력 준비 중", ephemeral=True)
@@ -57,6 +58,7 @@ async def verify(i: discord.Interaction):
     role="🔰ㅣ인증 후, 받으실 역할을 설정 해 주세요."
 )
 @commands.has_permissions(administrator=True)
+@discord.app_commands.guild_only()
 async def set_role(i: discord.Interaction, role: discord.Role):
     role_id = role.id
 
@@ -80,6 +82,7 @@ async def set_role(i: discord.Interaction, role: discord.Role):
     return await i.response.send_message(embed=embed, ephemeral=True)
 
 @bot.tree.command(name='등록', description='📥ㅣ서버를 등록 합니다.')
+@discord.app_commands.guild_only()
 @commands.has_permissions(administrator=True)
 async def register(i: discord.Interaction):
     class registerModal(discord.ui.Modal, title='📥ㅣ등록하기'):
@@ -93,7 +96,7 @@ async def register(i: discord.Interaction):
 
         async def on_submit(self, interaction: discord.Interaction):
             licenseKEY = self.licenseVar
-            registers = DB.registerGuild(i.guild_id, licenseKEY)
+            registers = await DB.registerGuild(i.guild_id, licenseKEY)
             if not registers:
                 embed = discord.Embed(title='Not found license key',
                     description='- please check license key again and use command later',
@@ -105,13 +108,9 @@ async def register(i: discord.Interaction):
 async def createLicense(ctx, days: int, amount:int = 1):
     if not bot.is_owner:
         return
-    
-    licenses = []
-    for _ in range(amount):
-        licenses.append(DB.create_license(days))
 
-    result = await asyncio.gather(*licenses)
-    return await ctx.send("\n".join(result))
+    result = await DB.createLicense(days, amount)
+    return await ctx.send(("\n".join(result)).join(days))
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):

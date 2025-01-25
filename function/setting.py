@@ -3,7 +3,7 @@ import os
 
 class setting:
     def __init__(self):
-        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '//설정.json'), 'r') as file:
+        with open(os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '설정.json')), 'r') as file:
             data = json.load(file)
             self.token = data['botToken']
             self.base_url = data['domain']

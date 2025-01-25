@@ -10,7 +10,7 @@ app = Quart('Restore Web')
 
 @app.route("/")
 async def main():
-    return "<h1>Hello, World!</h1>"
+    return await render_template('error.html', title='404', ERROR_MSG=''), 404
 
 @app.route("/callback")
 async def callback():

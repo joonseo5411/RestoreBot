@@ -88,7 +88,7 @@ async def register(i: discord.Interaction):
             style=discord.TextStyle.short,
             placeholder='1s3w5-1f3df-1cvbs-qwert',
             max_length=23,
-            min_length=21
+            min_length=23
         )
 
         async def on_submit(self, interaction: discord.Interaction):

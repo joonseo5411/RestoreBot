@@ -2,12 +2,10 @@ from discord.ext import commands
 from datetime import datetime
 import discord
 
-import setting as setting
-from db import DB
+from setting import setting
+from function import DB
 
-from logger import logger
-from web import web
-
+from function import logger
 import asyncio
 
 guilds = []
@@ -40,6 +38,7 @@ async def verify(i: discord.Interaction):
     await i.response.send_message("출력 준비 중", ephemeral=True)
     msg = await i.original_response()
 
+    setting = setting()
     verfiy = f'https://discord.com/api/oauth2/authorize?client_id={setting.client_id}&redirect_uri={setting.base_url}%2Fcallback&response_type=code&scope=identify+email+guilds.join&state={i.guild.id}'
     embed = discord.Embed(
         title=f"{i.guild.name}",
@@ -123,6 +122,6 @@ async def setRoleError(error, i: discord.Interaction):
     error_function(error, i)
 
 async def botRun():
-    await bot.start(setting.token)
+    await bot.start(setting().token)
 
 asyncio.run(botRun())

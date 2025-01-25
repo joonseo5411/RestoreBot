@@ -1,11 +1,11 @@
 import aiosqlite, os
-from logger import logger
+from function.logger import logger
 from random import choices
 from discord import Object
 import string
 import time
 
-db_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'database.db')
+db_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '//logs//database.db')
 
 class DB:
     def key_generate(number:int = 5):

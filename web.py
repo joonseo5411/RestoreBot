@@ -2,12 +2,9 @@ from quart import Quart
 from quart import request
 from quart import render_template
 
-from ouath2 import *
-from logger import logger
+from function import *
 
-from db import DB
-
-import setting
+from setting import setting
 
 app = Quart('Restore Web')
 
@@ -22,7 +19,7 @@ async def callback():
     state = int(request.args.get('state'))
 
     task = [
-        exchange_code(code, f"{setting.base_url}/callback"),
+        exchange_code(code, f"{setting().base_url}/callback"),
         serverCheck(state),
         getIp()
     ]
@@ -35,8 +32,11 @@ async def callback():
         getIpInfo(ip),
         getUserProfile(exchangeRes['access_token'])
     ]
-    ipInfo, userInfo = await asyncio.gather(*infoTask)
-    logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+    try:
+        ipInfo, userInfo = await asyncio.gather(*infoTask)
+        logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+    except:
+        return await render_template('error.html', title='인증 실패', ERROR_MSG='')
     
     if not userInfo:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500

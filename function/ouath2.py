@@ -4,13 +4,13 @@ from datetime import datetime
 from datetime import timedelta
 import requests
 import asyncio
-import setting as setting
+from setting import setting
 import pytz
 
 async def serverCheck(guildID):
     response = requests.get(
         f'https://discord.com/api/v10/users/@me/guilds',
-        headers = {'Authorization': f'Bot {setting.token}'})
+        headers = {'Authorization': f'Bot {setting().token}'})
     
     if response.status_code == 200:
         guilds = response.json()
@@ -21,7 +21,7 @@ async def serverCheck(guildID):
     return False
 
 def serverTime():
-    KST= pytz.timezone(setting.timeZone)
+    KST= pytz.timezone(setting().timeZone)
     return datetime.now().astimezone(KST)
 
 async def exchange_code(code, redirect_url):
@@ -29,8 +29,8 @@ async def exchange_code(code, redirect_url):
     data = {
         'grant_type': 'authorization_code',
         'redirect_uri':  redirect_url,
-        'client_id': setting.client_id,
-        'client_secret':setting.client_secret,
+        'client_id': setting().client_id,
+        'client_secret':setting().client_secret,
         'code':code,
     }
 
@@ -40,7 +40,7 @@ async def exchange_code(code, redirect_url):
     }
 
     while True:
-        response=requests.post(f'{setting.api_endpoint}/oauth2/token', data=data, headers=headers)
+        response=requests.post(f'{setting().api_endpoint}/oauth2/token', data=data, headers=headers)
 
         if response.status_code != 429:
             break
@@ -110,7 +110,7 @@ async def add_time(nowDays, addDays):
 async def getGuild(id):
     response = requests.get(
         f'https://discord.com/apt/v9/guilds/{id}',
-        headers={"Authorization": f"Bot {setting.token}"})
+        headers={"Authorization": f"Bot {setting().token}"})
 
     return response.json()
 

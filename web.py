@@ -36,7 +36,7 @@ async def callback():
         ipInfo, userInfo = await asyncio.gather(*infoTask)
         logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
     except:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG='올바르지 않는 인증 방법 입니다.'), 404
+        return await render_template('error.html', title='인증 실패', ERROR_MSG='올바르지 않는 인증 방법 입니다.'), 400
     
     if not userInfo:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
@@ -44,7 +44,10 @@ async def callback():
     if not guild:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
     
-    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+    try:
+        role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+    except:
+        return await render_template('error.html', title='인증실패', ERROR_MSG='등록 되지 않는 서버입니다.'), 400
     async def sendWebhook():
         if not webhook:
             return
@@ -58,4 +61,4 @@ async def callback():
     
 
 
-app.run(host="0.0.0.0", port=4404)
+app.run(host="0.0.0.0", port=4404, use_reloader=False)

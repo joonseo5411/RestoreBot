@@ -1,22 +1,249 @@
-01-24-2025 02:45:28 PM:INFO:discord.client: logging in using static token
-01-24-2025 02:45:30 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 65215b8c906da67126ddb3392d933f70).
-01-24-2025 02:45:32 PM:INFO:logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-24-2025 02:45:32 PM:INFO:logger: Successful getting verify guild id
-01-24-2025 02:45:32 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-24-2025 02:45:32 PM:INFO:logger: Starting Web server
-01-25-2025 07:05:23 AM:INFO:discord.client: logging in using static token
-01-25-2025 07:05:25 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d1d04f80f5d008db958baa08139fe8b0).
-01-25-2025 07:05:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-25-2025 07:05:28 AM:INFO:function.logger: Successful getting verify guild id
-01-25-2025 07:05:28 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-25-2025 09:45:49 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 11:21:59 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 12:06:49 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 01:28:24 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 02:50:38 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 03:57:48 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 04:37:38 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 06:50:05 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 08:22:52 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-25-2025 11:42:55 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
-01-26-2025 01:28:28 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-26-2025 04:55:52 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 04:55:52 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 04:55:53 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 04:55:59 AM:INFO:function.logger: (0, 0, 'dtes9-GsJFd-fd7xo-771QN', 1824179531),None
+01-26-2025 04:55:59 AM:INFO:function.logger: 1
+01-26-2025 04:55:59 AM:ERROR:discord.ui.modal: Ignoring exception in modal <registerModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 98, in on_submit
+    registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 100, in registerGuild
+    await asyncio.gather(*texe)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 25, in throw
+    return self._coro.throw(typ)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 23 supplied.
+01-26-2025 04:56:53 AM:INFO:discord.client: logging in using static token
+01-26-2025 04:56:54 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 732eb4f018f93a279b750fee9107d3bd).
+01-26-2025 04:56:57 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 04:56:57 AM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 28, in on_ready
+    guilds = await DB.getGuildRegister()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 109, in getGuildRegister
+    res = await db.execute("SELECT guild_id FROM restore_license")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: guild_id
+01-26-2025 04:57:11 AM:ERROR:discord.ext.commands.bot: Ignoring exception in command 생성
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 112, in createLicense
+    return await ctx.send(("\n".join(result)).join(days))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can only join an iterable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ext/commands/bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: can only join an iterable
+01-26-2025 04:57:46 AM:INFO:discord.client: logging in using static token
+01-26-2025 04:57:47 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 436750e963e30b952498d978501d7ba3).
+01-26-2025 04:57:50 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 04:57:50 AM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 28, in on_ready
+    guilds = await DB.getGuildRegister()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 109, in getGuildRegister
+    res = await db.execute("SELECT guild_id FROM restore_license")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: guild_id
+01-26-2025 04:58:11 AM:INFO:discord.client: logging in using static token
+01-26-2025 04:58:12 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: da4d3ea4d72de18bb651a1dc59bcf2fd).
+01-26-2025 04:58:15 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 04:58:15 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 04:58:16 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 04:58:27 AM:INFO:function.logger: None,None
+01-26-2025 05:05:50 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:05:51 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: cc6cf064e44bfecf303c81f24240dda3).
+01-26-2025 05:05:54 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:05:54 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:05:54 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:06:02 AM:INFO:function.logger: None,None
+01-26-2025 05:10:38 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:10:39 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 9464e3d4486c59f4d5122d77c2d4aea6).
+01-26-2025 05:10:42 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:10:42 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:10:42 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:10:48 AM:ERROR:discord.ui.modal: Ignoring exception in modal <registerModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 98, in on_submit
+    registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 84, in registerGuild
+    lic, info = await asyncio.gather(*task)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 25, in throw
+    return self._coro.throw(typ)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 23 supplied.
+01-26-2025 05:10:56 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:10:57 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: df9044939766f036133cd185713d3033).
+01-26-2025 05:11:00 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:11:00 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:11:13 AM:ERROR:discord.ui.modal: Ignoring exception in modal <registerModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 98, in on_submit
+    registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 84, in registerGuild
+    lic, info = await asyncio.gather(*task)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 25, in throw
+    return self._coro.throw(typ)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 23 supplied.
+01-26-2025 05:11:20 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:11:21 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2213d6cce9860f363c504a360b023f25).
+01-26-2025 05:11:24 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:11:24 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:11:25 AM:ERROR:discord.ui.modal: Ignoring exception in modal <registerModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 98, in on_submit
+    registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 84, in registerGuild
+    lic, info = await asyncio.gather(*task)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 25, in throw
+    return self._coro.throw(typ)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 23 supplied.
+01-26-2025 05:12:07 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:12:09 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: da02798ebd37a2d8a8a5048f3401b826).
+01-26-2025 05:12:11 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:12:11 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:12:13 AM:INFO:function.logger: None,None
+01-26-2025 05:12:42 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:18:56 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:18:57 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c6694c3f788b61ce4a6cb7a9486b2f55).
+01-26-2025 05:19:00 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:19:00 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:19:01 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:19:04 AM:ERROR:discord.ui.modal: Ignoring exception in modal <registerModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 98, in on_submit
+    registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 80, in registerGuild
+    async with db.execute("SELECT * FROM restore WHERE guild_id = ?", (serverID,)) as cursor:
+                                                                       ^^^^^^^^
+NameError: name 'serverID' is not defined
+01-26-2025 05:19:20 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:19:21 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b4eb1140a8360478ced9bfe32aba91bf).
+01-26-2025 05:19:24 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:19:24 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:19:33 AM:INFO:function.logger: None
+01-26-2025 05:20:01 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:20:33 AM:INFO:discord.client: logging in using static token
+01-26-2025 05:20:35 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3e48f09e5039c0d6e24e2e3967151d04).
+01-26-2025 05:20:37 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-26-2025 05:20:37 AM:INFO:function.logger: Successful getting verify guild id
+01-26-2025 05:20:38 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 05:20:55 AM:INFO:function.logger: None
+01-26-2025 05:21:34 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-26-2025 05:33:45 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-26-2025 05:33:49 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 26, in callback
+    exchangeRes, guild, ip = await asyncio.gather(*task)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/ouath2.py", line 64, in exchange_code
+    return False if "error" in response.json() else response.json()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'coroutine' is not iterable
+01-26-2025 05:34:10 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-26-2025 05:35:37 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)

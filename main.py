@@ -95,11 +95,10 @@ async def register(i: discord.Interaction):
         )
 
         async def on_submit(self, interaction: discord.Interaction):
-            licenseKEY = self.licenseVar
-            registers = await DB.registerGuild(i.guild_id, licenseKEY)
+            registers = await DB.registerGuild(int(i.guild_id), str(self.licenseVar))
             if not registers:
-                embed = discord.Embed(title='Not found license key',
-                    description='- please check license key again and use command later',
+                embed = discord.Embed(title='라이센스 등록 실패',
+                    description='- 시도하신 라이센스를 확인 하시고 다시 이용 해 주시길 바랍니다.',
                     color=discord.Color.red())
                 return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
@@ -110,7 +109,7 @@ async def createLicense(ctx, days: int, amount:int = 1):
         return
 
     result = await DB.createLicense(days, amount)
-    return await ctx.send(("\n".join(result)).join(days))
+    return await ctx.send((f" {days}일\n".join(result)))
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):

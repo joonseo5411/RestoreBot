@@ -2,9 +2,10 @@ from quart import request
 
 from datetime import datetime
 from datetime import timedelta
+from .setting import setting
 import requests
 import asyncio
-from .setting import setting
+import aiohttp
 import pytz
 
 async def giveRoleToMember(guildID, memberID, roleID):
@@ -12,12 +13,11 @@ async def giveRoleToMember(guildID, memberID, roleID):
         'Authorization': f'Bot {setting().token}',
         'Content-Type': 'application/json'
     }
-    response = requests.put(
-        f'{setting().api_endpoint}/guilds/{guildID}/members/{memberID}/roles/{roleID}',
-        headers=headers)
-    if response.status_code == 204:
-        return True
-    return False
+    async with aiohttp.ClientSession() as session:
+        async with session.put(f'{setting().api_endpoint}/guilds/{guildID}/members/{memberID}/roles/{roleID}', headers=headers) as response:
+            if response.status == 204:
+                return True
+            return False
 
 async def serverCheck(guildID):
     response = requests.get(
@@ -51,17 +51,18 @@ async def exchange_code(code, redirect_url):
         'Content-Type': 'application/x-www-form-urlencoded'
     }
 
-    while True:
-        response=requests.post(f'{setting().api_endpoint}/oauth2/token', data=data, headers=headers)
-
-        if response.status_code != 429:
-            break
+    
+    async with aiohttp.ClientSession() as session:
+        while True:
+            async with session.post(f'{setting().api_endpoint}/oauth2/token', data=data, headers=headers) as response:
+                if response.status != 429:
+                    break
         
-        # retry error command
-        limitinfo = response.json()
-        await asyncio.sleep(limitinfo["retry_after"] + 2)
+                # retry error command
+                limitinfo = response.json()
+                await asyncio.sleep(limitinfo["retry_after"] + 2)
 
-    return False if "error" in response.json() else response.json()
+                return False if "error" in response.json() else response.json()
 
 async def getIp():
     """Getting user's first IP"""
@@ -75,15 +76,16 @@ async def getIp():
     return ip
 
 async def getIpInfo(ipAddress):
-    response = requests.get(f'http://ip-api.com/json/{ipAddress}')
-    if response.status_code == 200:
-        data = response.json()
-        isp = data.get('isp')
-        city = data.get('city')
-        country = data.get('country')
-        if isp and city and country:
-            return isp, city, country
-    return None
+    async with aiohttp.ClientSession() as session:
+        async with session.get(f'http://ip-api.com/json/{ipAddress}') as response:
+            if response.status_code == 200:
+                data = response.json()
+                isp = data.get('isp')
+                city = data.get('city')
+                country = data.get('country')
+                if isp and city and country:
+                    return isp, city, country
+            return None
 
 async def getAgent():
     return request.user_agent.string
@@ -120,24 +122,17 @@ async def add_time(nowDays, addDays):
     return (ExpireTime + timedelta(days=addDays)).strftime("%Y-%m-%d %H:%M")
 
 async def getGuild(id):
-    response = requests.get(
-        f'https://discord.com/apt/v9/guilds/{id}',
-        headers={"Authorization": f"Bot {setting().token}"})
-
-    return response.json()
+    async with aiohttp.ClientSession() as session:
+        async with session.get(f'https://discord.com/apt/v9/guilds/{id}', headers={"Authorization": f"Bot {setting().token}"}) as response:
+            return response.json()
 
 async def getUserProfile2(token):
-    response = requests.get(
-        "https://discordapp.com/apt/v8/users/@me",
-        headers={"Authorization": f"Bearer {token}"}
-    )
-    print(response.json())
-    return False if response.status_code != 200 else response.json()
+    async with aiohttp.ClientSession() as session:
+        async with session.get("https://discordapp.com/apt/v8/users/@me", headers={"Authorization": f"Bearer {token}"}) as response:
+            print(response.json())
+            return False if response.status_code != 200 else response.json()
 
 async def getUserProfile(token):
-    response = requests.get(
-        "https://discord.com/api/v10/users/@me",
-        headers={"Authorization": "Bearer " + token}
-    )
-
-    return False if response.status_code != 200 else response.json()
+    async with aiohttp.ClientSession() as session:
+        async with session.get("https://discord.com/api/v10/users/@me", headers={"Authorization": "Bearer " + token}) as response:
+            return False if response.status_code != 200 else response.json()

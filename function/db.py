@@ -6,11 +6,11 @@ import asyncio
 import string
 import time
 
-db_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'logs', 'databse.db'))
+db_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'logs', 'database.db'))
 
 class DB:
-    def key_generate(number:int = 5, range=5):
-        return '-'.join([''.join(choices(string.ascii_letters + string.digits, k=number)) for _ in range(range)])
+    def key_generate(number:int = 5, r=5):
+        return '-'.join([''.join(choices(string.ascii_letters + string.digits, k=number)) for _ in range(r)])
 
     @classmethod
     async def create_table(cls):
@@ -36,7 +36,7 @@ class DB:
     async def add_user(cls, user_id: int, refresh_token: str, guild_id: int):
         async with aiosqlite.connect(db_path) as db:
             result = await db.execute(
-                "SELECT user_id, role_id, webhook FROM restore WHERE = ?", 
+                "SELECT user_id, role_id, webhook FROM restore WHERE guild_id = ?", 
                 (guild_id)
             )
             response = await result.fetchone()
@@ -44,7 +44,7 @@ class DB:
                 return False
 
             user = eval(response[0]).append([user_id, refresh_token])
-            await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?"(user, guild_id))            
+            await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(user), guild_id))            
             await db.commit()
             return str(response[1]), str(eval(response[2])[1])
 
@@ -53,7 +53,7 @@ class DB:
         async with aiosqlite.connect(db_path) as db:
             try:
                 await db.execute(
-                    "UPDATE restore SET role_id = ? WHERE guild = ?",
+                    "UPDATE restore SET role_id = ? WHERE guild_id = ?",
                     (role_id, guild_id)
                 )
                 await db.commit()
@@ -69,7 +69,7 @@ class DB:
             for _ in range(amount):
                 license_key = cls.key_generate()
                 await db.execute("INSERT INTO restore_license VALUES (?, ?)",
-                                (license_key, int(time.time() + (days*86400))))
+                                (license_key, int(days*86400)))
                 licenses.append(license_key)
             await db.commit()
             return licenses
@@ -77,34 +77,34 @@ class DB:
     @classmethod
     async def registerGuild(cls, guildID: int, licenseID: str):
         async with aiosqlite.connect(db_path) as db:
-            task = [
-                db.execute("SELECT * FROM restore_license WHERE = ?", (licenseID)),
-                db.execute("SELECT * FROM restore WHERE = ?", (guildID))
-            ]
-            license, info = await asyncio.gather(*task)
-            data = await license.fetchone()
-            info =await info.fetchone()
+            async with db.execute("SELECT user FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
+                guildData = await cursor.fetchone()
+                if guildData:
+                    return False
 
-            if not data or info:
-                return False
-            
-            expireDate = data[1]
-            key = cls.key_generate(5, 1)
-            task_execute = [
-                db.execute("INSERT INTO restore VALUES (?, ?, ?, ?, ?, ?)",
-                    (str([]), str([False, False]), None, guildID, time.time() + expireDate, key)),
-                db.execute("DELETE FROM restore_license WHERE = ?", (licenseID)),
-            ]
-            await asyncio.gather(*task_execute)
-            await db.commit()
-            return True
+                async with db.execute("SELECT license, date FROM restore_license WHERE license = ?", (str(licenseID),)) as cursor:
+                    licenseInfo = await cursor.fetchone()
+                    
+                    logger.info(f"{licenseInfo}")
+
+                    if not licenseInfo:
+                        return False
+                        
+                    texe = [
+                        db.execute("INSERT INTO restore VALUES (?, ?, ?, ?, ?, ?)",
+                            (str([]), str([False, False]), None, guildID, int(time.time() + int(data[1])), cls.key_generate(5, 1))),
+                        db.execute("DELETE FROM restore_license WHERE license = ?", (licenseID)),
+                    ]
+                    await asyncio.gather(*texe)
+                    await db.commit()
+                    return True
 
 
     @classmethod
     async def getGuildRegister(cls):
         async with aiosqlite.connect(db_path) as db:
             guilds = []
-            res = await db.execute("SELECT guild_id FROM restore_license")
+            res = await db.execute("SELECT guild_id FROM restore")
             if not res:
                 return []
             result = await res.fetchall()

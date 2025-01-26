@@ -252,3 +252,4 @@ TypeError: argument of type 'coroutine' is not iterable
 01-26-2025 05:55:02 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
 01-26-2025 05:55:02 AM:INFO:function.logger: Successful getting verify guild id
 01-26-2025 05:55:02 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-26-2025 06:19:18 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session ca975ecadbbd0aff611eccd8ab23d251.

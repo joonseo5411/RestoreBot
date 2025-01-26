@@ -100,12 +100,13 @@ async def register(i: discord.Interaction):
                 embed = discord.Embed(title='라이센스 등록 실패',
                     description='- 시도하신 라이센스를 확인 하시고 다시 이용 해 주시길 바랍니다.',
                     color=discord.Color.red())
-                return await interaction.response.send_message(embed=embed, ephemeral=True)
-            embed = discord.Embed(
-                title="successful register",
-                description="- `/help` command",
-                color=discord.Color.green()
-            )
+            else:
+                embed = discord.Embed(
+                    title="successful register",
+                    description="- `/help` command",
+                    color=discord.Color.green()
+                )
+            embed.set_footer(text="Zita Restore")
             return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 

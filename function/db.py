@@ -9,7 +9,7 @@ import time
 db_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'logs', 'database.db'))
 
 class DB:
-    def key_generate(number:int = 5, r=5):
+    def key_generate(number:int = 5, r=4):
         return '-'.join([''.join(choices(string.ascii_letters + string.digits, k=number)) for _ in range(r)])
 
     @classmethod
@@ -26,9 +26,9 @@ class DB:
                                     )''')
 
             await db.execute('''CREATE TABLE IF NOT EXISTS restore_license (
-                                    key TEXT,
-                                    date INTEGER
-                                    
+                            registerKEY TEXT,
+                            expireDate INTEGER,
+                            PRIMARY KEY (registerKEY, expireDate)
                                     )''')
             await db.commit()
 
@@ -82,25 +82,22 @@ class DB:
                 if guildData:
                     return False
 
-            async with db.execute("SELECT * FROM restore_license WHERE key = ?", (licenseID,)) as cursor:
+            async with db.execute("SELECT * FROM restore_license WHERE registerKEY = ?", (str(licenseID),)) as cursor:
                 licenseInfo = await cursor.fetchone()
+                logger.info(str(licenseInfo))
 
             if not licenseInfo:
                 return False
 
-            try:
-                await db.execute(
-                    "INSERT INTO restore (user, webhook, role_id, guild_id, expire_date, restoreKey) VALUES (?, ?, ?, ?, ?, ?)",
-                    (str([]), str([False, False]), None, guildID, int(time.time() + int(licenseInfo[1])), cls.key_generate(5, 1))
-                )
+            await db.execute(
+                "INSERT INTO restore (user, webhook, role_id, guild_id, expire_date, restoreKey) VALUES (?, ?, ?, ?, ?, ?)",
+                (str([]), str([False, False]), None, guildID, int(time.time() + int(licenseInfo[1])), cls.key_generate(5, 1))
+            )
 
-                await db.execute("DELETE FROM restore_license WHERE key = ?", (licenseID,))
-                await db.commit()
+            await db.execute("DELETE FROM restore_license WHERE registerKEY = ?", (licenseID,))
+            await db.commit()
 
-                return True
-            except Exception as e:
-                logger.error(f"Failed to register guild {guildID} with license {licenseID}: {e}")
-                return False
+            return True
 
 
 

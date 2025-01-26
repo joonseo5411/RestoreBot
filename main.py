@@ -101,6 +101,12 @@ async def register(i: discord.Interaction):
                     description='- 시도하신 라이센스를 확인 하시고 다시 이용 해 주시길 바랍니다.',
                     color=discord.Color.red())
                 return await interaction.response.send_message(embed=embed, ephemeral=True)
+            embed = discord.Embed(
+                title="successful register",
+                description="- `/help` command",
+                color=discord.Color.green()
+            )
+            return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 
 @bot.command(name="생성")
@@ -109,7 +115,10 @@ async def createLicense(ctx, days: int, amount:int = 1):
         return
 
     result = await DB.createLicense(days, amount)
-    return await ctx.send((f" {days}일\n".join(result)))
+    lic = []
+    for res in result: lic.append(f"{res} {days}일")
+    logger.info(f"\n".join(lic))
+    return await ctx.send((f" \n".join(lic)))
 
 @verify.error
 async def verify_error(error, i: discord.Interaction):

@@ -102,8 +102,8 @@ async def register(i: discord.Interaction):
                     color=discord.Color.red())
             else:
                 embed = discord.Embed(
-                    title="successful register",
-                    description="- `/help` command",
+                    title="라이센스 등록 성공",
+                    description="- `/설정`을 통해 설정을 마무리 해 주세요.\n- `/인증`명령어를 통해 인증 임베드를 출력 가능합니다.",
                     color=discord.Color.green()
                 )
             embed.set_footer(text="Zita Restore")

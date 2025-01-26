@@ -106,7 +106,7 @@ async def register(i: discord.Interaction):
                     description="- `/설정`을 통해 설정을 마무리 해 주세요.\n- `/인증`명령어를 통해 인증 임베드를 출력 가능합니다.",
                     color=discord.Color.green()
                 )
-            embed.set_footer(text="Zita Restore")
+            embed.set_footer(text=f"{bot.user.name}", icon_url=f"{bot.user.avatar}")
             return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 

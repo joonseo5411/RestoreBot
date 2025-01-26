@@ -4,3 +4,19 @@
 01-24-2025 02:45:32 PM:INFO:logger: Successful getting verify guild id
 01-24-2025 02:45:32 PM:INFO:logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
 01-24-2025 02:45:32 PM:INFO:logger: Starting Web server
+01-25-2025 07:05:23 AM:INFO:discord.client: logging in using static token
+01-25-2025 07:05:25 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d1d04f80f5d008db958baa08139fe8b0).
+01-25-2025 07:05:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-25-2025 07:05:28 AM:INFO:function.logger: Successful getting verify guild id
+01-25-2025 07:05:28 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-25-2025 09:45:49 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 11:21:59 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 12:06:49 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 01:28:24 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 02:50:38 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 03:57:48 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 04:37:38 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 06:50:05 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 08:22:52 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-25-2025 11:42:55 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.
+01-26-2025 01:28:28 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session d1d04f80f5d008db958baa08139fe8b0.

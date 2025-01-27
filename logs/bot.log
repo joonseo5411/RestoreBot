@@ -123,3 +123,4 @@ HKN3T-2cC8K-PsvVW-pICu4 99일
 01-27-2025 02:13:25 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
 01-27-2025 02:21:35 PM:ERROR:discord.ext.commands.bot: Ignoring exception in command None
 discord.ext.commands.errors.CommandNotFound: Command ".?" is not found
+01-27-2025 02:53:41 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session c9e8a9cf8bae65e49014ff32d1afedfe.

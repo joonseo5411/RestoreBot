@@ -60,4 +60,4 @@ async def callback():
     
 
 
-app.run(host="0.0.0.0", port=4404, use_reloader=False)
+app.run(host="0.0.0.0", port=4404, use_reloader=True)

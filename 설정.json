@@ -1,9 +1,9 @@
 {
     "botToken": "MTMyNDY0Mjc1MDAyODU3ODgxNg.GA0jp8.GBIsKiLdcesuqC1P_aGFgnZ_GQOEWNdJy-MmI8",
     "adminID": [955108737906012170],
-    "apiEndpoint": "https://discord.com/api/v9",
+    "apiEndpoint": "https://discord.com/api/v10",
     "clientID": "1324642750028578816",
-    "clientSecret": "ORoK8CkUJKSJgHaeqWE2vESBSu4qH9e1",
+    "clientSecret": "tnnpDuYai5ddms_c-XxeA9Fmn_2MK3YZ",
     "domain": "https://redirect.zita.kr",
     "restoreWebhook": "https://discord.com/api/webhooks/1324641451895951470/YuisU4VLlgWT9Oz1j0xUSdHFezmBgHlpK8eRf8-tasNO9OCEZJA3-9Ii-t23tuK52Jrn",
     "timeZone": "Asia/Seoul"

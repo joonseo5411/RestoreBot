@@ -122,3 +122,7 @@ class DB:
                     guilds.append(Object(guildID))
 
             return guilds
+
+def isExpired(func):
+    def wrapper(*args):
+        print(args)

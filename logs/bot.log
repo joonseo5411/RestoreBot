@@ -473,3 +473,37 @@ discord.app_commands.errors.CommandInvokeError: Command '설정' raised an excep
 01-27-2025 12:15:50 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
 01-27-2025 12:15:50 PM:INFO:function.logger: Successful getting verify guild id
 01-27-2025 12:15:50 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:01:22 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:01:22 PM:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0xfa1735a83a70>, 123616.298568528)])']
+connector: <aiohttp.connector.TCPConnector object at 0xfa173621e720>
+01-27-2025 04:01:57 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:01:58 PM:ERROR:asyncio: Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0xe3aa5cdd7890>, 123651.947352587)])']
+connector: <aiohttp.connector.TCPConnector object at 0xe3aa5d117830>
+01-27-2025 04:07:16 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:07:17 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3c30fd096a7726b7312949b8b68fc46a).
+01-27-2025 04:07:20 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 04:07:20 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 04:07:20 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:11:12 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 04:11:43 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:11:45 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 47661ebdc70eb6b11fdc5c12d4c17158).
+01-27-2025 04:11:47 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 04:11:47 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 04:11:48 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:12:07 PM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:12:26 PM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:12:53 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='웹훅설정' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 79, in webhookSetting
+    return await i.response.send_modal(wbhookModal())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 1041, in send_modal
+    await adapter.create_interaction_response(
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.placeholder: Must be 100 or fewer in length.

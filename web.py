@@ -4,8 +4,6 @@ from quart import render_template
 
 from function import *
 
-from function import setting
-
 app = Quart('Restore Web')
 
 @app.route("/")
@@ -23,6 +21,7 @@ async def callback():
         getIp()
     ]
     exchangeRes = await exchange_code(code, f"{setting().base_url}/callback")
+    logger.info(str(exchangeRes))
     guild, ip = await asyncio.gather(*task)
 
     if not exchangeRes:

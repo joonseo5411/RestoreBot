@@ -99,7 +99,14 @@ class DB:
 
             return True
 
-
+    @classmethod
+    async def getGuildInfo(cls, guildID):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT * FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
+                data = await cursor.fetchone()
+                if not data:
+                    return False
+                return data
 
     @classmethod
     async def getGuildRegister(cls):

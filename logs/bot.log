@@ -111,3 +111,15 @@ HKN3T-2cC8K-PsvVW-pICu4 99일
 01-26-2025 10:32:09 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
 01-26-2025 10:32:09 PM:INFO:function.logger: Successful getting verify guild id
 01-26-2025 10:32:10 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 02:10:26 PM:INFO:discord.client: logging in using static token
+01-27-2025 02:10:27 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 61be23ecc1cd7e02255a9ce5f54e7db8).
+01-27-2025 02:10:30 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 02:10:30 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 02:10:30 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 02:13:21 PM:INFO:discord.client: logging in using static token
+01-27-2025 02:13:22 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c9e8a9cf8bae65e49014ff32d1afedfe).
+01-27-2025 02:13:25 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 02:13:25 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 02:13:25 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 02:21:35 PM:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command ".?" is not found

@@ -121,7 +121,7 @@ async def restoreSetting(i: discord.Interaction):
 
 @bot.command(name="생성")
 async def createLicense(ctx, days: int, amount:int = 1):
-    if not bot.is_owner:
+    if not ctx.author.id in setting().admin_id:
         return
 
     result = await DB.createLicense(days, amount)

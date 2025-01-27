@@ -25,8 +25,8 @@ class settingBtn:
                 pass
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False
-        roleName = "Setting need" if not role else role.name
-        roleID = "Setting need"if not role else role.id
+        roleName = "설정필요" if not role else role.name
+        roleID = "설정필요"if not role else role.id
             
         embed = discord.Embed(
             title="복구봇 설정하기",

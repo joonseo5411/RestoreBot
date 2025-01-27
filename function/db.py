@@ -51,16 +51,16 @@ class DB:
     @classmethod
     async def set_role(cls, role_id: int, guild_id: int):
         async with aiosqlite.connect(db_path) as db:
-            try:
-                await db.execute(
-                    "UPDATE restore SET role_id = ? WHERE guild_id = ?",
-                    (role_id, guild_id)
-                )
+            async with db.execute("UPDATE restore SET role_id = ? WHERE guild_id = ?", (role_id, guild_id)) as cursor:
                 await db.commit()
                 return True
-            except Exception as e:
-                logger.error(f"{guild_id} 서버에서 에러가 발생했어요. ({e})")
-                return e
+
+    @classmethod
+    async def set_webhook(cls, webhook: list, guildID: int):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("UPDATE restore SET webhook = ? WHERE guild_id = ?", (str(webhook), guildID)) as cursor:
+                await db.commit()
+                return True
 
     @classmethod
     async def createLicense(cls, days: int, amount: int):        

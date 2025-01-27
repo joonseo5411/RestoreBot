@@ -113,7 +113,7 @@ async def register(i: discord.Interaction):
             return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 
-@bot.tree.command(name="설정", description="ᅵ서버 정보를 수정")
+@bot.tree.command(name="설정", description="⚙️ᅵ서버 정보를 수정")
 @discord.app_commands.guild_only()
 @commands.has_permissions(administrator=True)
 async def restoreSetting(i: discord.Interaction):

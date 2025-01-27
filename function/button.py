@@ -65,7 +65,7 @@ class settingBtn:
 
             @discord.ui.button(label="웹훅설정", emoji="💬", style=discord.ButtonStyle.blurple)
             async def webhookSetting(self, i: discord.Interaction, btn: discord.ui.Button):
-                class wbhookModal(discord.ui.Modal, title = "🔰ㅣ역할설정"):
+                class wbhookModal(discord.ui.Modal, title = "💬ㅣ웹훅설정"):
                     wbhook = discord.ui.TextInput(
                         label="웹후크 URI를 적어주세요.",
                         style=discord.TextStyle.short,

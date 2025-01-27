@@ -1,126 +1,294 @@
-01-26-2025 07:15:03 AM:INFO:discord.client: logging in using static token
-01-26-2025 07:15:05 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 0ffde42b66621865a3d8be74e9c6093c).
-01-26-2025 07:15:08 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 07:15:08 AM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 07:15:08 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 07:15:57 AM:INFO:function.logger: rfnyf-595tT-V6B5I-kQa4D
-01-26-2025 07:15:57 AM:INFO:function.logger: None
-01-26-2025 07:36:22 AM:INFO:discord.client: logging in using static token
-01-26-2025 07:36:24 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 36b8a7e10b189f44b5252be2956213d6).
-01-26-2025 07:36:26 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 07:36:26 AM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 07:36:27 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 07:47:47 AM:INFO:function.logger: e262t-QbDz2-ZJJtD-oxCiW
-01-26-2025 07:47:47 AM:INFO:function.logger: None
-01-26-2025 08:04:07 AM:INFO:discord.client: logging in using static token
-01-26-2025 08:04:08 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d6b79bb5d6eaf433792f84ea0b49cd2c).
-01-26-2025 08:04:11 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 08:04:11 AM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 08:04:12 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 08:04:25 AM:INFO:discord.client: logging in using static token
-01-26-2025 08:04:26 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c4a4769af24637526959e8fea5fbcaeb).
-01-26-2025 08:04:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 08:04:28 AM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 08:05:12 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 11:52:10 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session c4a4769af24637526959e8fea5fbcaeb.
-01-26-2025 09:26:53 PM:INFO:discord.client: logging in using static token
-01-26-2025 09:26:54 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 10164f40f45324297a6e981b6cccc508).
-01-26-2025 09:26:57 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 09:26:57 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 09:26:57 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 09:27:20 PM:INFO:discord.client: logging in using static token
-01-26-2025 09:27:21 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: cfa566d3701ea6b70cd6a0ca2d9ba7b6).
-01-26-2025 09:27:24 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 09:27:24 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 09:27:57 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 09:34:10 PM:INFO:discord.client: logging in using static token
-01-26-2025 09:34:11 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a9c223622b10f95fe5a49914aa85ab6b).
-01-26-2025 09:34:14 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 09:34:14 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 09:34:14 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 09:34:32 PM:INFO:function.logger: None
-01-26-2025 09:35:08 PM:INFO:function.logger: None
-01-26-2025 09:43:19 PM:INFO:function.logger: None
-01-26-2025 09:57:51 PM:INFO:discord.client: logging in using static token
-01-26-2025 09:57:53 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2fb1aa124a624ea441f9e3a81520fe87).
-01-26-2025 09:57:55 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 09:57:55 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 09:57:56 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:12:09 PM:INFO:function.logger: None
-01-26-2025 10:15:05 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:15:08 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 840a22042c27a6c1898b49d44f88670f).
-01-26-2025 10:15:10 PM:ERROR:discord.client: Ignoring exception in on_ready
+01-27-2025 06:17:26 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:17:28 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 9335a4ade54b0b993aca0627fa15c32a).
+01-27-2025 06:17:30 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:17:30 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:17:31 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:17:38 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/dist-packages/discord/client.py", line 449, in _run_event
-    await coro(*args, **kwargs)
-  File "/root/Desktop/restore/RestoreBot/main.py", line 25, in on_ready
-    await DB.create_table()
-  File "/root/Desktop/restore/RestoreBot/function/db.py", line 28, in create_table
-    await db.execute('''CREATE TABLE IF NOT EXISTS restore_license (
-  File "/usr/local/lib/python3.10/dist-packages/aiosqlite/core.py", line 193, in execute
-    cursor = await self._execute(self._conn.execute, sql, parameters)
-  File "/usr/local/lib/python3.10/dist-packages/aiosqlite/core.py", line 132, in _execute
-    return await future
-  File "/usr/local/lib/python3.10/dist-packages/aiosqlite/core.py", line 115, in run
-    result = function()
-sqlite3.OperationalError: near "KRY": syntax error
-01-26-2025 10:16:10 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:16:12 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 28126477e4bf986be1043028c85e9e04).
-01-26-2025 10:16:14 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:16:14 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:16:15 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:16:29 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:16:31 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c862b1fcf782c1c216a1126f8e514163).
-01-26-2025 10:16:33 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:16:33 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:17:15 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:19:23 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:19:24 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 0591db33d7cc63990771baddd82ab662).
-01-26-2025 10:19:27 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:19:27 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:19:27 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:19:48 PM:INFO:function.logger: jnMWd-P1hQG-Jodf2-ZnC71-lYA4G
-01-26-2025 10:20:04 PM:INFO:function.logger: 6hgIW-z1m44-45UWB-Epuez-7IQqY 99일
-cHHI5-gFUgS-JoOgS-I43Cv-PnDYH
-01-26-2025 10:24:24 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:24:25 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 43c2ee8c2cc7f388b07f0d39bb0e31d8).
-01-26-2025 10:24:28 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:24:28 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:24:28 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:24:38 PM:INFO:function.logger: Gz6Je-eHd2K-2aDdJ-ErhBi-ftmqn 99일
-bIrAr-vj0HZ-uWPPM-BBmV0-bbZP2 99일
-01-26-2025 10:26:15 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:26:17 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 083672060a291e4e61d9d1cfcc5e17a2).
-01-26-2025 10:26:19 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:26:19 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:26:19 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:26:23 PM:INFO:function.logger: uCXgq-mtzid-zl1aK-ljL2U 99일
-HKN3T-2cC8K-PsvVW-pICu4 99일
-01-26-2025 10:26:52 PM:INFO:function.logger: ('uCXgq-mtzid-zl1aK-ljL2U', 8553600)
-01-26-2025 10:26:52 PM:ERROR:function.logger: Failed to register guild 1316272008471904286 with license uCXgq-mtzid-zl1aK-ljL2U: no such column: key
-01-26-2025 10:28:31 PM:INFO:function.logger: ('uCXgq-mtzid-zl1aK-ljL2U', 8553600)
-01-26-2025 10:28:32 PM:ERROR:function.logger: Failed to register guild 1316272008471904286 with license uCXgq-mtzid-zl1aK-ljL2U: no such column: key
-01-26-2025 10:28:42 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:28:43 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 87a63c42553a246d4bd8778a8bf37416).
-01-26-2025 10:28:46 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:28:46 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:28:46 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-26-2025 10:29:10 PM:INFO:function.logger: ('uCXgq-mtzid-zl1aK-ljL2U', 8553600)
-01-26-2025 10:32:06 PM:INFO:discord.client: logging in using static token
-01-26-2025 10:32:07 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 72702ee8160afcf3e09a43f2a104a661).
-01-26-2025 10:32:09 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-26-2025 10:32:09 PM:INFO:function.logger: Successful getting verify guild id
-01-26-2025 10:32:10 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-27-2025 02:10:26 PM:INFO:discord.client: logging in using static token
-01-27-2025 02:10:27 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 61be23ecc1cd7e02255a9ce5f54e7db8).
-01-27-2025 02:10:30 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-27-2025 02:10:30 PM:INFO:function.logger: Successful getting verify guild id
-01-27-2025 02:10:30 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-27-2025 02:13:21 PM:INFO:discord.client: logging in using static token
-01-27-2025 02:13:22 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c9e8a9cf8bae65e49014ff32d1afedfe).
-01-27-2025 02:13:25 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
-01-27-2025 02:13:25 PM:INFO:function.logger: Successful getting verify guild id
-01-27-2025 02:13:25 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
-01-27-2025 02:21:35 PM:ERROR:discord.ext.commands.bot: Ignoring exception in command None
-discord.ext.commands.errors.CommandNotFound: Command ".?" is not found
-01-27-2025 02:53:41 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session c9e8a9cf8bae65e49014ff32d1afedfe.
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 61, in btn
+    async def webhookSetting(self, i: discord.Interaction, btn: discord.ui.Button):
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+01-27-2025 06:17:57 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='역할설정' emoji=<PartialEmoji animated=False name='🔰' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 34, in roleSetting
+    class setr0le(discord.ui.view):
+TypeError: module() takes at most 2 arguments (3 given)
+01-27-2025 06:19:57 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:19:58 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3204fb31e7dc6d99d2afd75ab4ff385c).
+01-27-2025 06:20:00 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:20:00 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:20:01 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:20:06 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 61, in btn
+    async def webhookSetting(self, i: discord.Interaction, btn: discord.ui.Button):
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+01-27-2025 06:21:45 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:21:47 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: fc34246019f1720a7247ae411adb30ce).
+01-27-2025 06:21:49 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:21:49 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:21:51 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:22:17 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 77, in btn
+    await self.i.response.send_message(embed=embed, view=SetBtn(), ephemeral=True)
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 221, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+01-27-2025 06:22:22 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='역할설정' emoji=<PartialEmoji animated=False name='🔰' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 43, in roleSetting
+    style=discord.TextStyle.short,
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.options: This field is required
+01-27-2025 06:24:22 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:24:23 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 9b5f6d52f13863c0a5f3de1899198aaf).
+01-27-2025 06:24:26 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:24:26 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:24:26 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:32:34 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 61, in btn
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+01-27-2025 06:34:19 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:34:21 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: db0cada57ee818c0d9c6c35e12b845b3).
+01-27-2025 06:34:23 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:34:23 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:34:24 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:34:42 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 61, in btn
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 221, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+01-27-2025 06:35:02 PM:ERROR:discord.ui.modal: Ignoring exception in modal <roleModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 50, in on_submit
+    num = int(num)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'TextInput'
+01-27-2025 06:35:33 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:35:35 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 00b7df7be539edd5789d9153eb119b8e).
+01-27-2025 06:35:37 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:35:37 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:35:38 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:36:10 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 80, in btn
+    await self.i.response.send_message(embed=embed, view=SetBtn(), ephemeral=True)
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 221, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+01-27-2025 06:36:12 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='역할설정' emoji=<PartialEmoji animated=False name='🔰' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 43, in roleSetting
+    style=discord.TextStyle.short,
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.options: This field is required
+01-27-2025 06:36:19 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='역할설정' emoji=<PartialEmoji animated=False name='🔰' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 43, in roleSetting
+    style=discord.TextStyle.short,
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.options: This field is required
+01-27-2025 06:36:32 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 80, in btn
+    await self.i.response.send_message(embed=embed, view=SetBtn(), ephemeral=True)
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+01-27-2025 06:36:34 PM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='역할설정' emoji=<PartialEmoji animated=False name='🔰' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 43, in roleSetting
+    style=discord.TextStyle.short,
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.options: This field is required
+01-27-2025 06:36:59 PM:INFO:discord.client: logging in using static token
+01-27-2025 06:37:00 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 4e4f4fbd38521284ba8f081185c936a8).
+01-27-2025 06:37:02 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 06:37:02 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 06:37:03 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 06:37:09 PM:ERROR:discord.app_commands.tree: Ignoring exception in command '설정'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/root/Desktop/restore/RestoreBot/main.py", line 120, in restoreSetting
+    await settingBtn(i).btn()
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 61, in btn
+    await i.response.send_message(embed=embed, view=setr0le(), ephemeral=True)
+  File "/usr/local/lib/python3.10/dist-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/usr/local/lib/python3.10/dist-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/usr/local/lib/python3.10/dist-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '설정' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+01-27-2025 06:37:16 PM:ERROR:discord.ui.modal: Ignoring exception in modal <roleModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/root/Desktop/restore/RestoreBot/function/button.py", line 51, in on_submit
+    num = int(num)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'TextInput'

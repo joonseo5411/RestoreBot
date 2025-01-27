@@ -117,7 +117,7 @@ async def register(i: discord.Interaction):
 @discord.app_commands.guild_only()
 @commands.has_permissions(administrator=True)
 async def restoreSetting(i: discord.Interaction):
-    await settingBtn(i).roleSetting()
+    await settingBtn(i).btn()
 
 @bot.command(name="생성")
 async def createLicense(ctx, days: int, amount:int = 1):

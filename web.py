@@ -19,11 +19,11 @@ async def callback():
     state = int(request.args.get('state'))
 
     task = [
-        exchange_code(code, f"{setting().base_url}/callback"),
         serverCheck(state),
         getIp()
     ]
-    exchangeRes, guild, ip = await asyncio.gather(*task)
+    exchangeRes = await exchange_code(code, f"{setting().base_url}/callback")
+    guild, ip = await asyncio.gather(*task)
 
     if not exchangeRes:
         return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404

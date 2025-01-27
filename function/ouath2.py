@@ -3,6 +3,7 @@ from quart import request
 from datetime import datetime
 from datetime import timedelta
 from .setting import setting
+from .logger import logger
 import requests
 import asyncio
 import aiohttp
@@ -60,6 +61,7 @@ async def exchange_code(code, redirect_url):
         
                 # retry error command
                 limitinfo = response.json()
+                logger.info(limitinfo)
                 await asyncio.sleep(limitinfo["retry_after"] + 2)
 
                 return False if "error" in response.json() else response.json()

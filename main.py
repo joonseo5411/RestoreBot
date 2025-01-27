@@ -50,15 +50,15 @@ async def verify(i: discord.Interaction):
         description=f"Please authorize your account [here]({url}) to see other channels.\n다른 채널을 보려면 [여기]({url}) 를 눌러 계정을 인증해주세요."
     )
 
-    class verify(discord.ui.View):
+    class verifyBtn(discord.ui.View):
         def __init__(self):
             super().__init__(timeout=None)
         
         @discord.ui.button(label="인증하기", style=discord.ButtonStyle.link, emoji="🌐", url=url)
-        async def verifyBtn(self, i: discord.Interaction, btn: discord.ui.Button):
+        async def verifyLink(self, i: discord.Interaction, btn: discord.ui.Button):
             pass
 
-    await i.channel.send(embed=embed, view=verify())
+    await i.channel.send(embed=embed, view=verifyBtn())
     embed = discord.Embed(title="출력 완료")
     return await msg.edit(content="출력 완료")
 

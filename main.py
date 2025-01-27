@@ -55,6 +55,7 @@ async def verify(i: discord.Interaction):
     view.add_item(button)
 
     await i.channel.send(embed=embed, view=view)
+    embed = discord.Embed(title="출력 완료")
     return await msg.edit(content="출력 완료")
 
 @bot.tree.command(name='등록', description='📥ㅣ서버를 등록 합니다.')

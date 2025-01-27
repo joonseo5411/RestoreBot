@@ -44,17 +44,21 @@ async def verify(i: discord.Interaction):
     msg = await i.original_response()
 
     setting = setting()
-    verfiy = f'https://discord.com/api/oauth2/authorize?client_id={setting.client_id}&redirect_uri={setting.base_url}%2Fcallback&response_type=code&scope=identify+email+guilds.join&state={i.guild.id}'
+    url = f'https://discord.com/api/oauth2/authorize?client_id={setting.client_id}&redirect_uri={setting.base_url}%2Fcallback&response_type=code&scope=identify+email+guilds.join&state={i.guild.id}'
     embed = discord.Embed(
         title=f"{i.guild.name}",
-        description=f"Please authorize your account [here]({verfiy}) to see other channels.\n다른 채널을 보려면 [여기]({verfiy}) 를 눌러 계정을 인증해주세요."
+        description=f"Please authorize your account [here]({url}) to see other channels.\n다른 채널을 보려면 [여기]({url}) 를 눌러 계정을 인증해주세요."
     )
 
-    button = discord.ui.Button(style=discord.ButtonStyle.link,label="인증하기",disabled=False, emoji="🌐", url=verfiy)
-    view = discord.ui.View()
-    view.add_item(button)
+    class verify(discord.ui.View):
+        def __init__(self):
+            super().__init__(timeout=None)
+        
+        @discord.ui.button(label="인증하기", style=discord.ButtonStyle.link, emoji="🌐", url=url)
+        async def verifyBtn(self, i: discord.Interaction, btn: discord.ui.Button):
+            pass
 
-    await i.channel.send(embed=embed, view=view)
+    await i.channel.send(embed=embed, view=verify())
     embed = discord.Embed(title="출력 완료")
     return await msg.edit(content="출력 완료")
 

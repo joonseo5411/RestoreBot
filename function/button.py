@@ -129,7 +129,7 @@ class settingBtn:
         roleID = "설정필요"if not role else role.id
         webhook = '설정필요' if not webhook[0] else webhook[0]
         KST= pytz.timezone(setting().timeZone)
-        expireDate = datetime.fromtimestamp(data[4]).astimezone(KST).strftime("%Y-%m-%d %H:%M")
+        expireDate = '등록필요' if not data[4] else datetime.fromtimestamp(data[4]).astimezone(KST).strftime("%Y-%m-%d %H:%M")
 
         embed = discord.Embed(
             title="복구봇 설정하기",

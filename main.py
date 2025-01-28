@@ -99,11 +99,11 @@ async def register(i: discord.Interaction):
             return await interaction.response.send_message(embed=embed, ephemeral=True)
     return await i.response.send_modal(registerModal())
 
-@bot.tree.command(name="설정", description="⚙️ᅵ서버 정보를 수정")
+@bot.tree.command(name="설정", description="⚙️ᅵ서버 정보를 수정 합니다.")
 @discord.app_commands.guild_only()
 @commands.has_permissions(administrator=True)
 async def restoreSetting(i: discord.Interaction):
-    await settingBtn(i).btn()
+    return await settingBtn(i).btn()
 
 @bot.command(name="생성")
 async def createLicense(ctx, days: int, amount:int = 1):

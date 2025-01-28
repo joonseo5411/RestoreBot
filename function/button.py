@@ -88,10 +88,6 @@ class settingBtn:
             
             @discord.ui.button(label="라이센스 연장/등록", row=1, style=discord.ButtonStyle.green, emoji="⏰")
             async def addLicense(self, i: discord.Interaction, btn: discord.ui.Button):
-                if not data[4]:
-                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
-                    return await i.response.send_message(embed=embed, ephemeral=True)
-                
                 class registerModal(discord.ui.Modal, title='⏰ㅣ연장/등록하기'):
                     licenseVar = discord.ui.TextInput(
                         label='라이센스 키를 입력 해 주세요.',

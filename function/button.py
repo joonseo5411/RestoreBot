@@ -21,7 +21,7 @@ class settingBtn:
             @discord.ui.button(label="역할설정", emoji="🔰", style=discord.ButtonStyle.blurple)
             async def roleSetting(self, i: discord.Interaction, btn: discord.ui.Button):
                 if not data[4]:
-                    embed = discord.Embed(title=":warning: Not register", description="- Please register ", color=discord.Color.red())
+                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
                 
                 bot = []
@@ -70,7 +70,7 @@ class settingBtn:
             @discord.ui.button(label="웹훅설정", emoji="💬", style=discord.ButtonStyle.blurple)
             async def webhookSetting(self, i: discord.Interaction, btn: discord.ui.Button):
                 if not data[4]:
-                    embed = discord.Embed(title=":warning: Not register", description="- Please register ", color=discord.Color.red())
+                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
                 
                 class wbhookModal(discord.ui.Modal, title = "🔰ㅣ역할설정"):
@@ -86,13 +86,13 @@ class settingBtn:
                         return await interaction.response.send_message(content="- 성공적으로 설정을 완료 했어요.\n- `/설정` 명령어를 통해 변경된 내용을 볼 수 있어요.", ephemeral=True)
                 return await i.response.send_modal(wbhookModal())
             
-            @discord.ui.button(label="add license", row=1, style=discord.ButtonStyle.green, emoji=None)
+            @discord.ui.button(label="라이센스 연장/등록", row=1, style=discord.ButtonStyle.green, emoji="⏰")
             async def addLicense(self, i: discord.Interaction, btn: discord.ui.Button):
                 if not data[4]:
-                    embed = discord.Embed(title=":warning: Not register", description="- Please register ", color=discord.Color.red())
+                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
                 
-                class registerModal(discord.ui.Modal, title='📥ㅣ등록하기'):
+                class registerModal(discord.ui.Modal, title='⏰ㅣ연장/등록하기'):
                     licenseVar = discord.ui.TextInput(
                         label='라이센스 키를 입력 해 주세요.',
                         style=discord.TextStyle.short,
@@ -117,10 +117,10 @@ class settingBtn:
                         return await interaction.response.send_message(embed=embed, ephemeral=True)
                 return await i.response.send_modal(registerModal())
             
-            @discord.ui.button(label="restore usr", style=discord.ButtonStyle.green, emoji=None, row=1)
+            @discord.ui.button(label="복구하기", style=discord.ButtonStyle.danger, emoji="👥", row=2)
             async def restoreUsr(self, i: discord.Interaction, btn: discord.ui.Button):
                 if not data[4]:
-                    embed = discord.Embed(title=":warning: Not register", description="- Please register ", color=discord.Color.red())
+                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False

@@ -14,7 +14,6 @@ class settingBtn:
     async def btn(self):
         data = await DB.getGuildInfo(self.i.guild_id)
         data = [str([]), str([False, False]), None, False, False, False] if not data else data
-        print(data)
         class SetBtn(discord.ui.View):
             def __init__(self):
                 super().__init__(timeout=None)
@@ -125,16 +124,12 @@ class settingBtn:
                     return await i.response.send_message(embed=embed, ephemeral=True)
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False
-        print(role)
         webhook = eval(data[1])
         roleName = "설정필요" if not role else role.name
         roleID = "설정필요" if not role else role.id
-        print(roleName, roleID)
         webhook = '설정필요' if not webhook[0] else webhook[0]
         KST= pytz.timezone(setting().timeZone)
         expireDate = '등록필요' if not data[4] else datetime.fromtimestamp(data[4]).astimezone(KST).strftime("%Y-%m-%d %H:%M")
-
-        print(expireDate)
 
         embed = discord.Embed(
             title="복구봇 설정하기",

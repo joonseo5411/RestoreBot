@@ -73,10 +73,10 @@ class settingBtn:
                     embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
                 
-                class wbhookModal(discord.ui.Modal, title = "🔰ㅣ역할설정"):
+                class wbhookModal(discord.ui.Modal, title = "💬ㅣ웹훅설정"):
                     wbhook = discord.ui.TextInput(
                         label="웹후크 URI를 적어주세요.",
-                        style=discord.TextStyle.short,
+                        style=discord.TextStyle.long,
                         placeholder="https://discord.com/api/webhooks/1333384349390864485/2H4UOGyQDStkfPFvNjuKJSwIxval-30NJrBa2Ijq8kKtBd2-0M-AXluwnNf6e4HJJae1"
                     )
 

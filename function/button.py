@@ -76,8 +76,8 @@ class settingBtn:
                 class wbhookModal(discord.ui.Modal, title = "💬ㅣ웹훅설정"):
                     wbhook = discord.ui.TextInput(
                         label="웹후크 URI를 적어주세요.",
-                        style=discord.TextStyle.long,
-                        placeholder="https://discord.com/api/webhooks/1333384349390864485/2H4UOGyQDStkfPFvNjuKJSwIxval-30NJrBa2Ijq8kKtBd2-0M-AXluwnNf6e4HJJae1"
+                        style=discord.TextStyle.short,
+                        placeholder=웹후크 URI"
                     )
 
                     async def on_submit(self, interaction: discord.Interaction):

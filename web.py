@@ -3,6 +3,7 @@ from quart import request
 from quart import render_template
 
 from function import *
+import time
 
 app = Quart('Restore Web')
 
@@ -13,44 +14,43 @@ async def main():
 @app.route("/callback")
 async def callback():
     """Callback User Data"""
-    code = request.args.get('code')
-    state = int(request.args.get('state'))
+    try:
+        code = str(request.args.get('code'))
+        state = int(request.args.get('state'))
+    except:
+        return await render_template('error.html', title='인증 실패', ERROR_MSG="잘못된 접근 입니다."), 404
 
     task = [
+        exchange_code(code, f"{setting().base_url}/callback"),
         serverCheck(state),
         getIp()
     ]
-    exchangeRes = await exchange_code(code, f"{setting().base_url}/callback")
-    logger.info(str(exchangeRes))
-    guild, ip = await asyncio.gather(*task)
+    exchangeRes, guild, ip = await asyncio.gather(*task)
 
     if not exchangeRes:
         return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
     
-    infoTask = [
-        getIpInfo(ip),
-        getUserProfile(exchangeRes['access_token'])
-    ]
+    if not guild:
+        return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
+
     try:
-        ipInfo, userInfo = await asyncio.gather(*infoTask)
-        logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
-    except:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG='올바르지 않는 인증 방법 입니다.'), 400
+        userInfo = await getUserProfile(exchangeRes['access_token'])
+        logger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+    except:return await render_template('error.html', title='인증 실패', ERROR_MSG='올바르지 않는 인증 방법 입니다.'), 400
     
     if not userInfo:
         return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
     
-    if not guild:
-        return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
-    
     try:
         role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
-    except:
-        return await render_template('error.html', title='인증실패', ERROR_MSG='등록 되지 않는 서버입니다.'), 400
+    except: return await render_template('error.html', title='인증실패', ERROR_MSG='등록 되지 않는 서버입니다.'), 400
+
     async def sendWebhook():
-        if not webhook:
-            return
-        await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest')
+        try: bool(webhook)
+        except:
+            await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+            await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', "https://discord.com/api/webhooks/1319277896325533789/m-4trAEfkd_Xb_aUqfKGPPuFFIbkMpr7APfWvhStGDJLYpK2kSyG-3h-PZPPq1x1fDht")
+
     task = [
         giveRoleToMember(state, int(userInfo['id']), role_id),
         sendWebhook()
@@ -60,4 +60,4 @@ async def callback():
     
 
 
-app.run(host="0.0.0.0", port=4404, use_reloader=True)
+app.run(host="0.0.0.0", port=4404, use_reloader=False)

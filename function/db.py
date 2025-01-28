@@ -35,18 +35,16 @@ class DB:
     @classmethod
     async def add_user(cls, user_id: int, refresh_token: str, guild_id: int):
         async with aiosqlite.connect(db_path) as db:
-            result = await db.execute(
-                "SELECT user_id, role_id, webhook FROM restore WHERE guild_id = ?", 
-                (guild_id)
-            )
-            response = await result.fetchone()
-            if not response:
-                return False
+            async with db.execute("SELECT user, role_id, webhook FROM restore WHERE guild_id = ?", (guild_id, )) as result:
+                response = await result.fetchone()
+                if not response:
+                    return False, False
 
-            user = eval(response[0]).append([user_id, refresh_token])
-            await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(user), guild_id))            
-            await db.commit()
-            return str(response[1]), str(eval(response[2])[1])
+                if not user_id in eval(response[0]):
+                    usrDB = eval(response[0]).append([user_id, refresh_token])
+                    await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(usrDB), guild_id))            
+                    await db.commit()
+                return str(response[1]), str(eval(response[2])[0])
 
     @classmethod
     async def set_role(cls, role_id: int, guild_id: int):
@@ -107,6 +105,19 @@ class DB:
                 if not data:
                     return False
                 return data
+    
+    @classmethod
+    async def isExpired(cls, guildID):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT expire_date FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
+                data = await cursor.fetchone()
+                if not data:
+                    return False
+                
+                if int(data[0]) > time.time():
+                    return True
+                
+                return False
 
     @classmethod
     async def getGuildRegister(cls):
@@ -122,7 +133,3 @@ class DB:
                     guilds.append(Object(guildID))
 
             return guilds
-
-def isExpired(func):
-    def wrapper(*args):
-        print(args)

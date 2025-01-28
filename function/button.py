@@ -77,7 +77,7 @@ class settingBtn:
                     wbhook = discord.ui.TextInput(
                         label="웹후크 URI를 적어주세요.",
                         style=discord.TextStyle.short,
-                        placeholder=웹후크 URI"
+                        placeholder="웹후크 URI"
                     )
 
                     async def on_submit(self, interaction: discord.Interaction):

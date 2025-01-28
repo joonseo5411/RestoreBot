@@ -13,7 +13,7 @@ class settingBtn:
     
     async def btn(self):
         data = await DB.getGuildInfo(self.i.guild_id)
-        data = [str([]), [False, False], None, False, False, False] if not data else data
+        data = [str([]), str([False, False]), None, False, False, False] if not data else data
         print(data)
         class SetBtn(discord.ui.View):
             def __init__(self):

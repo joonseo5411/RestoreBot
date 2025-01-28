@@ -116,6 +116,12 @@ class settingBtn:
                         embed.set_footer(text=f"Zita Restore", icon_url=f"https://cdn.discordapp.com/attachments/1317512746702733362/1322530302282956852/17.png?ex=67996b93&is=67981a13&hm=8d47a02d4943f4088678439522b2ce960c06b09679ef653624135cf0b6eb7318&")
                         return await interaction.response.send_message(embed=embed, ephemeral=True)
                 return await i.response.send_modal(registerModal())
+            
+            @discord.ui.button(label="restore usr", style=discord.ButtonStyle.green, emoji=None, row=1)
+            async def restoreUsr(self, i: discord.Interaction, btn: discord.ui.Button):
+                if not data[4]:
+                    embed = discord.Embed(title=":warning: Not register", description="- Please register ", color=discord.Color.red())
+                    return await i.response.send_message(embed=embed, ephemeral=True)
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False
         webhook = eval(data[1])

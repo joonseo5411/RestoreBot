@@ -117,7 +117,7 @@ class settingBtn:
                         return await interaction.response.send_message(embed=embed, ephemeral=True)
                 return await i.response.send_modal(registerModal())
             
-            @discord.ui.button(label="복구하기", style=discord.ButtonStyle.danger, emoji="👥", row=2)
+            @discord.ui.button(label="복구하기", style=discord.ButtonStyle.green, emoji="👥", row=1)
             async def restoreUsr(self, i: discord.Interaction, btn: discord.ui.Button):
                 if not data[4]:
                     embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())

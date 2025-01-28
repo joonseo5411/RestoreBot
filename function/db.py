@@ -75,27 +75,21 @@ class DB:
     @classmethod
     async def registerGuild(cls, guildID: int, licenseID: str):
         async with aiosqlite.connect(db_path) as db:
-            async with db.execute("SELECT user FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
-                guildData = await cursor.fetchone()
-                if guildData:
-                    return False
-
             async with db.execute("SELECT * FROM restore_license WHERE registerKEY = ?", (str(licenseID),)) as cursor:
                 licenseInfo = await cursor.fetchone()
                 logger.info(str(licenseInfo))
 
-            if not licenseInfo:
-                return False
+                if not licenseInfo:
+                    return False
 
-            await db.execute(
+                await db.execute(
                 "INSERT INTO restore (user, webhook, role_id, guild_id, expire_date, restoreKey) VALUES (?, ?, ?, ?, ?, ?)",
                 (str([]), str([False, False]), None, guildID, int(time.time() + int(licenseInfo[1])), cls.key_generate(5, 1))
             )
 
-            await db.execute("DELETE FROM restore_license WHERE registerKEY = ?", (licenseID,))
-            await db.commit()
-
-            return True
+                await db.execute("DELETE FROM restore_license WHERE registerKEY = ?", (licenseID,))
+                await db.commit()
+                return True
 
     @classmethod
     async def getGuildInfo(cls, guildID):

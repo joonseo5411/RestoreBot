@@ -1,4 +1,4 @@
-import requests 
+import aiohttp 
 
 async def send_webhook(
         username: str, content: str, avatarUrl: str,title: str, desc: str, webhook: str
@@ -15,12 +15,10 @@ async def send_webhook(
             'description': desc
         }
     ]
-    result = requests.post(url=webhook, json=data)
-
-    try:
-        result.raise_for_status()
-        return True
-    except requests.exceptions.HTTPError:
-        return False
-    else:
-        return False
+    async with aiohttp.ClientSession() as session:
+        async with session.post(url=webhook, json=data) as result:
+            try:
+                result.raise_for_status()
+                return True
+            except:
+                return False

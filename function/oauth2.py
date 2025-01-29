@@ -60,8 +60,6 @@ async def exchange_code(code, redirect_url):
                     break
         
                 # retry error command
-                limitinfo = response.json()
-                logger.info(str(limitinfo))
                 await asyncio.sleep(limitinfo["retry_after"] + 2)
 
         return False if "error" in data else data
@@ -88,37 +86,6 @@ async def getIp(request):
 
 async def getAgent():
     return request.user_agent.string
-
-async def isExpired(time):
-    ServerTime = serverTime()
-    ExpireTime = datetime.strptime(time, "%Y-%m-%d %H:%M")
-
-    return True if (ExpireTime - ServerTime).total_seconds() > 0 else False
-
-async def get_expiretime(time):
-    ServerTime = serverTime()
-    ExpireTime = datetime.strptime(time, "%Y-%m-%d %H:%M")
-
-    if (ExpireTime - ServerTime).total_seconds() > 0:
-        howLong = ExpireTime - ServerTime
-        days = howLong.days
-        hours = howLong.seconds // 3600
-        minutes = howLong.seconds // 60 - hours * 60
-        print(minutes)
-        return (
-            str(round(days)) + "Days" +
-            str(round(hours)) + "hours" +
-            str(round(minutes)) + "minutes"
-        )
-    else:
-        return False
-    
-async def make_expireitme(days):
-    return (serverTime() + timedelta(days=days)).strftime("%Y-%m-%d %H:%M")
-
-async def add_time(nowDays, addDays):
-    ExpireTime = datetime.strptime(nowDays, "%Y-%m-%d %H:%M")
-    return (ExpireTime + timedelta(days=addDays)).strftime("%Y-%m-%d %H:%M")
 
 async def getGuild(id):
     async with aiohttp.ClientSession() as session:

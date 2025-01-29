@@ -507,3 +507,950 @@ Traceback (most recent call last):
     raise HTTPException(response, data)
 discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
 In data.components.0.components.0.placeholder: Must be 100 or fewer in length.
+01-27-2025 04:36:44 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:36:46 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 5cb13dc3f66edd2c344fca07f770a524).
+01-27-2025 04:36:49 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 04:36:49 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 04:36:49 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:36:55 PM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:42:55 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:42:56 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1f07060cde4067b33b788817f73ab31f).
+01-27-2025 04:42:58 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 04:42:58 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 04:42:59 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:43:11 PM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:45:37 PM:INFO:discord.client: logging in using static token
+01-27-2025 04:45:38 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 5429555bf493b3b39751a4f43bc7ad63).
+01-27-2025 04:45:41 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-27-2025 04:45:41 PM:INFO:function.logger: Successful getting verify guild id
+01-27-2025 04:45:41 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-27-2025 04:45:47 PM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:52:25 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 04:53:51 PM:INFO:function.logger: 74llc-oF4Vy-SmP6k-1yXOV 99일
+01-27-2025 04:54:15 PM:INFO:function.logger: ('74llc-oF4Vy-SmP6k-1yXOV', 8553600)
+01-27-2025 04:54:21 PM:INFO:function.logger: jonso541(955108737906012170) 님이 스태프 전용 서버(1313453319687114763)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 04:56:00 PM:INFO:function.logger: jonso541(955108737906012170) 님이 스태프 전용 서버(1313453319687114763)에서 인증 명령어를 실행 하셨습니다.
+01-27-2025 05:25:04 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 05:36:51 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 05:37:21 PM:INFO:function.logger: None
+01-27-2025 05:38:03 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 05:54:43 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 05:55:05 PM:INFO:function.logger: None
+01-27-2025 05:57:53 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 05:58:01 PM:INFO:function.logger: None
+01-27-2025 05:58:24 PM:INFO:function.logger: None
+01-27-2025 06:00:37 PM:INFO:function.logger: None
+01-27-2025 06:08:19 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-27-2025 06:08:32 PM:INFO:function.logger: None
+01-28-2025 04:11:49 AM:INFO:function.logger: None
+01-28-2025 04:26:05 AM:INFO:function.logger: None
+01-28-2025 06:04:07 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:04:08 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c956827c6521a5bf22eacb17dffcedec).
+01-28-2025 06:04:11 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:04:11 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:04:12 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:04:21 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:04:23 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 47, in verify
+    setting = setting()
+              ^^^^^^^
+UnboundLocalError: cannot access local variable 'setting' where it is not associated with a value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: UnboundLocalError: cannot access local variable 'setting' where it is not associated with a value
+01-28-2025 06:05:20 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:05:21 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: f49db5a519e57dd81b1da547efe3871b).
+01-28-2025 06:05:24 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:05:24 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:05:25 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:05:27 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:05:27 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 54, in verify
+    class verifyBtn(discord.ui.View):
+  File "/home/ubuntu/js/RestoreBot/main.py", line 58, in verifyBtn
+    @discord.ui.button(label="인증하기", style=discord.ButtonStyle.link, emoji="🌐", url=url)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: button() got an unexpected keyword argument 'url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: button() got an unexpected keyword argument 'url'
+01-28-2025 06:05:43 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:05:44 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d7f3fbf8dfc516ab83abc29dcba2ca4c).
+01-28-2025 06:05:47 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:05:47 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:05:59 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:06:00 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 54, in verify
+    class verifyBtn(discord.ui.View):
+  File "/home/ubuntu/js/RestoreBot/main.py", line 58, in verifyBtn
+    @discord.ui.button(label="인증하기", style=discord.ButtonStyle.link, emoji="🌐", uri=url)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: button() got an unexpected keyword argument 'uri'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: button() got an unexpected keyword argument 'uri'
+01-28-2025 06:06:25 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:07:34 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:07:35 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 7659568056567c4da4e850b5f4783e92).
+01-28-2025 06:07:37 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:07:37 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:07:38 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:07:41 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:07:42 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 47, in verify
+    setting = setting()
+              ^^^^^^^
+UnboundLocalError: cannot access local variable 'setting' where it is not associated with a value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: UnboundLocalError: cannot access local variable 'setting' where it is not associated with a value
+01-28-2025 06:08:25 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:08:26 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1d63693a1e6ae151c60a2c8a757bf4d1).
+01-28-2025 06:08:29 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:08:29 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:08:30 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:08:30 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:08:31 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 54, in verify
+    class verifyBtn(discord.ui.View):
+  File "/home/ubuntu/js/RestoreBot/main.py", line 58, in verifyBtn
+    @discord.ui.button(label="인증하기", style=discord.ButtonStyle.link, emoji="🌐", url=url)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: button() got an unexpected keyword argument 'url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: button() got an unexpected keyword argument 'url'
+01-28-2025 06:10:24 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:10:25 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 809bd685e6e1835cb4224104fe0e924e).
+01-28-2025 06:10:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:10:28 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:10:28 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:10:30 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:11:18 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:11:19 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2b5cf82227e63a25c2818bcfa2eb8727).
+01-28-2025 06:11:22 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:11:22 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:11:22 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:11:23 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:13:59 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:14:00 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 89bb39db551f94d7ed8ff39d23d4b944).
+01-28-2025 06:14:03 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:14:03 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:14:03 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:14:12 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita Service(1316272008471904286)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:16:11 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:16:13 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3e479be3e1e579a982c62a1bafd7d292).
+01-28-2025 06:34:41 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:34:53 AM:INFO:function.logger: None
+01-28-2025 06:35:40 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:35:45 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:35:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:35:52 AM:INFO:function.logger: None
+01-28-2025 06:36:34 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:36:38 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:36:40 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:36:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:36:54 AM:INFO:function.logger: <coroutine object ClientResponse.json at 0xe6c031bb3cd0>
+01-28-2025 06:36:54 AM:INFO:function.logger: None
+01-28-2025 06:37:19 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:25 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:27 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:33 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:34 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:36 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:37:41 AM:INFO:function.logger: None
+01-28-2025 06:38:00 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:38:04 AM:INFO:function.logger: None
+01-28-2025 06:38:10 AM:INFO:function.logger: None
+01-28-2025 06:39:02 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:39:18 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:46:20 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 06:48:30 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:48:31 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a36837bc92c141a11f1f10458a4fc8e2).
+01-28-2025 06:48:34 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:48:34 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 43, in verify
+    await isExpired(i, i.guild_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isExpired() takes 1 positional argument but 2 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: isExpired() takes 1 positional argument but 2 were given
+01-28-2025 06:48:34 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:48:34 AM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 32, in on_ready
+    guilds = await DB.getGuildRegister()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 135, in getGuildRegister
+    guilds.append(Object(guildID))
+                  ^^^^^^
+NameError: name 'Object' is not defined. Did you mean: 'object'?
+01-28-2025 06:48:47 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:48:48 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c97dd855cc44aad2a325521dd47fa210).
+01-28-2025 06:48:51 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:48:51 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:48:52 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:48:53 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:48:53 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 43, in verify
+    await isExpired(i, i.guild_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isExpired() takes 1 positional argument but 2 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: isExpired() takes 1 positional argument but 2 were given
+01-28-2025 06:49:26 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:49:28 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 0e8fa3c214559fd0a2dd64f7a6e6d049).
+01-28-2025 06:49:31 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:49:31 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:49:31 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:49:45 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:49:46 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 615fb45f22c831d5175f95250aa30dca).
+01-28-2025 06:49:49 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:49:49 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:49:51 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:49:53 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a6d947cbdc22b40360ecc0df52a5f058).
+01-28-2025 06:49:56 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:49:56 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:49:56 AM:WARNING:discord.http: We are being rate limited. PUT https://discord.com/api/v10/applications/1324642750028578816/commands responded with 429. Retrying in 5.07 seconds.
+01-28-2025 06:50:42 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:50:42 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 43, in verify
+    await isExpired(i)
+  File "/home/ubuntu/js/RestoreBot/function/ouath2.py", line 96, in isExpired
+    ExpireTime = datetime.strptime(time, "%Y-%m-%d %H:%M")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not Interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: strptime() argument 1 must be str, not Interaction
+01-28-2025 06:51:01 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:51:42 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:51:43 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: f32d8402c7fdca2fae37a0252efb09b6).
+01-28-2025 06:51:46 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:51:46 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:51:46 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:51:48 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:51:48 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 49, in verify
+    await isExpired(i)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 30, in isExpired
+    embed = Embed(title="⚠️ㅣ라이센스 만료", description="- `/설정`을(를) 통해 라이센스를 연장 하세요.", color=Color.red())
+            ^^^^^
+NameError: name 'Embed' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: NameError: name 'Embed' is not defined
+01-28-2025 06:52:01 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:52:02 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 14834dd5406502b3026e41738917fd48).
+01-28-2025 06:52:05 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:52:05 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:52:47 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 06:55:05 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 06:55:08 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 50, in verify
+    await i.response.send_message("출력 준비 중", ephemeral=True)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 827, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: InteractionResponded: This interaction has already been responded to before
+01-28-2025 06:58:35 AM:INFO:discord.client: logging in using static token
+01-28-2025 06:58:37 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1982942a61486b82abe89eb8fc34bc22).
+01-28-2025 06:58:40 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 06:58:40 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 06:58:40 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-28-2025 07:02:12 AM:INFO:discord.client: logging in using static token
+01-28-2025 07:02:13 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2d0f2581c92fd754269da2e3bf1b3c17).
+01-28-2025 07:02:16 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 07:02:16 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 07:02:17 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-28-2025 07:02:30 AM:INFO:function.logger: YGu5p-az0rH-0f7Ph-nPLfo 9일
+01-28-2025 07:02:47 AM:INFO:discord.client: logging in using static token
+01-28-2025 07:02:48 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 506be8400f21771b3bd18d5bf63ee160).
+01-28-2025 07:02:51 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 07:02:51 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 07:02:51 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 07:14:17 AM:INFO:function.logger: ('YGu5p-az0rH-0f7Ph-nPLfo', 777600)
+01-28-2025 07:14:23 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 34, in wrapper
+    return await func(args)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 53, in verify
+    logger.info(f'{i.user.name}({i.user.id}) 님이 {i.guild.name}({i.guild.id})에서 인증 명령어를 실행 하셨습니다.')
+                   ^^^^^^
+AttributeError: 'tuple' object has no attribute 'user'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: AttributeError: 'tuple' object has no attribute 'user'
+01-28-2025 07:15:03 AM:INFO:discord.client: logging in using static token
+01-28-2025 07:15:04 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: cdbb2b47e627e117c6d58db6ff3395a4).
+01-28-2025 07:15:07 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 07:15:07 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 07:15:08 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 07:15:10 AM:ERROR:discord.app_commands.tree: Ignoring exception in command '인증'
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/main.py", line 33, in wrapper
+    return await func(interaction)
+                 ^^^^^^
+TypeError: verify() missing 1 required positional argument: 'i'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '인증' raised an exception: TypeError: verify() missing 1 required positional argument: 'i'
+01-28-2025 07:19:20 AM:INFO:discord.client: logging in using static token
+01-28-2025 07:19:21 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 436ac03ab45534dc987e6fb18c671289).
+01-28-2025 07:19:24 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 07:19:24 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 07:19:25 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 07:19:28 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 07:30:57 AM:INFO:function.logger: None
+01-28-2025 07:36:25 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 17, in callback
+    state = int(request.args.get('state'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+01-28-2025 07:37:03 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:41:22 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:41:52 AM:INFO:function.logger: None
+01-28-2025 07:42:20 AM:INFO:function.logger: None
+01-28-2025 07:45:35 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:48:21 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 07:48:27 AM:INFO:function.logger: None
+01-28-2025 07:49:13 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:49:18 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:50:17 AM:INFO:function.logger: {'token_type': 'Bearer', 'access_token': 'Mw2PpcrgFBnqKbirInAoGaoEimhrkm', 'expires_in': 604800, 'refresh_token': 'jL1Ozns4GYJqfFm1pYkwibDFZaVMwb', 'scope': 'identify email guilds.join'}
+01-28-2025 07:50:52 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:55:24 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 07:55:32 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 37, in callback
+    ipInfo, userInfo = await asyncio.gather(*infoTask)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/ouath2.py", line 139, in getUserProfile
+    return False if response.status_code != 200 else response.json()
+                    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ClientResponse' object has no attribute 'status_code'
+01-28-2025 08:00:48 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:02:22 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 27, in callback
+    exchangeRes, guild, ip = await asyncio.gather(*task)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/ouath2.py", line 30, in serverCheck
+    for guild in guilds:
+TypeError: 'coroutine' object is not iterable
+01-28-2025 08:08:25 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:09:53 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:10:04 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 23, in callback
+    exchange_code(code, f"{setting().base_url}/callback"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: exchange_code() missing 1 required positional argument: 'redirect_url'
+01-28-2025 08:10:13 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:10:25 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:13:16 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:15:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:16:07 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:16:07 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 48, in callback
+    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 38, in add_user
+    async with db.execute("SELECT user_id, role_id, webhook FROM restore WHERE guild_id = ?", (guild_id)) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 39, in __aenter__
+    self._obj = await self._coro
+                ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: user_id
+01-28-2025 08:16:33 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:17:07 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:17:07 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 48, in callback
+    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 38, in add_user
+    async with db.execute("SELECT user, role_id, webhook FROM restore WHERE guild_id = ?", (guild_id)) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 39, in __aenter__
+    self._obj = await self._coro
+                ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.ProgrammingError: parameters are of unsupported type
+01-28-2025 08:17:25 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:17:48 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:17:48 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 48, in callback
+    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 45, in add_user
+    await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(user), guild_id))
+                                                                ^^^^
+NameError: name 'user' is not defined
+01-28-2025 08:18:07 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:18:21 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:18:21 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 58, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 53, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_webhook() missing 1 required positional argument: 'webhook'
+01-28-2025 08:22:15 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:23:07 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:24:04 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:24:04 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 60, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 55, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+  File "/home/ubuntu/js/RestoreBot/function/webhook.py", line 20, in send_webhook
+    async with session.post(url=webhook, json=data) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 622, in _request
+    raise err_exc_cls(url)
+aiohttp.client_exceptions.InvalidUrlClientError: False
+01-28-2025 08:24:41 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:26:41 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:26:41 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 60, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 55, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+  File "/home/ubuntu/js/RestoreBot/function/webhook.py", line 21, in send_webhook
+    async with session.post(url=webhook, json=data) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 622, in _request
+    raise err_exc_cls(url)
+aiohttp.client_exceptions.InvalidUrlClientError: False
+01-28-2025 08:28:09 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:28:23 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:28:23 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 61, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 56, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+  File "/home/ubuntu/js/RestoreBot/function/webhook.py", line 19, in send_webhook
+    async with session.post(url=webhook, json=data) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 622, in _request
+    raise err_exc_cls(url)
+aiohttp.client_exceptions.InvalidUrlClientError: False
+01-28-2025 08:28:44 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:30:54 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:30:54 AM:INFO:function.logger: False
+01-28-2025 08:30:54 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 61, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 56, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+  File "/home/ubuntu/js/RestoreBot/function/webhook.py", line 19, in send_webhook
+    async with session.post(url=webhook, json=data) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 622, in _request
+    raise err_exc_cls(url)
+aiohttp.client_exceptions.InvalidUrlClientError: False
+01-28-2025 08:31:49 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:32:37 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 08:32:37 AM:INFO:function.logger: False
+01-28-2025 08:32:37 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 62, in callback
+    await asyncio.gather(*task)
+  File "/home/ubuntu/js/RestoreBot/web.py", line 57, in sendWebhook
+    await send_webhook('verify logger', None, None, 'verify', '```ansi\ntest', webhook)
+  File "/home/ubuntu/js/RestoreBot/function/webhook.py", line 19, in send_webhook
+    async with session.post(url=webhook, json=data) as result:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client.py", line 622, in _request
+    raise err_exc_cls(url)
+aiohttp.client_exceptions.InvalidUrlClientError: False
+01-28-2025 08:35:03 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 08:39:17 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 09:36:11 AM:INFO:discord.client: logging in using static token
+01-28-2025 09:36:12 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: e550bae0200e754f87652106d9a789b7).
+01-28-2025 09:36:15 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 09:36:15 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 09:36:15 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 09:54:47 AM:INFO:discord.client: logging in using static token
+01-28-2025 09:54:49 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 90e8b0c512e591708d176900a5f7b4d8).
+01-28-2025 09:54:52 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-28-2025 09:54:52 AM:INFO:function.logger: Successful getting verify guild id
+01-28-2025 09:54:53 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 09:54:53 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 3 개의 명령어가 활성화 되었습니다.
+01-28-2025 09:58:45 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 09:59:14 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:01:00 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:12:34 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:25:39 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 34, in callback
+    getIpInfo(ip),
+    ^^^^^^^^^
+NameError: name 'getIpInfo' is not defined
+01-28-2025 10:39:57 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:40:35 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:41:00 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 38, in callback
+    logger.info(f"{ip} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+                   ^^
+NameError: name 'ip' is not defined
+01-28-2025 10:41:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:41:59 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 10:42:18 AM:INFO:function.logger: 0yo1a-hsQpq-Xdksg-ZXR0x 1일
+01-28-2025 10:42:22 AM:INFO:function.logger: jonso541(955108737906012170) 님이 Zita 무료자료 300+(1324667266150699058)에서 등록 명령어를 실행 하셨습니다.
+01-28-2025 10:42:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:44:52 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 10:44:52 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 46, in callback
+    role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 44, in add_user
+    usrDB = eval(response[0])([user_id, refresh_token])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'list' object is not callable
+01-28-2025 10:45:17 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-28-2025 10:46:22 AM:INFO:function.logger: 123.142.117.15 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1324667266150699058
+01-28-2025 10:46:36 AM:INFO:function.logger: dphaweong_20169(1230599168263852092) 님이 발로란트(1330158680297050227)에서 등록 명령어를 실행 하셨습니다.
+01-28-2025 10:46:40 AM:INFO:function.logger: None
+01-28-2025 10:47:34 AM:INFO:function.logger: dphaweong_20169(1230599168263852092) 님이 발로란트(1330158680297050227)에서 등록 명령어를 실행 하셨습니다.
+01-28-2025 10:47:38 AM:INFO:function.logger: None
+01-28-2025 10:53:22 AM:INFO:function.logger: jmmn(762458172870361128) 님이 .님의 서버(1317745985228771369)에서 등록 명령어를 실행 하셨습니다.
+01-28-2025 10:53:26 AM:INFO:function.logger: ('0yo1a-hsQpq-Xdksg-ZXR0x', 86400)
+01-28-2025 10:54:11 AM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='웹훅설정' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 79, in webhookSetting
+    return await i.response.send_modal(wbhookModal())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 1041, in send_modal
+    await adapter.create_interaction_response(
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/webhook/async_.py", line 223, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.components.0.components.0.placeholder: Must be 100 or fewer in length.
+01-28-2025 10:54:21 AM:INFO:function.logger: jmmn(762458172870361128) 님이 .님의 서버(1317745985228771369)에서 인증 명령어를 실행 하셨습니다.
+01-28-2025 10:54:28 AM:INFO:function.logger: 118.34.72.30 Users in data email: donuldduck@outlook.kr, User: .(762458172870361128) in guild: 1317745985228771369
+01-28-2025 10:55:14 AM:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "생성1" is not found
+01-28-2025 11:44:34 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session 90e8b0c512e591708d176900a5f7b4d8.

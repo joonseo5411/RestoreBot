@@ -35,18 +35,16 @@ class DB:
     @classmethod
     async def add_user(cls, user_id: int, refresh_token: str, guild_id: int):
         async with aiosqlite.connect(db_path) as db:
-            result = await db.execute(
-                "SELECT user_id, role_id, webhook FROM restore WHERE guild_id = ?", 
-                (guild_id)
-            )
-            response = await result.fetchone()
-            if not response:
-                return False
+            async with db.execute("SELECT user, role_id, webhook FROM restore WHERE guild_id = ?", (guild_id, )) as result:
+                response = await result.fetchone()
+                if not response:
+                    return False, False
 
-            user = eval(response[0]).append([user_id, refresh_token])
-            await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(user), guild_id))            
-            await db.commit()
-            return str(response[1]), str(eval(response[2])[1])
+                if not user_id in eval(response[0]):
+                    usrDB = eval(response[0]).append([user_id, refresh_token])
+                    await db.execute("UPDATE restore SET user = ? WHERE guild_id = ?", (str(usrDB), guild_id))            
+                    await db.commit()
+                return str(response[1]), str(eval(response[2])[0])
 
     @classmethod
     async def set_role(cls, role_id: int, guild_id: int):
@@ -77,27 +75,21 @@ class DB:
     @classmethod
     async def registerGuild(cls, guildID: int, licenseID: str):
         async with aiosqlite.connect(db_path) as db:
-            async with db.execute("SELECT user FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
-                guildData = await cursor.fetchone()
-                if guildData:
-                    return False
-
             async with db.execute("SELECT * FROM restore_license WHERE registerKEY = ?", (str(licenseID),)) as cursor:
                 licenseInfo = await cursor.fetchone()
                 logger.info(str(licenseInfo))
 
-            if not licenseInfo:
-                return False
+                if not licenseInfo:
+                    return False
 
-            await db.execute(
+                await db.execute(
                 "INSERT INTO restore (user, webhook, role_id, guild_id, expire_date, restoreKey) VALUES (?, ?, ?, ?, ?, ?)",
                 (str([]), str([False, False]), None, guildID, int(time.time() + int(licenseInfo[1])), cls.key_generate(5, 1))
             )
 
-            await db.execute("DELETE FROM restore_license WHERE registerKEY = ?", (licenseID,))
-            await db.commit()
-
-            return True
+                await db.execute("DELETE FROM restore_license WHERE registerKEY = ?", (licenseID,))
+                await db.commit()
+                return True
 
     @classmethod
     async def getGuildInfo(cls, guildID):
@@ -107,6 +99,19 @@ class DB:
                 if not data:
                     return False
                 return data
+    
+    @classmethod
+    async def isExpired(cls, guildID):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT expire_date FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
+                data = await cursor.fetchone()
+                if not data:
+                    return False
+                
+                if int(data[0]) > time.time():
+                    return True
+                
+                return False
 
     @classmethod
     async def getGuildRegister(cls):
@@ -122,7 +127,3 @@ class DB:
                     guilds.append(Object(guildID))
 
             return guilds
-
-def isExpired(func):
-    def wrapper(*args):
-        print(args)

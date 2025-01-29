@@ -6,7 +6,6 @@ from datetime import datetime
 
 from function import setting
 from function import DB
-from function import isExpired
 from function import logger
 from function import settingBtn
 

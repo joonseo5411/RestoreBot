@@ -23,7 +23,7 @@ async def callback():
     task = [
         exchange_code(code, f"{setting().base_url}/callback"),
         serverCheck(state),
-        getIp()
+        getIp(request)
     ]
     exchangeRes, guild, ip = await asyncio.gather(*task)
 

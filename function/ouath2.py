@@ -60,6 +60,8 @@ async def exchange_code(code, redirect_url):
                     break
         
                 # retry error command
+                limitinfo = response.json()
+                logger.info(str(limitinfo))
                 await asyncio.sleep(limitinfo["retry_after"] + 2)
 
         return False if "error" in data else data

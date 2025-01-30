@@ -9,95 +9,94 @@ import asyncio
 import aiohttp
 import pytz
 
-async def giveRoleToMember(guildID, memberID, roleID):
-    headers ={
-        'Authorization': f'Bot {setting().token}',
-        'Content-Type': 'application/json'
-    }
-    async with aiohttp.ClientSession() as session:
-        async with session.put(f'{setting().api_endpoint}/guilds/{guildID}/members/{memberID}/roles/{roleID}', headers=headers) as response:
-            if response.status == 204:
-                return True
-            return False
+settingVar = setting()
 
-async def serverCheck(guildID):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f'https://discord.com/api/v10/users/@me/guilds', headers = {'Authorization': f'Bot {setting().token}'}) as response:
-            if response.status != 200:
-                return False
-                
-            guilds = await response.json()
-            for guild in guilds:
-                if guild['id'] == str(guildID):
-                    return True
+async def giveRoleToMember(session, guildID, memberID, roleID):    
+    async with session.put(f'{settingVar.api_endpoint}/guilds/{guildID}/members/{memberID}/roles/{roleID}', headers ={
+        'Authorization': f'Bot {settingVar.token}',
+        'Content-Type': 'application/json'
+    }) as response:
+        if response.status == 204:
+            return True
+        return False
+
+async def serverCheck(session, guildID):
+    async with session.get(f'https://discord.com/api/v10/users/@me/guilds', headers={'Authorization': f'Bot {settingVar.token}'}) as response:
+        if response.status != 200:
             return False
+        
+        guilds = await response.json()
+        return next((guild for guild in guilds if guild['id'] == str(guildID)), False)
 
 def serverTime():
-    KST= pytz.timezone(setting().timeZone)
-    return datetime.now().astimezone(KST)
+    return datetime.now().astimezone(pytz.timezone(settingVar.timeZone))
 
-async def exchange_code(code, redirect_url):
-    # Data Posting
-    data = {
-        'grant_type': 'authorization_code',
-        'redirect_uri':  redirect_url,
-        'client_id': setting().client_id,
-        'client_secret':setting().client_secret,
-        'code':code,
-    }
+async def exchange_code(session, code, redirect_url):
+    """access user"""
+    while True:
+        async with session.post(f'{settingVar.api_endpoint}/oauth2/token',
+        data = {
+        'grant_type': 'authorization_code', 'redirect_uri':  redirect_url,'code':code,
+        'client_id': settingVar.client_id, 'client_secret':settingVar.client_secret,
+        },
+        headers = {'Content-Type': 'application/x-www-form-urlencoded'}) as response:
+            data = await response.json()
+            if response.status != 429:
+                return False if "error" in data else data
+            await asyncio.sleep(data["retry_after"] + 2)
 
-    # Posting headers
-    headers = {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    }
+async def refreshToken(refresh_token):
+    while True:
+        async with session.post(f"{settingVar.api_endpoint}/oauth2/token",
+        data = {
+            'client_id': settings.client_id, 'client_secret': settings.client_secret,
+            'grant_type': 'refresh_token', 'refresh_token': refresh_token
+        },
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }) as response:
+            data = await response.json()
+            if response.status != 429:
+                return False if "error" in data.json() else data.json()
 
-    
-    async with aiohttp.ClientSession() as session:
-        while True:
-            async with session.post(f'{setting().api_endpoint}/oauth2/token', data=data, headers=headers) as response:
-                data = await response.json()
-                if response.status != 429:
-                    break
-        
-                # retry error command
-                await asyncio.sleep(limitinfo["retry_after"] + 2)
+        await asyncio.sleep(data["retry_after"] + 2)
 
-        return False if "error" in data else data
+async def addUser(session, access_token, guild_id, user_id):
+    while True:
+        jsonData = {"access_token": access_token}
+        header = {"Authorization": "Bot " + settings.token}
+        async with session.put(f"{settings.api_endpoint}/guilds/{guild_id}/members/{user_id}", json=jsonData, headers=header) as response:
+            data = await response.json()
+            if response.status != 429:
+                return True if (response.status == 201 or response.status == 204) else False
 
-async def getIp(request):
+            await asyncio.sleep(data["retry_after"] + 2)
+
+async def getIp(session, request):
     """Getting user's first IP"""
-    ip = request.headers.get('X-Forwarded-For')
+    ip = (request.headers.get('X-Forwarded-For') or request.remote_addr).split(",")[0].strip()
+    agent = request.user_agent.string
 
-    if not ip:
-        ip = request.remote_addr
+    async with session.get(f'http://ip-api.com/json/{ip}') as response:
+        if response.status == 200:
+            data = await response.json()
+            return ip, data.get('isp'), data.get('city'), data.get('country'), agent
+    return ip, None, None, None, agent
 
-    ip = ip.split(",")[0].strip()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f'http://ip-api.com/json/{ip}') as response:
-            if response.status == 200:
-                data = await response.json()
-                isp = data.get('isp')
-                city = data.get('city')
-                country = data.get('country')
-                if isp and city and country:
-                    return ip, isp, city, country
-            return ip
+async def getGuild(session, id):
+    async with session.get(f'https://discord.com/apt/v9/guilds/{id}', headers={"Authorization": f"Bot {settingVar.token}"}) as response:
+        return await response.json()
 
-async def getAgent():
-    return request.user_agent.string
+async def getRole(session, guildID, id):
+    async with session.get(f'https://discord.com/api/v9/guilds/{guildID}/roles', headers={"Authorization": f"Bot {settingVar.token}"}) as response:
+        roles = await response.json()
+        return next((role for role in roles if role['id'] == id), False)
 
-async def getGuild(id):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f'https://discord.com/apt/v9/guilds/{id}', headers={"Authorization": f"Bot {setting().token}"}) as response:
-            return await response.json()
+async def getUserProfile2(session, token):
+    async with session.get("https://discordapp.com/apt/v8/users/@me", headers={"Authorization": f"Bearer {token}"}) as response:
+        return False if response.status != 200 else await response.json()
 
-async def getUserProfile2(token):
-    async with aiohttp.ClientSession() as session:
-        async with session.get("https://discordapp.com/apt/v8/users/@me", headers={"Authorization": f"Bearer {token}"}) as response:
-            return False if response.status != 200 else await response.json()
-
-async def getUserProfile(token):
-    async with aiohttp.ClientSession() as session:
-        async with session.get("https://discord.com/api/v10/users/@me", headers={"Authorization": "Bearer " + token}) as response:
-            return False if response.status != 200 else await response.json()
+async def getUserProfile(session, token):
+    async with session.get("https://discord.com/api/v10/users/@me", headers={"Authorization": "Bearer " + token}) as response:
+        return False if response.status != 200 else await response.json()

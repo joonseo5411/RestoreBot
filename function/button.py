@@ -1,11 +1,11 @@
 from .db import DB
 
 from discord.ext import commands
-import discord
-
 from datetime import datetime
 from .setting import setting
-import pytz
+from .oauth2 import refreshToken, addUser
+
+import aiohttp, pytz, asyncio, discord
 
 class settingBtn:
     def __init__(self, i: discord.Interaction):
@@ -109,6 +109,11 @@ class settingBtn:
                                 description="- `/설정`을 통해 설정을 마무리 해 주세요.\n- `/인증`명령어를 통해 인증 임베드를 출력 가능합니다.",
                                 color=discord.Color.green()
                             )
+                            if registers != True:
+                                dm = await i.user.create_dm()
+                                embed1 = discord.Embed(title="Restore Service", description=f">>> 복구키는 `{registers}`입니다.\n-# 이 키는 저장 하거나 기억 해두세요.", color=discord.Color.green())
+                                embed1.set_footer(text="Zita Restore", icon_url="https://i.imgur.com/X2gz8W2.png")
+                                await dm.send(embed=embed1)
                         embed.set_footer(text=f"Zita Restore", icon_url=f"https://cdn.discordapp.com/attachments/1317512746702733362/1322530302282956852/17.png?ex=67996b93&is=67981a13&hm=8d47a02d4943f4088678439522b2ce960c06b09679ef653624135cf0b6eb7318&")
                         return await interaction.response.send_message(embed=embed, ephemeral=True)
                 return await i.response.send_modal(registerModal())
@@ -118,6 +123,67 @@ class settingBtn:
                 if not data[4]:
                     embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
                     return await i.response.send_message(embed=embed, ephemeral=True)
+
+                class restoreUser(discord.ui.Modal, title='👥ㅣ복구하기'):
+                    licenseVar = discord.ui.TextInput(
+                        label='복구키를 입력 해 주세요.',
+                        style=discord.TextStyle.short,
+                        placeholder='1s3w5',
+                        max_length=5,
+                        min_length=5
+                    )
+
+                    async def on_submit(self, i: discord.Interaction):
+                        recover_key = str(self.licenseVar)
+                        users = await DB.getRestoreKey(recover_key)
+
+                        if not users:
+                            return await i.response.send_message(
+                                embed=discord.Embed(
+                                    title=":warning: 존재 하지 않는 복구키", description="- 올바르게 하였는데도 문제 발생하면 고객센터에 문의해주세요.", color=discord.Color.red()
+                                )
+                            )
+
+                        await i.response.send_message(
+                            embed=discord.Embed(
+                                title="👥 유저 복구중...", description="- 유저를 **복구** 중입니다.\n- 최대 **__2시간__**이 소요 될 수 있습니다.", color=discord.Color.orange()
+                            ).set_footer(text="Zita Restore", icon_url="https://i.imgur.com/bBsWj5S.png")
+                        )
+                        msg = await i.original_response()
+                        users = [users[i:i+round(len(users)/2)] for i in range(0, len(users), round(len(users)/2))]
+                        async with aiohttp.ClientSession() as session:
+                            newUsr= []
+                            async def restore(user):
+                                try:
+                                    user_id = user[1]
+                                    refresh_token1 = user[0]
+                                    new_token = await refreshToken(refresh_token1)
+                                    if new_token == False:
+                                        return
+
+                                    new_refresh = new_token["refresh_token"]
+                                    new_token = new_token["access_token"]
+                                    await addUser(session, new_token, i.guild.id, user_id)
+                                except:
+                                    pass
+                            async def async1():
+                                for user in users[0]:
+                                    await restore(user)
+                            
+                            async def async2():
+                                for user in users[1]:
+                                    await restore(user)
+                            await asyncio.gather(async1(), async2())
+                        await msg.edit(
+                            embed=discord.Embed(
+                                title="👥 유저 복구완료", description="- 유저를 **복구**완료 했습니다.", color=discord.Color.green()
+                            ).set_footer(text="Zita Restore", icon_url="https://i.imgur.com/bBsWj5S.png") # jMP9e
+                        )
+                await i.response.send_modal(restoreUser())
+            
+            @discord.ui.button(row=3, label="설정리로드", emoji="⚙️", style=discord.ButtonStyle.danger)
+            async def settingReload(self, i: discord.Interaction, btn: discord.ui.Button):
+                pass
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False
         webhook = eval(data[1])

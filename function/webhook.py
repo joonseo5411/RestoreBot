@@ -1,7 +1,7 @@
 import aiohttp 
 
 async def send_webhook(
-        username: str, content: str, avatarUrl: str,title: str, desc: str, webhook: str
+        session, username: str, content: str, avatarUrl: str,title: str, desc: str, webhook: str
         ):
     data = {
         'username': username,
@@ -12,13 +12,16 @@ async def send_webhook(
     data['embeds'] = [
         {
             'title': title,
-            'description': desc
+            'description': desc,
+            "footer": {
+                "text": "Zita Restore",
+                "icon_url": "https://i.imgur.com/X2gz8W2.png"
+            },
         }
     ]
-    async with aiohttp.ClientSession() as session:
+    try:
         async with session.post(url=webhook, json=data) as result:
-            try:
-                result.raise_for_status()
-                return True
-            except:
-                return False
+            result.raise_for_status()
+            return
+    except:
+        return

@@ -1,1 +1,178 @@
-
+01-30-2025 06:59:58 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 07:15:28 AM:INFO:function.logger: 112.156.58.144 Users in data email: seungchangang111015@gmail.com, User: 박다영 사랑해(1309032710198661152) in guild: 1334390235605368907
+01-30-2025 07:42:42 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 07:52:49 AM:INFO:function.logger: 58.237.124.144 Users in data email: kimjisuoep@gmail.com, User: pro 1(1258973936218275932) in guild: 1334390235605368907
+01-30-2025 08:00:23 AM:INFO:function.logger: 58.237.124.144 Users in data email: kimjisuoep@gmail.com, User: pro 1(1258973936218275932) in guild: 1334390235605368907
+01-30-2025 08:13:25 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:18:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:18:56 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:19:18 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:19:46 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:19:56 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:20:28 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:20:33 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:21:10 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:21:22 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:27:41 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:27:56 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:29:11 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:29:21 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:29:26 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:29:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:29:52 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:29:52 AM:INFO:function.logger: [{'id': '1334390235605368907', 'name': '@everyone', 'description': None, 'permissions': '2248095508581952', 'position': 0, 'color': 0, 'hoist': False, 'managed': False, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'flags': 0}, {'id': '1334390366551412798', 'name': 'Reseller', 'description': None, 'permissions': '0', 'position': 1, 'color': 3066993, 'hoist': False, 'managed': False, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'flags': 0}, {'id': '1334390494268096617', 'name': 'Owner', 'description': None, 'permissions': '8', 'position': 3, 'color': 3552822, 'hoist': False, 'managed': False, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'flags': 0}, {'id': '1334390563411329157', 'name': 'Admin', 'description': None, 'permissions': '1721826618638335', 'position': 2, 'color': 15844367, 'hoist': False, 'managed': False, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'flags': 0}, {'id': '1334390974075502634', 'name': '복구등록', 'description': None, 'permissions': '0', 'position': 1, 'color': 0, 'hoist': False, 'managed': False, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'flags': 0}, {'id': '1334409020617785368', 'name': 'Zita Restore', 'description': None, 'permissions': '805324801', 'position': 1, 'color': 0, 'hoist': False, 'managed': True, 'mentionable': False, 'icon': None, 'unicode_emoji': None, 'tags': {'bot_id': '1324642750028578816'}, 'flags': 0}]
+01-30-2025 08:31:27 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:31:47 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:31:47 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 55, in callback
+    🔰 역할 정보: {role['name']}({role_id})
+                   ~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01-30-2025 08:32:49 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:33:08 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+01-30-2025 08:40:14 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:40:53 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:42:30 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:42:45 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:42:55 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+01-30-2025 08:42:58 AM:INFO:discord.client: logging in using static token
+01-30-2025 08:42:59 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: beca60e9ea2cafe701817a59846b0830).
+01-30-2025 08:43:02 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 08:43:02 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 08:43:03 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 08:43:12 AM:INFO:function.logger: 2ThZF-20C0c-cvWfJ-cCSbT 999일
+01-30-2025 08:44:55 AM:INFO:function.logger: 123.142.117.12 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907
+01-30-2025 08:47:50 AM:INFO:function.logger: 211.208.201.245 Users in data email: gjwogh6@gmail.com, User: sky(830721138190974976) in guild: 1334390235605368907
+01-30-2025 09:45:20 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session beca60e9ea2cafe701817a59846b0830.
+01-30-2025 10:07:52 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session beca60e9ea2cafe701817a59846b0830.
+01-30-2025 10:22:11 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:22:12 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1aba0dfcaabd4ab510aea6cfa1bf2b4e).
+01-30-2025 10:22:15 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:22:15 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:22:15 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:22:29 AM:INFO:function.logger: Xk9xj-UHqCv-oYfio-U9lcR 999일
+01-30-2025 10:28:29 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:28:30 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 24b716718020f0075dc9cc3ba03a8736).
+01-30-2025 10:28:33 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:28:33 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:28:33 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:29:44 AM:INFO:function.logger: ARf4y-mM9OP-TTy7M-t8srv 9999일
+01-30-2025 10:30:36 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:30:37 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: f2a7de6108c348a2277cbba6abd243ad).
+01-30-2025 10:30:39 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:30:39 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:30:40 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:32:02 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:32:03 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c886505efa4d51b7671e95b189042946).
+01-30-2025 10:32:06 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:32:06 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:32:06 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:32:23 AM:INFO:function.logger: Etbpb-16lI0-SSCcJ-zEGiV 44일
+01-30-2025 10:32:55 AM:INFO:function.logger: fBqWE-cDGXj-oyZ5s-VSrLF 9999일
+01-30-2025 10:36:28 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:36:29 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 29f3d827851a9cf9a6c3817687826555).
+01-30-2025 10:36:32 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:36:32 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:36:33 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:36:40 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 141, in on_submit
+    return await i.response.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 827, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+01-30-2025 10:36:50 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 141, in on_submit
+    return await i.response.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 827, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+01-30-2025 10:36:59 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 141, in on_submit
+    return await i.response.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 827, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+01-30-2025 10:37:28 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:37:29 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 018642646bfc2a73d1a3b860ce4db64a).
+01-30-2025 10:37:32 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:37:32 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:37:32 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:40:16 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:40:17 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: dc7e1edab0366d6ee6c81d1d439621ef).
+01-30-2025 10:40:20 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:40:20 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:40:21 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:42:33 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 155, in on_submit
+    users = [lst[i:i+n] for i in range(0, len(users), round(len(users)/2))]
+             ^^^
+NameError: name 'lst' is not defined. Did you mean: 'list'?
+01-30-2025 10:43:09 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:43:10 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b1f80159d3bea63007bb80cf6e78d51f).
+01-30-2025 10:43:13 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:43:13 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:43:13 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:43:26 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 155, in on_submit
+    users = [users[i:i+n] for i in range(0, len(users), round(len(users)/2))]
+                       ^
+NameError: name 'n' is not defined
+01-30-2025 10:44:08 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:44:09 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3fe675bd758081039fb366bf2701623e).
+01-30-2025 10:44:12 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:44:12 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:44:12 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:45:04 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:45:06 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: cfee7b65df44be312ed0ef8733af1c59).
+01-30-2025 10:45:09 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:45:09 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:45:09 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 10:45:18 AM:ERROR:discord.ui.modal: Ignoring exception in modal <restoreUser timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/function/button.py", line 181, in on_submit
+    await i.response.send_message(
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/interactions.py", line 827, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+01-30-2025 10:45:58 AM:INFO:discord.client: logging in using static token
+01-30-2025 10:46:00 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: d259f3d967639b1af8086fd90e53d3df).
+01-30-2025 10:46:03 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+01-30-2025 10:46:03 AM:INFO:function.logger: Successful getting verify guild id
+01-30-2025 10:46:03 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+01-30-2025 11:03:29 AM:INFO:function.logger: 2001:e60:916f:4ac7:8542:6912:b48f:e006 Users in data email: fdjinyou@gmail.com, User: 영찬(994922728937242704) in guild: 1334390235605368907
+01-30-2025 11:09:05 AM:INFO:function.logger: 122.37.206.7 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1334390235605368907

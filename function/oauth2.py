@@ -57,7 +57,7 @@ async def refreshToken(refresh_token):
         }) as response:
             data = await response.json()
             if response.status != 429:
-                return False if "error" in data.json() else data.json()
+                return False if "error" in data else data
 
         await asyncio.sleep(data["retry_after"] + 2)
 

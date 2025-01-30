@@ -177,6 +177,8 @@ class settingBtn:
                                     await restore(user)
                             await asyncio.gather(async1(), async2())
 
+                        await DB.changeRefreshToken(users, newUsrs)
+
                         await msg.edit(
                             embed=discord.Embed(
                                 title="👥 유저 복구완료", description="- 유저를 **복구**완료 했습니다.", color=discord.Color.green()

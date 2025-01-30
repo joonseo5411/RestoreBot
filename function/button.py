@@ -150,30 +150,33 @@ class settingBtn:
                             ).set_footer(text="Zita Restore", icon_url="https://i.imgur.com/bBsWj5S.png")
                         )
                         msg = await i.original_response()
-                        users = [users[i:i+round(len(users)/2)] for i in range(0, len(users), round(len(users)/2))]
+                        usrs = [users[i:i+round(len(users)/2)] for i in range(0, len(users), round(len(users)/2))]
                         async with aiohttp.ClientSession() as session:
-                            newUsr= []
+                            newUsr = []
                             async def restore(user):
                                 try:
                                     user_id = user[1]
-                                    refresh_token1 = user[0]
-                                    new_token = await refreshToken(refresh_token1)
+                                    refresh_token = user[0]
+                                    new_token = await refreshToken(refresh_token)
                                     if new_token == False:
                                         return
 
                                     new_refresh = new_token["refresh_token"]
                                     new_token = new_token["access_token"]
+
+                                    newUsr.append([new_refresh, user_id])
                                     await addUser(session, new_token, i.guild.id, user_id)
                                 except:
                                     pass
                             async def async1():
-                                for user in users[0]:
+                                for user in usrs[0]:
                                     await restore(user)
                             
                             async def async2():
-                                for user in users[1]:
+                                for user in usrs[1]:
                                     await restore(user)
                             await asyncio.gather(async1(), async2())
+
                         await msg.edit(
                             embed=discord.Embed(
                                 title="👥 유저 복구완료", description="- 유저를 **복구**완료 했습니다.", color=discord.Color.green()

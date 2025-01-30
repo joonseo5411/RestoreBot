@@ -2,6 +2,7 @@ from .db import DB
 
 from discord.ext import commands
 from datetime import datetime
+from .logger import logger
 from .setting import setting
 from .oauth2 import refreshToken, addUser
 
@@ -150,14 +151,14 @@ class settingBtn:
                             ).set_footer(text="Zita Restore", icon_url="https://i.imgur.com/bBsWj5S.png")
                         )
                         msg = await i.original_response()
-                        usrs = [users[i:i+round(len(users)/2)] for i in range(0, len(users), round(len(users)/2))]
+                        usrs = users if len(users) < 3 else [users[i:i+round(len(users)/2)] for i in range(0, len(users), round(len(users)/2))]
                         async with aiohttp.ClientSession() as session:
                             newUsr = []
-                            async def restore(user):
-                                try:
+                            async def asyncRestore(user):
+                                for user in user:
                                     user_id = user[1]
                                     refresh_token = user[0]
-                                    new_token = await refreshToken(refresh_token)
+                                    new_token = await refreshToken(session, refresh_token)
                                     if new_token == False:
                                         return
 
@@ -166,18 +167,13 @@ class settingBtn:
 
                                     newUsr.append([new_refresh, user_id])
                                     await addUser(session, new_token, i.guild.id, user_id)
-                                except:
-                                    pass
-                            async def async1():
-                                for user in usrs[0]:
-                                    await restore(user)
                             
-                            async def async2():
-                                for user in usrs[1]:
-                                    await restore(user)
-                            await asyncio.gather(async1(), async2())
+                            if len(users) > 3:
+                                await asyncio.gather(asyncRestore(usrs[0]), asyncRestore(usrs[1]))
+                            else: 
+                                await asyncRestore(users)
+                            await DB.changeRefreshToken(users, newUsr)
 
-                        await DB.changeRefreshToken(users, newUsrs)
 
                         await msg.edit(
                             embed=discord.Embed(

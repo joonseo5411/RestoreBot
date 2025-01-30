@@ -4,7 +4,6 @@ from datetime import datetime
 from datetime import timedelta
 from .setting import setting
 from .logger import logger
-import requests
 import asyncio
 import aiohttp
 import pytz
@@ -45,11 +44,11 @@ async def exchange_code(session, code, redirect_url):
                 return False if "error" in data else data
             await asyncio.sleep(data["retry_after"] + 2)
 
-async def refreshToken(refresh_token):
+async def refreshToken(session, refresh_token):
     while True:
         async with session.post(f"{settingVar.api_endpoint}/oauth2/token",
         data = {
-            'client_id': settings.client_id, 'client_secret': settings.client_secret,
+            'client_id': settingVar.client_id, 'client_secret': settingVar.client_secret,
             'grant_type': 'refresh_token', 'refresh_token': refresh_token
         },
         headers = {
@@ -64,8 +63,8 @@ async def refreshToken(refresh_token):
 async def addUser(session, access_token, guild_id, user_id):
     while True:
         jsonData = {"access_token": access_token}
-        header = {"Authorization": "Bot " + settings.token}
-        async with session.put(f"{settings.api_endpoint}/guilds/{guild_id}/members/{user_id}", json=jsonData, headers=header) as response:
+        header = {"Authorization": "Bot " + settingVar.token}
+        async with session.put(f"{settingVar.api_endpoint}/guilds/{guild_id}/members/{user_id}", json=jsonData, headers=header) as response:
             data = await response.json()
             if response.status != 429:
                 return True if (response.status == 201 or response.status == 204) else False

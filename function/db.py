@@ -132,7 +132,7 @@ class DB:
     @classmethod
     async def changeRefreshToken(cls, old_usr, new_usr):
         async with aiosqlite.connect(db_path) as db:
-            async with db.execute("UPDATE restore SET user = ? WHERE user = ?", (new_usr, old_usr,)) as cursor:
+            async with db.execute("UPDATE restore SET user = ? WHERE user = ?", (str(new_usr), str(old_usr),)) as cursor:
                 await db.commit()
                 return
     @classmethod

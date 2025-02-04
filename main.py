@@ -25,11 +25,11 @@ def error_function(error, i: discord.Interaction):
 
 def isExpired(func):
     async def wrapper(*args):
-        interaction = args[0]
+        interaction = args[0] 
         result = await DB.isExpired(interaction.guild_id)
         if not result:
             embed = discord.Embed(title="⚠️ㅣ라이센스 만료", description="- `/설정`을(를) 통해 라이센스를 연장 하시거나 등록을 하여 주세요.", color=discord.Color.red())
-            return await interaction.response.send_message(embed=embed)
+            return await interaction.response.send_message(embed=embed, ephemeral=True)
         return await func(*args)
     return wrapper
 
@@ -70,10 +70,10 @@ async def verify(i: discord.Interaction):
     return await msg.edit(content=None, embed=embed)
 
 @bot.tree.command(name="설정", description="⚙️ᅵ서버 정보를 수정 합니다.")
+@commands.has_permissions(administrator = True)
 @discord.app_commands.guild_only()
-@commands.has_permissions(administrator=True)
 async def restoreSetting(i: discord.Interaction):
-    return await settingBtn(i).btn()
+    return await settingBtn(i).btn(None)
 
 @bot.command(name="생성")
 async def createLicense(ctx, days: int, amount:int = 1):

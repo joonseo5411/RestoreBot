@@ -28,6 +28,15 @@ class DB:
                                 expireDate INTEGER,
                                 PRIMARY KEY (registerKEY, expireDate)
                             )''')
+            await db.execute('''CREATE TABLE IF NOT EXISTS backup (
+                                guild_id INTEGER,
+                                uploadDate INTEGER,
+                                guild TEXT,
+                                category TEXT,
+                                roles TEXT,
+                                emoji TEXT,
+                                PRIMARY KEY (guild_id, guild, category, roles, emoji)
+                            )''')
             await db.commit()
 
     @classmethod
@@ -102,9 +111,11 @@ class DB:
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT * FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
                 data = await cursor.fetchone()
-                if not data:
-                    return False
-                return data
+                data = False if not data else data
+            async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
+                d = await cursor.fetchone()
+                d = False if not d else d
+            return data, d
     
     @classmethod
     async def isExpired(cls, guildID):
@@ -123,11 +134,7 @@ class DB:
     async def getRestoreKey(cls, key: str):
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT user FROM restore WHERE restoreKey = ?", (str(key),)) as cursor:
-                data = await cursor.fetchone()
-                if not data:
-                    return False
-                
-                return eval(data[0])
+                return False if not await cursor.fetchone() else eval(await cursor.fetchone()[0])
 
     @classmethod
     async def changeRefreshToken(cls, old_usr, new_usr):
@@ -135,6 +142,27 @@ class DB:
             async with db.execute("UPDATE restore SET user = ? WHERE user = ?", (str(new_usr), str(old_usr),)) as cursor:
                 await db.commit()
                 return
+
+    @classmethod
+    async def backupServer(cls, guild, category, role, emoji, guildID):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
+                print(await cursor.fetchone())
+                if await cursor.fetchone():
+                    async with db.execute("UPDATE backup SET uploadDate = ?, guild = ?, category = ?, roles = ?, emoji = ? WHERE guild_id = ?", (int(time.time()), str(guild), str(category), str(role), str(emoji), guildID,)) as cursor:
+                        await db.commit()
+                        return
+                async with db.execute("INSERT INTO backup (guild_id, uploadDate, guild, category, roles, emoji) VALUES (?,?,?,?,?,?)", (guildID, int(time.time()), str(guild), str(category), str(role), str(emoji))) as cursor:
+                    await db.commit()
+                    return
+    
+    @classmethod
+    async def getBackupData(cls, guildID):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
+                data = await cursor.fetchone()
+                return False if not data else data
+
     @classmethod
     async def getGuildRegister(cls):
         async with aiosqlite.connect(db_path) as db:

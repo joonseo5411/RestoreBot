@@ -32,8 +32,9 @@ async def callback():
         if not guild:
             return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
 
+        print(exchangeRes)
         userInfo = await getUserProfile(session, exchangeRes['access_token'])
-        if not userInfo:
+        if not userInfo and not 'email' in userInfo:
             return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
 
         logger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
@@ -42,7 +43,10 @@ async def callback():
         if not role_id:
             return await render_template('error.html', title='인증실패', ERROR_MSG='등록 되지 않는 서버입니다.'), 400
 
-        role = await getRole(session, state, role_id)
+        role = {'name': '설정 필요', 'id': '설정 필요'}
+
+        if role_id != "None":
+            role = await getRole(session, state, role_id)
 
         task = [
             giveRoleToMember(session, state, int(userInfo['id']), role_id),
@@ -51,7 +55,7 @@ async def callback():
 
 >>> ⏰ 인증 날짜: <t:{int(time.time())}:f>
 🌐 인증 서버: {guild['name']}({state})
-🔰 역할 정보: {role['name']}({role_id})
+🔰 역할 정보: {role['name']}({role['id']})
 """, webhook),
             send_webhook(session, 'Zita Restore', None, "https://i.imgur.com/X2gz8W2.png", '인증 정보', f"""### -# > {userInfo['global_name']}({userInfo['id']}) 님의 정보입니다.
 🌐 유저 IP 정보```ansi
@@ -61,7 +65,7 @@ async def callback():
 🌐[2;34m유저 국가[0m: [2;30m{ip[3]}[0m```
 👤  유저 정보```ansi
 👤 [2;31m인증 서버[0m: [2;30m{guild['name']}({state})
-👤 [2;32m부여된 역할[0m: [0m[2;30m{role['name']}({role_id})[0m```
+👤 [2;32m부여된 역할[0m: [0m[2;30m{role['name']}({role['id']})[0m```
 """, "https://discord.com/api/webhooks/1334443562007396423/R82BgBWOZBJmqmHmIPZYN3QVd6GzPeFYmvp1rcC77lu5Cu2o6zVR0NoVx4yJmfKHIRNz")
         ]
 

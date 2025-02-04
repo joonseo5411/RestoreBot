@@ -1,7 +1,7 @@
 {
-    "botToken": "MTMyNDY0Mjc1MDAyODU3ODgxNg.GA0jp8.GBIsKiLdcesuqC1P_aGFgnZ_GQOEWNdJy-MmI8",
+    "botToken": "MTMyNDY0Mjc1MDAyODU3ODgxNg.GsXtAW.ID-f7uEAlZUwoJNrnU-0iO8McwxW4qLIGEvNjM",
     "adminID": [955108737906012170],
-    "apiEndpoint": "https://discord.com/api/v10",
+    "apiEndpoint": "https://discord.com/api/v9",
     "clientID": "1324642750028578816",
     "clientSecret": "tnnpDuYai5ddms_c-XxeA9Fmn_2MK3YZ",
     "domain": "https://redirect.zita.kr",

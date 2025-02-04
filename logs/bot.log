@@ -982,3 +982,8 @@ Traceback (most recent call last):
     result = function()
              ^^^^^^^^^^
 sqlite3.IntegrityError: UNIQUE constraint failed: backup.guild_id, backup.guild, backup.category, backup.roles, backup.emoji
+02-04-2025 04:49:26 AM:INFO:discord.client: logging in using static token
+02-04-2025 04:49:27 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 7a97241ddd6f92e4b1cadf1befce60ae).
+02-04-2025 04:49:30 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 04:49:30 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 04:49:30 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.

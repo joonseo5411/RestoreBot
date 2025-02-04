@@ -987,3 +987,144 @@ sqlite3.IntegrityError: UNIQUE constraint failed: backup.guild_id, backup.guild,
 02-04-2025 04:49:30 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
 02-04-2025 04:49:30 AM:INFO:function.logger: Successful getting verify guild id
 02-04-2025 04:49:30 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 06:18:49 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session 7a97241ddd6f92e4b1cadf1befce60ae.
+02-04-2025 07:50:31 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:50:32 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: fa08c29061f68917fc3b17f4e36446b3).
+02-04-2025 07:50:35 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:50:35 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:50:36 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:52:24 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:52:25 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: e5bbd976a0ce3f4344abd2310152bd95).
+02-04-2025 07:52:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:52:28 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:52:28 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:53:25 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:53:26 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2a9995da4b940f13a4dce40595c1ece2).
+02-04-2025 07:53:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:53:28 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:53:29 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:53:48 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:53:49 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c374b1c3648245f46c6fad87ad9d2c74).
+02-04-2025 07:53:52 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:53:52 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:53:57 AM:ERROR:discord.ui.modal: Ignoring exception in modal <roleModal timeout=None children=1>:
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/modal.py", line 189, in _scheduled_task
+    await self.on_submit(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/roleBtn.py", line 50, in on_submit
+    await DB.set_role(roleID, interaction.guild_id)
+          ^^
+NameError: name 'DB' is not defined
+02-04-2025 07:54:12 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:54:13 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 99bb062144a3c085016b81fa119fdb42).
+02-04-2025 07:54:16 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:54:16 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:54:52 AM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=5> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='라이센스 연장/등록' emoji=<PartialEmoji animated=False name='⏰' id=None> row=2 sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/button.py", line 39, in addLicense
+    return await registerModal(self.instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object registerModal can't be used in 'await' expression
+02-04-2025 07:54:59 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:55:32 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:55:33 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 47525d806724d085f352e8d21eb85e1e).
+02-04-2025 07:55:36 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:55:36 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:55:36 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:55:44 AM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=None children=5> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='웹훅설정' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/button.py", line 35, in webhookSetting
+    return await webhookCallback(self.instance, i, btn, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/button/webhookBtn.py", line 9, in webhookCallback
+    class webhookBtn(discord.ui.View):
+                     ^^^^^^^
+NameError: name 'discord' is not defined
+02-04-2025 07:56:01 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:56:02 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 293060242b09fa81b95d3061db323ef2).
+02-04-2025 07:56:05 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:56:05 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:56:13 AM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=900.0 children=5> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='웹훅설정' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/button.py", line 35, in webhookSetting
+    return await webhookCallback(self.instance, i, btn, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/button/webhookBtn.py", line 44, in webhookCallback
+    await i.response.send_message(view=webhookBtn(self.instance), ephemeral=True)
+                                                  ^^^^
+NameError: name 'self' is not defined
+02-04-2025 07:56:32 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:56:33 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3fb1a14825a13dd67b287d1d54e55927).
+02-04-2025 07:56:36 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:56:36 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:56:42 AM:ERROR:discord.ui.view: Ignoring exception in view <webhookBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='이 체널에 웹훅설정하기' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/webhookBtn.py", line 18, in thisChannelSetWebhook
+    await DB.set_webhook([wbhook, webhook[1]], i.guild_id)
+          ^^
+NameError: name 'DB' is not defined
+02-04-2025 07:56:57 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:57:25 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 8face7b235cab87ab8486455cdcf4ac9).
+02-04-2025 07:57:28 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:57:28 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:57:28 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:57:36 AM:ERROR:discord.ui.view: Ignoring exception in view <webhookBtn timeout=900.0 children=2> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='이 체널에 웹훅설정하기' emoji=<PartialEmoji animated=False name='💬' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/webhookBtn.py", line 19, in thisChannelSetWebhook
+    await DB.set_webhook([wbhook, webhook[1]], i.guild_id)
+                                  ^^^^^^^
+NameError: name 'webhook' is not defined. Did you mean: 'wbhook'?
+02-04-2025 07:59:05 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:59:07 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 5619344fa9b070cc5b1bd638c26d0649).
+02-04-2025 07:59:10 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:59:10 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 07:59:10 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 07:59:27 AM:INFO:discord.client: logging in using static token
+02-04-2025 07:59:28 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 4ef04d23af432544cdce1e5bb21294ad).
+02-04-2025 07:59:31 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 07:59:31 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 08:00:10 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-04-2025 08:00:22 AM:ERROR:discord.ui.view: Ignoring exception in view <backupBtn timeout=900.0 children=1> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='확인했습니다.' emoji=<PartialEmoji animated=False name='✅' id=None> row=None sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/button.py", line 113, in check
+    await DB.backupServer(guildData, channels, roles, emojidata, i.guild_id)
+  File "/home/ubuntu/js/RestoreBot/function/db.py", line 152, in backupServer
+    async with db.execute("UPDATE backup SET uploadDate = ?, guild = ?, category = ?, roles = ?, emoji = ? WHERE guild_id = ?", (int(time.time()), str(guild), str(category), str(role), str(emoji), guildID,)) as cursor:
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/context.py", line 39, in __aenter__
+    self._obj = await self._coro
+                ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 193, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 132, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiosqlite/core.py", line 115, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: backup.guild_id, backup.guild, backup.category, backup.roles, backup.emoji
+02-04-2025 08:01:14 AM:ERROR:discord.ui.view: Ignoring exception in view <SetBtn timeout=None children=5> for item <Button style=<ButtonStyle.success: 3> url=None disabled=False label='복구하기' emoji=<PartialEmoji animated=False name='👥' id=None> row=1 sku_id=None>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/ui/view.py", line 430, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/ubuntu/js/RestoreBot/button/button.py", line 43, in restoreUsr
+    return await restoreUser(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: restoreUser() missing 1 required positional argument: 'i'
+02-04-2025 08:01:31 AM:INFO:discord.client: logging in using static token
+02-04-2025 08:01:32 AM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3dc92904ae266758decf69403bf824b8).
+02-04-2025 08:01:35 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-04-2025 08:01:35 AM:INFO:function.logger: Successful getting verify guild id
+02-04-2025 08:01:36 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.

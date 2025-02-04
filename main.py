@@ -7,7 +7,7 @@ from datetime import datetime
 from function import setting
 from function import DB
 from function import logger
-from function import settingBtn
+from button import settingBtn
 
 import asyncio
 

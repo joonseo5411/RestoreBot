@@ -1,10 +1,10 @@
 {
-    "botToken": "MTMyNDY0Mjc1MDAyODU3ODgxNg.GsXtAW.ID-f7uEAlZUwoJNrnU-0iO8McwxW4qLIGEvNjM",
-    "adminID": [955108737906012170],
+    "botToken": "MTMzNjI2MTEzNDk2NTI3NjY5Mg.GGcAd_.-L1VxBCTrtQ52Io83Atm6196V4LnFGitWOK86k",
+    "adminID": [762458172870361128],
     "apiEndpoint": "https://discord.com/api/v9",
-    "clientID": "1324642750028578816",
-    "clientSecret": "tnnpDuYai5ddms_c-XxeA9Fmn_2MK3YZ",
+    "clientID": "1336261134965276692",
+    "clientSecret": "gjfhjEbfRKLzBgNg1W0F9nLKWedSudR_",
     "domain": "https://redirect.zita.kr",
-    "restoreWebhook": "https://discord.com/api/webhooks/1324641451895951470/YuisU4VLlgWT9Oz1j0xUSdHFezmBgHlpK8eRf8-tasNO9OCEZJA3-9Ii-t23tuK52Jrn",
+    "restoreWebhook": "https://discord.com/api/webhooks/1331205655557570581/ZxtLCvmY5S7i2C2sG06pOMinABYpNHDETg0ogk6oyhERUXC7acE5rVoV1gWv4i-y42_H",
     "timeZone": "Asia/Seoul"
 }

@@ -37,6 +37,12 @@ class DB:
                                 emoji TEXT,
                                 PRIMARY KEY (guild_id, guild, category, roles, emoji)
                             )''')
+            await db.execute('''CREATE TABLE IF NOT EXISTS invite (
+                                guild_id INTEGER,
+                                name TEXT,
+                                invite TEXT,
+                                PRIMARY KEY (guild_id, name, invite)
+                            )''')
             await db.commit()
 
     @classmethod
@@ -107,6 +113,32 @@ class DB:
                 return key
 
     @classmethod
+    async def updateInvite(cls, name: str, link: str, guildID: int):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT guild_id FROM invite WHERE name = ?", (name,)) as cursor:
+                if await cursor.fetchone():
+                    return False
+
+                async with db.execute("SELECT guild_id FROM invite WHERE guild_id = ?", (guildID,)) as cursor:
+                    if not await cursor.fetchone():
+                        await db.execute("INSERT INTO invite (name, invite, guild_id) VALUES (?, ?, ?)", (name, link, guildID,))
+                        await db.commit()
+                        return True
+                    await db.execute("UPDATE invite SET name = ?, invite = ? WHERE guild_id = ?", (name, link, guildID,))
+                    await db.commit()
+                    return True
+
+    @classmethod
+    async def getInvite(cls, name):
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT * FROM invite WHERE name = ?", (name,)) as cursor:
+                data = await cursor.fetchone()
+                if not data:
+                    return False, False, False
+                
+                return int(data[0]), str(data[1]), str(data[2])
+
+    @classmethod
     async def getGuildInfo(cls, guildID):
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT * FROM restore WHERE guild_id = ?", (guildID,)) as cursor:
@@ -115,7 +147,10 @@ class DB:
             async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
                 d = await cursor.fetchone()
                 d = False if not d else d
-            return data, d
+            async with db.execute("SELECT * FROM invite WHERE guild_id = ?", (guildID,)) as cursor:
+                i = await cursor.fetchone()
+                i = False if not i else i
+            return data, d, i
     
     @classmethod
     async def isExpired(cls, guildID):

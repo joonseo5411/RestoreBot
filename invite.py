@@ -37,14 +37,14 @@ async def callback():
         if not exchangeRes:
             return await render_template('error.html', title='가입 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
 
-        if "Unknown Guild" in guild:
+        if "Unknown Guild" in str(guild):
             return await render_template('error.html', title='가입 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
 
         userInfo = await getUserProfile(session, exchangeRes['access_token'])
         if not userInfo and not 'email' in userInfo:
             return await render_template('error.html', title='가입 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
 
-        logger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {guildID}")
+        usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {guildID}")
 
         role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], guildID)
         if not role_id:
@@ -91,6 +91,9 @@ async def invite(inviteLink):
         return
     try:
         if request.method == "GET":
+            guildID, name, inviteLink = await DB.getInvite(inviteLink)
+            if not name:
+                return await render_template('error.html', title="알수 없는 애러", ERROR_MSG="접근이 잘못 된 것 같네요."), 404
             async with aiohttp.ClientSession() as session:
                 async with session.get(f'https://discord.com/api/v9/invites/{inviteLink}?with_counts=true&with_expiration=true&with_permissions=false') as response:
                     data = await response.json()

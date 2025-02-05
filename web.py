@@ -29,14 +29,14 @@ async def callback():
         if not exchangeRes:
             return await render_template('error.html', title='인증 실패', ERROR_MSG="존재하지 않는 callback 토큰 입니다."), 404
 
-        if "Unknown Guild" in guild:
+        if "Unknown Guild" in str(guild):
             return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
 
         userInfo = await getUserProfile(session, exchangeRes['access_token'])
         if not userInfo and not 'email' in userInfo:
             return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
 
-        logger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+        usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
 
         role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
         if not role_id:

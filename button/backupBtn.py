@@ -36,14 +36,15 @@ async def backupCallback(instance, i: discord.Interaction, data: list):
                                 thisChannel.append([
                                     msg.author.global_name if msg.author.global_name != None else msg.author.name,
                                     msg.author.avatar, msg.content if msg.content != '' else msg.embeds])
-                            thisChannel = [[channel.name], thisChannel]
                         except:
                             pass
                         
-                        
+                        perm = []
                         for overwrite in channel.overwrites:
-                            for perm in overwrite.permissions:
-                                print(perm)
+                            perm.append(overwrite)
+                        
+                        
+                        thisChannel = [channel.name, thisChannel, perm]
                     channelVar.append([category.name, thisChannel])
                 return channelVar
 

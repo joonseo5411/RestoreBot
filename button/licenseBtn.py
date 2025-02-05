@@ -37,7 +37,3 @@ class registerModal(Modal, title='⏰ㅣ연장/등록하기'):
             embed1 = Embed(title="Restore Service", description=f">>> 복구키는 `{registers}`입니다.\n-# 이 키는 저장 하거나 기억 해두세요.", color=Color.green())
             embed1.set_footer(text="Zita Restore", icon_url="https://i.imgur.com/X2gz8W2.png")
             await dm.send(embed=embed1)
-
-        # 응답이 완료되지 않은 경우에만 모달을 보냄
-        if not i.response.is_done():
-            return await i.response.send_modal(registerModal(self.instance))  # self.instance로 변경

@@ -10,7 +10,7 @@ from .roleBtn import roleCallback
 from .webhookBtn import webhookCallback
 from .licenseBtn import registerModal
 from .restore import restoreUser
-from .backupBtn import backupBtn
+from .backupBtn import backupCallback
 
 import aiohttp, pytz, asyncio, discord, time
 
@@ -35,7 +35,7 @@ class settingBtn:
             async def webhookSetting(self, i: discord.Interaction, btn: discord.ui.Button):
                 return await webhookCallback(self.instance, i, btn, data, webhook)
             
-            @discord.ui.button(label="라이센스 연장/등록", row=2, style=discord.ButtonStyle.green, emoji="⏰")
+            @discord.ui.button(label="라이센스 연장/등록", row=2, style=discord.ButtonStyle.red, emoji="⏰")
             async def addLicense(self, i: discord.Interaction, btn: discord.ui.Button):
                 return await i.response.send_modal(registerModal(self.instance))
             
@@ -46,21 +46,7 @@ class settingBtn:
             
             @discord.ui.button(label="백업하기", style=discord.ButtonStyle.green, emoji="👥", row=1)
             async def storeUsr(self, i: discord.Interaction, btn: discord.ui.Button):
-                if not data[4]:
-                    embed = discord.Embed(title=":warning: 연장/등록 필요", description="- 라이센스가 만료 되어있네요. 연장 해 주세요.", color=discord.Color.red())
-                    return await i.response.send_message(embed=embed, ephemeral=True)
-
-                # embed 변수를 정의합니다.
-                embed = discord.Embed(
-                    title="사직하기 앞서...",
-                    description="- 봇 역할을 젤 위로 해주세요.\n- 반드시 관리자 권한을 부여 해 주세요.",
-                    color=discord.Color.orange()
-                )
-                embed.set_footer(text="Zita Restore", icon_url="https://i.imgur.com/X2gz8W2.png")
-                embed.set_image(url="https://i.imgur.com/zAyZwj6.png")
-
-                # backupBtn 클래스를 인스턴스화하여 사용
-                interactionMessage = await i.response.send_message(embed=embed, view=backupBtn(self.instance, interactionMessage), ephemeral=True)
+                return await backupCallback(self.instance, i, data)
 
         role = self.i.guild.get_role(int(data[2])) if data[2] != None else False
         usr = len(eval(data[0]))
@@ -83,103 +69,3 @@ class settingBtn:
             self.response = await self.i.original_response()
         else:
             await self.response.edit(embed=embed, view=SetBtn(self))
-
-
-# ('create_instant_invite', True)
-# ('kick_members', False)
-# ('ban_members', False)
-# ('administrator', False)
-# ('manage_channels', False)
-# ('manage_guild', False)
-# ('add_reactions', True)
-# ('view_audit_log', False)
-# ('priority_speaker', False)
-# ('stream', True)
-# ('read_messages', True)
-# ('send_messages', True)
-# ('send_tts_messages', False)
-# ('manage_messages', False)
-# ('embed_links', True)
-# ('attach_files', True)
-# ('read_message_history', True)
-# ('mention_everyone', False)
-# ('external_emojis', True)
-# ('view_guild_insights', False)
-# ('connect', True)
-# ('speak', True)
-# ('mute_members', False)
-# ('deafen_members', False)
-# ('move_members', False)
-# ('use_voice_activation', True)
-# ('change_nickname', True)
-# ('manage_nicknames', False)
-# ('manage_roles', False)
-# ('manage_webhooks', False)
-# ('manage_expressions', False)
-# ('use_application_commands', True)
-# ('request_to_speak', True)
-# ('manage_events', False)
-# ('manage_threads', False)
-# ('create_public_threads', True)
-# ('create_private_threads', True)
-# ('external_stickers', True)
-# ('send_messages_in_threads', True)
-# ('use_embedded_activities', True)
-# ('moderate_members', False)
-# ('view_creator_monetization_analytics', False)
-# ('use_soundboard', True)
-# ('create_expressions', False)
-# ('create_events', False)
-# ('use_external_sounds', True)
-# ('send_voice_messages', True)
-# ('send_polls', True)
-# ('use_external_apps', True)
-# ('create_instant_invite', False)
-# ('kick_members', False)
-# ('ban_members', False)
-# ('administrator', False)
-# ('manage_channels', False)
-# ('manage_guild', False)
-# ('add_reactions', False)
-# ('view_audit_log', False)
-# ('priority_speaker', False)
-# ('stream', False)
-# ('read_messages', False)
-# ('send_messages', False)
-# ('send_tts_messages', False)
-# ('manage_messages', True)
-# ('embed_links', False)
-# ('attach_files', False)
-# ('read_message_history', True)
-# ('mention_everyone', False)
-# ('external_emojis', False)
-# ('view_guild_insights', False)
-# ('connect', False)
-# ('speak', False)
-# ('mute_members', False)
-# ('deafen_members', False)
-# ('move_members', False)
-# ('use_voice_activation', False)
-# ('change_nickname', False)
-# ('manage_nicknames', False)
-# ('manage_roles', False)
-# ('manage_webhooks', False)
-# ('manage_expressions', False)
-# ('use_application_commands', False)
-# ('request_to_speak', False)
-# ('manage_events', False)
-# ('manage_threads', False)
-# ('create_public_threads', False)
-# ('create_private_threads', False)
-# ('external_stickers', False)
-# ('send_messages_in_threads', False)
-# ('use_embedded_activities', False)
-# ('moderate_members', False)
-# ('view_creator_monetization_analytics', False)
-# ('use_soundboard', False)
-# ('create_expressions', False)
-# ('create_events', False)
-# ('use_external_sounds', False)
-# ('send_voice_messages', False)
-# ('send_polls', False)
-# ('use_external_apps', False)

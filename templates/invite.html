@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta property="og:type" content="link">
+    <meta property="og:title" content="{{ guild_name }}">
+    <meta property="og:description" content="{{ guild_name }}에는 {{ members }}명의 유저가 함께하고 있습니다!">
+    <meta property="og:image" content="{{ server_image }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ server_image }}">
+    <title>{{ guild_name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 0 55px;
+            background-color: {{ 'black' if BANNER is none else 'transparent' }};
+            background-image: url('{{ BANNER if BANNER else "data:image/svg+xml,%3Csvg%20width=%22100%22%20height=%22100%22%20viewBox=%220%200%20100%20100%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Crect%20width=%22100%22%20height=%22100%22%20fill=%22black%22/%3E%3C/svg%3E%22" }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 410px;
+            width: 100%;
+            padding: 35px;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            user-select: none;
+        }
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .server-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 70%;
+            overflow: hidden;
+            margin: 0 auto;
+            pointer-events: none;
+            background-image: url("{{ server_image if server_image else None}}");
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ebebeb;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+        .member-info {
+            display: flex;
+            justify-content: center;
+            color: #9b9b9b;
+            gap: 10px;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .member-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .total-circle, .online-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .total-circle {
+            background-color: #555;
+        }
+        .online-circle {
+            background-color: #4CAF50;
+        }
+        button {
+            background-color: #5865f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #4d59c3;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #888888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="server-image"></div>
+        <h1>{{ guild_name }}</h1>
+        <div class="member-info">
+            <span><div class="online-circle"></div>{{ onlines }} 명</span>
+            <span><div class="total-circle"></div>{{ members }} 명</span>
+        </div>
+        <form action="{{POST}}" method="POST">            
+            <input type="hidden" name="srvid" value="1314962487065575494">
+            <button type="submit">참가하기</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -53,7 +53,6 @@ async def refreshToken(session, refresh_token):
     while True:
         async with session.post(f"{settingVar.api_endpoint}/oauth2/token", data=data, headers=headers) as response:
             data = await response.json()
-            print(data)
             if response.status != 429:
                 return False if "error" in data else data
 
@@ -82,7 +81,7 @@ async def getIp(session, request):
 
 
 async def getGuild(session, id):
-    async with session.get(f'https://discord.com/apt/v9/guilds/{id}', headers={"Authorization": f"Bot {settingVar.token}"}) as response:
+    async with session.get(f'https://discord.com/api/v9/guilds/{id}', headers={"Authorization": f"Bot {settingVar.token}"}) as response:
         return await response.json()
 
 async def getRole(session, guildID, id):
@@ -91,7 +90,7 @@ async def getRole(session, guildID, id):
         return next((role for role in roles if role['id'] == id), False)
 
 async def getUserProfile2(session, token):
-    async with session.get("https://discordapp.com/apt/v8/users/@me", headers={"Authorization": f"Bearer {token}"}) as response:
+    async with session.get("https://discordapp.com/api/v8/users/@me", headers={"Authorization": f"Bearer {token}"}) as response:
         return False if response.status != 200 else await response.json()
 
 async def getUserProfile(session, token):

@@ -134,7 +134,8 @@ class DB:
     async def getRestoreKey(cls, key: str):
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT user FROM restore WHERE restoreKey = ?", (str(key),)) as cursor:
-                return False if not await cursor.fetchone() else eval(await cursor.fetchone()[0])
+                data = await cursor.fetchone()
+                return False if not data else data
 
     @classmethod
     async def changeRefreshToken(cls, old_usr, new_usr):

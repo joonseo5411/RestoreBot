@@ -1,4 +1,5 @@
-import discord
+import discord, aiohttp
+from function import refreshToken, DB
 
 async def usrRestore(instance, i: discord.Interaction, btnMSG, users):
     await btnMSG.delete()
@@ -37,4 +38,4 @@ async def usrRestore(instance, i: discord.Interaction, btnMSG, users):
             title="👥 유저 복구완료", description="- 유저를 **복구**완료 했습니다.", color=discord.Color.green()
         ).set_footer(text="Zita Restore", icon_url="https://i.imgur.com/X2gz8W2.png")
     )
-    await self.instance.btn(111)
+    await instance.btn(111)

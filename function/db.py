@@ -183,7 +183,6 @@ class DB:
     async def backupServer(cls, guild, category, role, emoji, guildID):
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
-                print(await cursor.fetchone())
                 if await cursor.fetchone():
                     async with db.execute("UPDATE backup SET uploadDate = ?, guild = ?, category = ?, roles = ?, emoji = ? WHERE guild_id = ?", (int(time.time()), str(guild), str(category), str(role), str(emoji), guildID,)) as cursor:
                         await db.commit()
@@ -198,18 +197,3 @@ class DB:
             async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
                 data = await cursor.fetchone()
                 return False if not data else data
-
-    @classmethod
-    async def getGuildRegister(cls):
-        async with aiosqlite.connect(db_path) as db:
-            guilds = []
-            res = await db.execute("SELECT guild_id FROM restore")
-            if not res:
-                return []
-            result = await res.fetchall()
-            for x in range(len(result)):
-                guildID = result[x][0]
-                if guildID != 0:
-                    guilds.append(Object(guildID))
-
-            return guilds

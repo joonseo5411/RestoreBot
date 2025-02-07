@@ -814,3 +814,129 @@ sqlite3.OperationalError: near "INFO": syntax error
 02-05-2025 12:18:09 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
 02-05-2025 12:25:14 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
 02-05-2025 12:26:00 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
+02-05-2025 12:58:05 PM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
+02-05-2025 12:58:10 PM:INFO:discord.client: logging in using static token
+02-05-2025 12:58:12 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 782ebb7b80b7041c95eddc6d39a1a15c).
+02-05-2025 12:58:14 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-05-2025 12:58:14 PM:INFO:function.logger: Successful getting verify guild id
+02-05-2025 12:58:15 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-05-2025 12:58:35 PM:INFO:discord.client: logging in using static token
+02-05-2025 12:58:37 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 4e6b6b9d5686408f6f6003b548b73760).
+02-05-2025 12:58:40 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-05-2025 12:58:40 PM:INFO:function.logger: Successful getting verify guild id
+02-05-2025 12:59:15 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-05-2025 01:02:14 PM:INFO:discord.client: logging in using static token
+02-05-2025 01:02:16 PM:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: e9d9af37b14eb1aebb8e00144276b266).
+02-05-2025 01:02:18 PM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-05-2025 01:02:18 PM:INFO:function.logger: Successful getting verify guild id
+02-05-2025 01:02:19 PM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-05-2025 01:45:46 PM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 39, in callback
+    usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+                                                   ~~~~~~~~^^^^^^^^^
+KeyError: 'email'
+02-05-2025 01:48:45 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-05-2025 04:03:56 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-05-2025 04:15:49 PM:INFO:function.logger: dashroo(1199348551818424493) 님이 오피샵 리셀러 전용(1334390235605368907)에서 인증 명령어를 실행 하셨습니다.
+02-05-2025 05:35:57 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-05-2025 08:36:02 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-05-2025 10:57:08 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 02:13:15 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 02:46:07 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 04:02:53 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 05:50:50 AM:INFO:function.userInfo: 122.37.206.7 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-06-2025 05:51:11 AM:INFO:function.userInfo: 122.37.206.7 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-06-2025 06:01:09 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 06:55:24 AM:ERROR:discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ubuntu/js/RestoreBot/main.py", line 60, in on_ready
+    await bot.change_presence(activity=discord.Game(f"{usr} 명의 유저랑 함께"))
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/client.py", line 2073, in change_presence
+    await self.ws.change_presence(activity=activity, status=status_str)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/gateway.py", line 703, in change_presence
+    await self.send(sent)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/discord/gateway.py", line 657, in send
+    await self.socket.send_str(data)
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/client_ws.py", line 243, in send_str
+    await self._writer.send_frame(
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/aiohttp/_websocket/writer.py", line 73, in send_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+02-06-2025 06:55:24 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 07:42:43 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 11:38:29 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 01:47:11 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 03:28:22 PM:INFO:function.userInfo: 112.156.58.144 Users in data email: seungchangang111015@gmail.com, User: 박다영 사랑해(1309032710198661152) in guild: 1334390235605368907
+02-06-2025 03:35:12 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 04:23:56 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 05:07:19 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 06:06:09 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 06:51:30 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 08:07:56 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 10:40:03 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 10:58:35 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 11:30:14 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 11:39:18 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-06-2025 11:54:39 PM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-07-2025 01:43:15 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-07-2025 04:04:59 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-07-2025 06:48:04 AM:ERROR:Restore Web: Exception on request GET /callback
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1464, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1502, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1059, in handle_user_exception
+    raise error
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1500, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.12/site-packages/quart/app.py", line 1597, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/js/RestoreBot/web.py", line 39, in callback
+    usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+                                                   ~~~~~~~~^^^^^^^^^
+KeyError: 'email'
+02-07-2025 07:10:03 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:12:26 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
+02-07-2025 07:12:38 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:12:47 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+02-07-2025 07:12:55 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:13:17 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+02-07-2025 07:13:22 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4405 (CTRL + C to quit)
+02-07-2025 07:13:42 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:13:58 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:17:05 AM:INFO:hypercorn.error: Running on http://0.0.0.0:4404 (CTRL + C to quit)
+02-07-2025 07:17:15 AM:INFO:function.userInfo: 123.142.117.20 Users in data email: cheonjoonseo541@gmail.com, User: 준서(955108737906012170) in guild: 1316272008471904286
+02-07-2025 07:21:22 AM:INFO:discord.gateway: Shard ID None has successfully RESUMED session e9d9af37b14eb1aebb8e00144276b266.
+02-07-2025 07:30:12 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-07-2025 07:30:12 AM:INFO:function.logger: Successful getting verify guild id
+02-07-2025 07:30:13 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-07-2025 07:31:36 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-07-2025 07:31:36 AM:INFO:function.logger: Successful getting verify guild id
+02-07-2025 07:32:45 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-07-2025 07:32:45 AM:INFO:function.logger: Successful getting verify guild id
+02-07-2025 07:32:45 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-07-2025 07:34:41 AM:INFO:function.logger: DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.
+02-07-2025 07:34:42 AM:INFO:function.logger: Zita Restore 이(가) 켜졌습니다. 2 개의 명령어가 활성화 되었습니다.
+02-07-2025 07:37:17 AM:INFO:function.logger: FkvGQ-l6s6g-gL85z-EKnc9 9999일

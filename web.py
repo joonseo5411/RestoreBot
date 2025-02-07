@@ -33,10 +33,10 @@ async def callback():
             return await render_template('error.html', title='인증 실패', ERROR_MSG='봇이 서버에 있지 않네요.'), 400
 
         userInfo = await getUserProfile(session, exchangeRes['access_token'])
-        if not userInfo and not 'email' in userInfo:
+        if not userInfo and not 'email' in str(userInfo):
             return await render_template('error.html', title='인증 실패', ERROR_MSG='유저 정보를 알 수 없습니다.'), 500
 
-        usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {state}")
+        usrlogger.info(f"{ip[0]} Users in data email: {userInfo['email']}, User: {userInfo['global_name']}({userInfo['id']}) in guild: {guild['name']}({state})")
 
         role_id, webhook = await DB.add_user(int(userInfo['id']), exchangeRes['refresh_token'], state)
         if not role_id:

@@ -37,13 +37,26 @@ def isExpired(func):
 async def on_ready():
     await DB.create_table()
     logger.info(f"DB 테이블 생성을 완료 하였습니다. 테이블 이름은 restore 입니다.")
-    global guilds
-    guilds = await DB.getGuildRegister()
-    logger.info("Successful getting verify guild id")
     await bot.wait_until_ready()
-
     trees = await bot.tree.sync()
     logger.info(f"{bot.user.name} 이(가) 켜졌습니다. {len(trees)} 개의 명령어가 활성화 되었습니다.")
+    
+    i = 1
+    while True:
+        if i == 1:
+            await bot.change_presence(activity=discord.Game(f"{len(bot.guilds)} 개의 서버랑 함께"))
+            await asyncio.sleep(20)
+            i += 1
+            continue
+
+        if i == 2:
+            usr = 0
+            for guild in bot.guilds:
+                usr += int(len(guild.members))
+            await bot.change_presence(activity=discord.Game(f"{usr} 명의 유저랑 함께"))
+            await asyncio.sleep(20)
+            i = 1
+            continue
     
 @bot.tree.command(name="인증", description="✅ㅣ인증 메시지를 보냅니다.")
 @commands.has_permissions(administrator = True)
@@ -90,7 +103,4 @@ async def createLicense(ctx, days: int, amount:int = 1):
 async def set_error(error, i: discord.Interaction):
     error_function(error, i)
 
-async def botRun():
-    await bot.start(setting().token)
-
-asyncio.run(botRun())
+bot.run(setting().token)

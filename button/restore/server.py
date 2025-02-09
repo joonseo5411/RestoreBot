@@ -34,8 +34,23 @@ async def serverRestore(instance, i: discord.Interaction, btnMSG):
 
             # 채널 복구 및 메시지 복구
             for category in eval(data[3]):
-                await i.guild.create_category(category[0], overwrites=category[1])
-            
+                ctg = await i.guild.create_category(category[0])
+                for channel in category[1]:
+                    if channel[1] == "text":
+                        chanel = await ctg.create_text_channel(name=channel[0])
+                    
+                    if channel[1] == "voive":
+                        chanel = await ctg.create_voice_channel(name=channel[0])
+
+                    if channel[1] == "news":
+                        chanel = await ctg.create_text_channel(name=channel[0], news=True)
+
+                    if channel[1] == "forum":
+                        chanel = await ctg.create_forum(name=channel[0])
+
+                    for msg in category[2][2]:
+                        wbhook = await chanel.create_webhook()
+                        await wbhook.send(username=msg[0], avatar_url=msg[1], content=msg[2], embeds=msg[3])
 
     embed = discord.Embed(
         title="사직하기 앞서...",

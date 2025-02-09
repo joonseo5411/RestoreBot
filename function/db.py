@@ -184,7 +184,7 @@ class DB:
         async with aiosqlite.connect(db_path) as db:
             async with db.execute("SELECT * FROM backup WHERE guild_id = ?", (guildID,)) as cursor:
                 if await cursor.fetchone():
-                    async with db.execute("UPDATE backup SET uploadDate = ?, guild = ?, category = ?, roles = ?, emoji = ? WHERE guild_id = ?", (int(time.time()), str(guild), str(category), str(role), str(emoji), guildID,)) as cursor:
+                    async with db.execute("UPDATE OR REPLACE backup SET uploadDate = ?, guild = ?, category = ?, roles = ?, emoji = ? WHERE guild_id = ?", (int(time.time()), str(guild), str(category), str(role), str(emoji), guildID,)) as cursor:
                         await db.commit()
                         return
                 async with db.execute("INSERT INTO backup (guild_id, uploadDate, guild, category, roles, emoji) VALUES (?,?,?,?,?,?)", (guildID, int(time.time()), str(guild), str(category), str(role), str(emoji))) as cursor:

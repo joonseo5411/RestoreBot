@@ -55,6 +55,8 @@ async def callback():
 
             role = {'name': '설정 필요', 'id': '설정 필요'}
 
+            roleName = "없음"
+
             if role_id != "None":
                 roleName = next((role['name'] for role in guild['roles'] if role['id'] == str(role_id)), "없음")
 
@@ -63,25 +65,25 @@ async def callback():
             task = [
                 giveRoleToMember(session, guildID, int(userInfo['id']), role_id),
                 send_webhook(session, 'Zita Restore', None, "https://i.imgur.com/X2gz8W2.png", f"{userInfo['global_name']}({userInfo['id']})", f"""
-    > 유저가 정상적으로 인증을 완료 하였습니다.
+> 유저가 정상적으로 인증을 완료 하였습니다.
 
-    >>> ⏰ 인증 날짜: <t:{int(time.time())}:f>
-    👥 인증 링크: https://invite.zita.kr/{state}
-    🌐 인증 서버: {guild['name']}({guildID})
-    🔰 역할 정보: {roleName}({role_id})
-    """, webhook),
+>>> ⏰ 인증 날짜: <t:{int(time.time())}:f>
+👥 인증 링크: https://invite.zita.kr/{state}
+🌐 인증 서버: {guild['name']}({guildID})
+🔰 역할 정보: {roleName}({role_id})
+""", webhook),
                 send_webhook(session, 'Zita Restore', None, "https://i.imgur.com/X2gz8W2.png", '인증 정보', f"""### -# > {userInfo['global_name']}({userInfo['id']}) 님의 정보입니다.
-    🌐 유저 IP 정보```ansi
-    🌐[2;31m유저 아이피[0m: [2;30m{ip[0]}[0m
-    🌐[2;32m유저 통신사[0m: [2;30m{ip[1]}[0m
-    🌐[2;33m예상 지역[0m: [2;30m{ip[2]}[0m
-    🌐[2;34m유저 국가[0m: [2;30m{ip[3]}[0m```
-    👤  유저 정보```ansi
-    👤 [2;31m인증 링크[0m: [2;30mhttps://invite.zita.kr/{state}
-    👤 [2;31m인증 서버[0m: [2;30m{guild['name']}({guildID})
-    👤 [2;32m부여된 역할[0m: [0m[2;30m{roleName}({role_id})[0m```
-    """, "https://discord.com/api/webhooks/1334443562007396423/R82BgBWOZBJmqmHmIPZYN3QVd6GzPeFYmvp1rcC77lu5Cu2o6zVR0NoVx4yJmfKHIRNz")
-            ]
+🌐 유저 IP 정보```ansi
+🌐[2;31m유저 아이피[0m: [2;30m{ip[0]}[0m
+🌐[2;32m유저 통신사[0m: [2;30m{ip[1]}[0m
+🌐[2;33m예상 지역[0m: [2;30m{ip[2]}[0m
+🌐[2;34m유저 국가[0m: [2;30m{ip[3]}[0m```
+👤  유저 정보```ansi
+👤 [2;31m인증 링크[0m: [2;30mhttps://invite.zita.kr/{state}
+👤 [2;31m인증 서버[0m: [2;30m{guild['name']}({guildID})
+👤 [2;32m부여된 역할[0m: [0m[2;30m{roleName}({role_id})[0m```
+""", "https://discord.com/api/webhooks/1334443562007396423/R82BgBWOZBJmqmHmIPZYN3QVd6GzPeFYmvp1rcC77lu5Cu2o6zVR0NoVx4yJmfKHIRNz")
+        ]
 
             await asyncio.gather(*task)
             return await render_template('success.html', title='가입 완료', SUCCESSFUL_MSG='이제 이 탭 또는 창을 닫으셔도 좋습니다.'), 200
@@ -117,4 +119,4 @@ async def invite(inviteLink):
     except:
         return await render_template('error.html', title="알수 없는 애러", ERROR_MSG="접근이 잘못 된 것 같네요."), 404
 
-app.run(host="0.0.0.0", port=4405, use_reloader=False)
+app.run(host="0.0.0.0", port=4405, use_reloader=False, debug=True)

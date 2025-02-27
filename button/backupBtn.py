@@ -11,7 +11,7 @@ async def backupCallback(instance, i: discord.Interaction, data: list):
         def __init__(self, instance):
             super().__init__(timeout=None)
             self.instance = instance
-        
+
         @discord.ui.button(label="확인했습니다.", emoji="✅", style=discord.ButtonStyle.blurple)
         async def check(self, i: discord.Interaction, btn: discord.ui.Button):
             embed = discord.Embed(
@@ -23,45 +23,130 @@ async def backupCallback(instance, i: discord.Interaction, data: list):
             msg = await i.original_response()
 
             # 길드 관련 백업
-            guildData = [i.guild.name, i.guild.icon, i.guild.banner]
+            guildData = {
+                "name": i.guild.name,
+                "icon": str(i.guild.icon),
+                "banner": str(i.guild.banner),
+                "features": i.guild.features,
+                "rules_channel": i.guild.rules_channel.name if i.guild.rules_channel else None,
+                "public_updates_channel": i.guild.public_updates_channel.name if i.guild.public_updates_channel else None
+            }
+
+            bot_names = [bot.global_name or bot.name for bot in i.guild.members if bot.bot]
 
             # 채널 및 카테고리 백업
             async def channelBackup():
-                channelVar = []
+                channel_data = []
+
                 for category in i.guild.categories:
-                    thisChannel = []
+                    category_permissions = []
+                    for role, overwrite in category.overwrites.items():
+                        if not isinstance(role, discord.Role):
+                            continue
+                        permissions = [perm for perm, value in overwrite if value]
+                        category_permissions.append({
+                            "role_name": role.name,
+                            "permissions": permissions
+                        })
+
+                    category_data = []
+
                     for channel in category.channels:
                         try:
-                            async for msg in channel.history(limit=100):
-                                thisChannel.append([
-                                    msg.author.global_name if msg.author.global_name != None else msg.author.name,
-                                    msg.author.avatar.url,
-                                    msg.content if msg.content != '' else None,
-                                    msg.embeds if msg.embeds else None])
-                        except:
-                            pass
-                        thisChannel = [channel.name, channel.type, thisChannel]
-                    channelVar.append([category.name, thisChannel])
-                return channelVar
+                            channel_permissions = []
+                            if isinstance(channel, (discord.TextChannel, discord.VoiceChannel)):
+                                if channel.permissions_synced:
+                                    channel_permissions = category_permissions
+                                else:
+                                    for role, overwrite in channel.overwrites.items():
+                                        if not isinstance(role, discord.Role):
+                                            continue
+                                        permissions = [perm for perm, value in overwrite if value]
+                                        channel_permissions.append({
+                                            "role_name": role.name,
+                                            "permissions": permissions
+                                        })
+
+                                channel_messages = []
+                                if isinstance(channel, discord.TextChannel):
+                                    async for msg in channel.history(limit=100):
+                                        # Gather embeds
+                                        embeds = [
+                                            {
+                                                "title": embed.title or None,
+                                                "description": embed.description or None,
+                                                "color": int(embed.color.value) if embed.color else None,
+                                                "image": embed.image.url if embed.image else None,
+                                                "thumbnail": embed.thumbnail.url if embed.thumbnail else None,
+                                                "footer": [
+                                                    embed.footer.text or None,
+                                                    str(embed.footer.icon_url) if embed.footer.icon_url else None
+                                                ],
+                                                "author": [
+                                                    embed.author.name if embed.author and embed.author.name else None,
+                                                    str(embed.author.url) if embed.author and embed.author.url else None,
+                                                    str(embed.author.icon_url) if embed.author and embed.author.icon_url else None
+                                                ],
+                                                "fields": [
+                                                    {"name": field.name, "value": field.value, "inline": field.inline}
+                                                    for field in embed.fields
+                                                ]
+                                            }
+                                            for embed in msg.embeds
+                                        ]
+
+                                        # Collect attachment URLs if any
+                                        attachment_urls = [attachment.url for attachment in msg.attachments if attachment.url]
+
+                                        # Append URLs to content or use only URLs if no content
+                                        message_content = msg.content or ""
+                                        if attachment_urls:
+                                            message_content += "\n" + "\n".join(attachment_urls)
+
+                                        channel_messages.append({
+                                            "author": msg.author.global_name or msg.author.name,
+                                            "avatar": msg.author.avatar.url if msg.author.avatar else None,
+                                            "content": message_content,
+                                            "embeds": embeds
+                                        })
+
+                                # Append channel data
+                                channel_type = "news" if (isinstance(channel, discord.TextChannel) and channel.is_news()) else str(channel.type)
+                                
+                                category_data.append({
+                                    "name": channel.name,
+                                    "type": channel_type,
+                                    "permissions": channel_permissions,
+                                    "messages": channel_messages
+                                })
+
+                        except Exception as e:
+                            print(f"Error backing up channel {channel.name}: {e}")
+
+                    channel_data.append({
+                        "category_name": category.name,
+                        "category_permissions": category_permissions,
+                        "channels": category_data
+                    })
+
+                return channel_data
 
             # 역할 백업
             async def roleBackup():
-                roleData = []
+                role_data = []
                 for role in i.guild.roles:
-                    perm = []
-                    for rolePerm in role.permissions:
-                        if not rolePerm[1]:
-                            continue
-                        perm.append([rolePerm])
-                    roleData.append([role.name, role.colour, perm])
-                return roleData
+                    if role.name not in bot_names:
+                        permissions = [perm[0] for perm in role.permissions if perm[1]]
+                        role_data.append({
+                            "name": role.name,
+                            "color": int(role.color.value) if int(role.color.value) != 0 else None,
+                            "permissions": permissions
+                        })
+                return role_data
 
             # 이모지 백업
             async def emojiBackup():
-                emojidata = []
-                for emoji in i.guild.emojis:
-                    emojidata.append([emoji.name, emoji.url])
-                return emojidata
+                return [{"name": emoji.name, "url": str(emoji.url)} for emoji in i.guild.emojis]
 
             channels, roles, emojidata = await asyncio.gather(channelBackup(), roleBackup(), emojiBackup())
 

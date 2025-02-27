@@ -1,0 +1,1 @@
+from .role import role_permissions

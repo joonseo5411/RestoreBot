@@ -1,15 +1,16 @@
-from discord.ext import commands
+from discord.ext import commands, tasks
 import discord
 
 
 from datetime import datetime
 
 from function import setting
-from function import DB
+from function import DB, db_path
 from function import logger
+from function import refreshToken
 from button import settingBtn
 
-import asyncio
+import asyncio, aiohttp, aiosqlite
 
 guilds = []
 
@@ -33,6 +34,36 @@ def isExpired(func):
         return await func(*args)
     return wrapper
 
+@tasks.loop(hours=96)
+async def asyncUserData():
+    async with aiohttp.ClientSession() as session:
+        async with aiosqlite.connect(db_path) as db:
+            async with db.execute("SELECT user, guild_id FROM restore") as cursor:
+                users = await cursor.fetchall()
+
+            for user in users:
+                oldData = eval(user[0])
+                if len(oldData) == 0:
+                    continue
+
+                newData = []
+                
+                for data in oldData:
+                    new_token = await refreshToken(session, data[1])
+
+                    if new_token:
+                        newData.append([data[0], new_token['refresh_token']])
+
+                await db.execute(
+                    "UPDATE restore SET user = ? WHERE user = ?",
+                    (str(newData), str(oldData))
+                )
+                await db.commit()
+                guild = bot.get_guild(int(user[1]))
+                print(f"{guild.name}({guild.id})의 유저 동기화 완료.\n기존 유저: {len(oldData)}명 || 동기화된 유저: {len(newData)}명")
+                logger.info(f"\n{guild.name}({guild.id})의 유저 동기화 완료.\n기존 유저: {len(oldData)}명 || 동기화된 유저: {len(newData)}명")
+                
+
 @bot.event
 async def on_ready():
     await DB.create_table()
@@ -40,7 +71,9 @@ async def on_ready():
     await bot.wait_until_ready()
     trees = await bot.tree.sync()
     logger.info(f"{bot.user.name} 이(가) 켜졌습니다. {len(trees)} 개의 명령어가 활성화 되었습니다.")
-    
+
+    # asyncUserData.start()
+
     i = 1
     while True:
         if i == 1:
@@ -57,6 +90,25 @@ async def on_ready():
             await asyncio.sleep(20)
             i = 1
             continue
+
+@bot.command()
+async def get_permissions(ctx, channel_id: int, role_id: int):
+    # 주어진 ID로 채널과 역할 객체를 가져옵니다.
+    channel = ctx.guild.get_channel(channel_id)
+    role = ctx.guild.get_role(role_id)
+    
+    if channel is None or role is None:
+        await ctx.send("Invalid channel or role ID.")
+        return
+
+    # 해당 역할에 대한 채널의 퍼미션을 가져옵니다.
+    permissions = channel.permissions_for(role)
+
+    # 퍼미션을 출력합니다.
+    permissions_list = [perm for perm, value in permissions if value]
+    response = f"Permissions for role {role.name} in channel {channel.name}:\n" + ', '.join(permissions_list)
+
+    await ctx.send(response)
     
 @bot.tree.command(name="인증", description="✅ㅣ인증 메시지를 보냅니다.")
 @commands.has_permissions(administrator = True)
@@ -102,5 +154,10 @@ async def createLicense(ctx, days: int, amount:int = 1):
 @restoreSetting.error
 async def set_error(error, i: discord.Interaction):
     error_function(error, i)
+
+# async def run():
+#     await bot.start(setting().token)
+
+# asyncio.run(run())
 
 bot.run(setting().token)

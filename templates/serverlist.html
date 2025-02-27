@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스코드 서버 목록</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+        :root {
+            --primary-color: #2f3542;
+            --secondary-color: #4b4f56;
+            --background-color: #1d2125;
+            --button-color: #007bff;
+            --button-hover-color: #0056b3;
+            --nav-height: 60px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #1f2329;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .logo a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .banner {
+            background-image: url('./banner.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: var(--nav-height);
+            padding: 20px;
+        }
+        .server-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .server-item {
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            flex: 1 1 calc(100% - 20px);
+            max-width: calc(100% - 20px);
+            overflow: hidden;
+            position: relative;
+        }
+        @media (min-width: 576px) {
+            .server-item {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (min-width: 768px) {
+            .server-item {
+                flex: 1 1 calc(33.333% - 20px);
+                max-width: calc(33.333% - 20px);
+            }
+        }
+        .server-item:hover {
+            transform: scale(1.05);
+        }
+        .server-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .server-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .server-img {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .server-body {
+            margin: 15px 0;
+        }
+        .server-footer .join-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .server-footer .join-btn:hover {
+            background-color: var(--button-hover-color);
+        }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #2f354c;
+                position: absolute;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
+            }
+        }
+        footer {
+            background-color: #2f354c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/">Zita Service</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/servers">서버 목록</a></li>
+            <li><a href="/about">소개</a></li>
+            <li><a href="/contact">연락처</a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <h1>디스코드 서버 목록</h1>
+    </div>
+
+    <div class="server-list">
+        <div class="server-item">
+            <div class="server-header">
+                <div class="server-img" style="background-image: url('https://i.imgur.com/X2gz8W2.png');"></div>
+                <div class="server-name">디스코드 서버 1</div>
+            </div>
+            <div class="server-body">
+                <h1>안녕하세요!</h1>
+                <p>반갑습니다.</p>
+            </div>
+            <div class="server-footer">
+                <button class="join-btn">서버 가입</button>
+            </div>
+        </div>
+        <div class="server-item">
+            <div class="server-header">
+                <div class="server-img" style="background-image: url('https://i.imgur.com/X2gz8W2.png');"></div>
+                <div class="server-name">디스코드 서버 1</div>
+            </div>
+            <div class="server-body">
+                <h1>안녕하세요!</h1>
+                <p>반갑습니다.</p>
+            </div>
+            <div class="server-footer">
+                <button class="join-btn">서버 가입</button>
+            </div>
+        </div>
+        <div class="server-item">
+            <div class="server-header">
+                <div class="server-img" style="background-image: url('https://i.imgur.com/X2gz8W2.png');"></div>
+                <div class="server-name">디스코드 서버 1</div>
+            </div>
+            <div class="server-body">
+                <h1>안녕하세요!</h1>
+                <p>반갑습니다.</p>
+            </div>
+            <div class="server-footer">
+                <button class="join-btn">서버 가입</button>
+            </div>
+        </div>
+        <div class="server-item">
+            <div class="server-header">
+                <div class="server-img" style="background-image: url('https://i.imgur.com/X2gz8W2.png');"></div>
+                <div class="server-name">디스코드 서버 1</div>
+            </div>
+            <div class="server-body">
+                <h1>안녕하세요!</h1>
+                <p>반갑습니다.</p>
+            </div>
+            <div class="server-footer">
+                <button class="join-btn">서버 가입</button>
+            </div>
+        </div>
+        <div class="server-item">
+            <div class="server-header">
+                <div class="server-img" style="background-image: url('https://i.imgur.com/X2gz8W2.png');"></div>
+                <div class="server-name">디스코드 서버 1</div>
+            </div>
+            <div class="server-body">
+                <h3>안녕하세요!</h3>
+                <p>반갑습니다.</p>
+            </div>
+            <div class="server-footer">
+                <button class="join-btn">서버 가입</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Zita Service</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

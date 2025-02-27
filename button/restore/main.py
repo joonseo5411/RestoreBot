@@ -38,7 +38,7 @@ async def restoreUser(instance, i: discord.Interaction):
                     
                 @discord.ui.button(label="서버복구", emoji='🏀', style=discord.ButtonStyle.red)
                 async def serverRestore(self, i: discord.Interaction, btn: discord.ui.Button):
-                    return await serverRestore(self.instance, i, btnMSG)
+                    return await serverRestore(self.instance, i, btnMSG, recover_key)
 
             await i.response.send_message(view=restoreBtn(self.instance), ephemeral=True)
             btnMSG = await i.original_response()
